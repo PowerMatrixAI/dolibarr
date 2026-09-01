@@ -1,0 +1,73 @@
+# syntax=docker/dockerfile:1
+
+ARG PACKAGE_IMAGE=dolibarr/prod/package:local
+FROM ${PACKAGE_IMAGE} AS packaged
+
+FROM php:8.2-apache-bookworm
+
+ARG DOLIBARR_VERSION=25.0.0-alpha
+
+LABEL org.opencontainers.image.title="Dolibarr" \
+      org.opencontainers.image.version="${DOLIBARR_VERSION}" \
+      org.opencontainers.image.description="Dolibarr ERP/CRM runtime image"
+
+ENV PHP_INI_DATE_TIMEZONE=UTC \
+    PHP_INI_MEMORY_LIMIT=256M \
+    PHP_INI_UPLOAD_MAX_FILESIZE=32M \
+    PHP_INI_POST_MAX_SIZE=32M \
+    PHP_INI_MAX_EXECUTION_TIME=120
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        libc-client-dev \
+        libcurl4-openssl-dev \
+        libfreetype6-dev \
+        libicu-dev \
+        libjpeg62-turbo-dev \
+        libkrb5-dev \
+        libldap2-dev \
+        libonig-dev \
+        libpng-dev \
+        libpq-dev \
+        libxml2-dev \
+        libzip-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-configure imap --with-kerberos --with-imap-ssl \
+    && docker-php-ext-configure ldap --with-libdir=lib/$(gcc -dumpmachine)/ \
+    && docker-php-ext-install -j"$(nproc)" \
+        bcmath \
+        calendar \
+        curl \
+        gd \
+        imap \
+        intl \
+        ldap \
+        mbstring \
+        mysqli \
+        opcache \
+        pdo_mysql \
+        pdo_pgsql \
+        pdo_sqlite \
+        pgsql \
+        soap \
+        xml \
+        zip \
+    && mv "${PHP_INI_DIR}/php.ini-production" "${PHP_INI_DIR}/php.ini" \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY --from=packaged /package/dolibarr/htdocs/ /var/www/html/
+COPY build/docker/docker-run.sh /usr/local/bin/dolibarr-entrypoint
+
+RUN a2enmod expires headers rewrite \
+    && mkdir -p /var/www/html/conf /var/www/documents \
+    && chown -R root:root /var/www/html \
+    && chown -R www-data:www-data /var/www/html/conf /var/www/documents \
+    && chmod 750 /var/www/html/conf \
+    && chmod 755 /usr/local/bin/dolibarr-entrypoint
+
+WORKDIR /var/www/html
+
+EXPOSE 80
+
+ENTRYPOINT ["dolibarr-entrypoint"]
+CMD ["apache2-foreground"]

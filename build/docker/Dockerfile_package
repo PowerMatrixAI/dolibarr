@@ -1,0 +1,30 @@
+# syntax=docker/dockerfile:1
+
+FROM debian:bookworm-slim
+
+ARG DOLIBARR_VERSION=25.0.0-alpha
+ENV DOLIBARR_VERSION="${DOLIBARR_VERSION}"
+
+WORKDIR /package
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        ca-certificates \
+        gzip \
+        tar \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY htdocs/ /package/dolibarr/htdocs/
+COPY README.md COPYING SECURITY.md /package/dolibarr/
+
+RUN tar --create --gzip \
+        --file="/package/dolibarr-${DOLIBARR_VERSION}.tar.gz" \
+        --sort=name \
+        --mtime='UTC 1970-01-01' \
+        --owner=0 \
+        --group=0 \
+        --numeric-owner \
+        --directory=/package \
+        dolibarr
+
+CMD ["sh", "-c", "printf 'Dolibarr package %s is ready\\n' \"$DOLIBARR_VERSION\""]
