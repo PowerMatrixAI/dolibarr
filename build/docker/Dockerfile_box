@@ -1,8 +1,5 @@
 # syntax=docker/dockerfile:1
 
-ARG PACKAGE_IMAGE=dolibarr/prod/package:local
-FROM ${PACKAGE_IMAGE} AS packaged
-
 FROM php:8.2-apache-bookworm
 
 ARG DOLIBARR_VERSION=25.0.0-alpha
@@ -55,7 +52,7 @@ RUN apt-get update \
     && mv "${PHP_INI_DIR}/php.ini-production" "${PHP_INI_DIR}/php.ini" \
     && rm -rf /var/lib/apt/lists/*
 
-COPY --from=packaged /package/dolibarr/htdocs/ /var/www/html/
+COPY htdocs/ /var/www/html/
 COPY build/docker/docker-run.sh /usr/local/bin/dolibarr-entrypoint
 
 RUN a2enmod expires headers rewrite \

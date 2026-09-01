@@ -17,7 +17,7 @@ fi
 environment="${DOLIBARR_ENVIRONMENT:-prod}"
 version="${DOLIBARR_VERSION:-${version_major}.${version_minor}}"
 registry="${DOCKER_REGISTRY:-}"
-repository="${DOCKER_REPOSITORY:-dolibarr}"
+repository="${DOCKER_REPOSITORY:-kol-base}"
 output_dir="${OUTPUT_DIR:-${project_dir}/output}"
 no_cache=0
 push=0
@@ -33,7 +33,7 @@ Options:
   -e ENV                 Build environment label (default: prod)
   -v VERSION             Image/source version (default: version.inc.php)
   -r REGISTRY            Optional image registry
-  -n REPOSITORY          Image repository prefix (default: dolibarr)
+  -n REPOSITORY          Base image repository (default: kol-base)
   -o DIRECTORY           Export directory (default: ./output)
   -p                     Push both images after building
   --run                  Recreate and start the runtime container
@@ -108,9 +108,9 @@ if [[ ! "${version}" =~ ^[A-Za-z0-9_.-]+$ ]]; then
 fi
 
 if [ -n "${registry}" ]; then
-	image_root="${registry%/}/${repository#/}/${environment}"
+	image_root="${registry%/}/${repository#/}"
 else
-	image_root="${repository#/}/${environment}"
+	image_root="${repository#/}"
 fi
 
 package_image="${image_root}/package:${version}"
@@ -137,6 +137,7 @@ fi
 
 echo "Building package image: ${package_image}"
 docker build "${build_options[@]}" \
+	--build-arg "DOLIBARR_ENVIRONMENT=${environment}" \
 	--build-arg "DOLIBARR_VERSION=${version}" \
 	-f "${docker_dir}/Dockerfile_package" \
 	-t "${package_image}" \
@@ -156,7 +157,6 @@ trap - EXIT
 
 echo "Building runtime image: ${box_image}"
 docker build "${build_options[@]}" \
-	--build-arg "PACKAGE_IMAGE=${package_image}" \
 	--build-arg "DOLIBARR_VERSION=${version}" \
 	-f "${docker_dir}/Dockerfile_box" \
 	-t "${box_image}" \
