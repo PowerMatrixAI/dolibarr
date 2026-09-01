@@ -19,15 +19,15 @@ fi
 rm -rf "${output_dir}"
 mkdir -p "${output_dir}"
 
-rsync -a \
-	--exclude='/conf/conf.php' \
-	--exclude='/conf/conf.php.mysql' \
-	--exclude='/conf/conf.php.old' \
-	--exclude='/conf/conf.php.postgres' \
-	"${project_dir}/htdocs/" "${output_dir}/htdocs/"
+cp -r "${project_dir}/htdocs" "${output_dir}/"
+
+rm -f \
+	"${output_dir}/htdocs/conf/conf.php" \
+	"${output_dir}/htdocs/conf/conf.php.mysql" \
+	"${output_dir}/htdocs/conf/conf.php.old" \
+	"${output_dir}/htdocs/conf/conf.php.postgres"
 
 cp "${project_dir}/build/dolibarr/Dockerfile" "${output_dir}/Dockerfile"
 cp "${project_dir}/build/dolibarr/entrypoint" "${output_dir}/entrypoint"
 
 echo "Prepared Dolibarr source image context at ${output_dir}"
-

@@ -12,7 +12,6 @@ RUN apt-get update -y \
         git \
         perl \
         php-cli \
-        rsync \
         tar \
         unzip \
         zip \
