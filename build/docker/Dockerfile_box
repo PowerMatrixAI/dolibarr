@@ -3,6 +3,7 @@
 FROM php:8.2-apache-bookworm
 
 ARG DOLIBARR_VERSION=25.0.0-alpha
+ARG PHP_BUILD_JOBS=2
 
 LABEL org.opencontainers.image.title="Dolibarr" \
       org.opencontainers.image.version="${DOLIBARR_VERSION}" \
@@ -16,7 +17,7 @@ ENV PHP_INI_DATE_TIMEZONE=UTC \
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        libc-client-dev \
+        libc-client2007e-dev \
         libcurl4-openssl-dev \
         libfreetype6-dev \
         libicu-dev \
@@ -26,19 +27,17 @@ RUN apt-get update \
         libonig-dev \
         libpng-dev \
         libpq-dev \
+        libssl-dev \
         libxml2-dev \
         libzip-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-configure imap --with-kerberos --with-imap-ssl \
     && docker-php-ext-configure ldap --with-libdir=lib/$(gcc -dumpmachine)/ \
-    && docker-php-ext-install -j"$(nproc)" \
+    && docker-php-ext-install -j"${PHP_BUILD_JOBS}" \
         bcmath \
         calendar \
         curl \
-        gd \
-        imap \
         intl \
-        ldap \
         mbstring \
         mysqli \
         opcache \
@@ -49,6 +48,9 @@ RUN apt-get update \
         soap \
         xml \
         zip \
+    && docker-php-ext-install -j"${PHP_BUILD_JOBS}" gd \
+    && docker-php-ext-install -j"${PHP_BUILD_JOBS}" ldap \
+    && docker-php-ext-install -j"${PHP_BUILD_JOBS}" imap \
     && mv "${PHP_INI_DIR}/php.ini-production" "${PHP_INI_DIR}/php.ini" \
     && rm -rf /var/lib/apt/lists/*
 

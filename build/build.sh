@@ -16,6 +16,7 @@ fi
 
 environment="${DOLIBARR_ENVIRONMENT:-prod}"
 version="${DOLIBARR_VERSION:-${version_major}.${version_minor}}"
+php_build_jobs="${PHP_BUILD_JOBS:-2}"
 registry="${DOCKER_REGISTRY:-}"
 repository="${DOCKER_REPOSITORY:-kol-base}"
 output_dir="${OUTPUT_DIR:-${project_dir}/output}"
@@ -107,6 +108,11 @@ if [[ ! "${version}" =~ ^[A-Za-z0-9_.-]+$ ]]; then
 	exit 1
 fi
 
+if [[ ! "${php_build_jobs}" =~ ^[1-9][0-9]*$ ]]; then
+	echo "Invalid PHP_BUILD_JOBS: ${php_build_jobs}" >&2
+	exit 1
+fi
+
 if [ -n "${registry}" ]; then
 	image_root="${registry%/}/${repository#/}"
 else
@@ -138,6 +144,7 @@ fi
 echo "Building package image: ${package_image}"
 docker build "${build_options[@]}" \
 	--build-arg "DOLIBARR_ENVIRONMENT=${environment}" \
+	--build-arg "PHP_BUILD_JOBS=${php_build_jobs}" \
 	--build-arg "DOLIBARR_VERSION=${version}" \
 	-f "${docker_dir}/Dockerfile_package" \
 	-t "${package_image}" \
@@ -157,6 +164,7 @@ trap - EXIT
 
 echo "Building runtime image: ${box_image}"
 docker build "${build_options[@]}" \
+	--build-arg "PHP_BUILD_JOBS=${php_build_jobs}" \
 	--build-arg "DOLIBARR_VERSION=${version}" \
 	-f "${docker_dir}/Dockerfile_box" \
 	-t "${box_image}" \
