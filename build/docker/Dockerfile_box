@@ -50,7 +50,6 @@ RUN apt-get update -y \
         pdo_sqlite \
         pgsql \
         soap \
-        sqlite3 \
         zip \
     && mv "${PHP_INI_DIR}/php.ini-production" "${PHP_INI_DIR}/php.ini" \
     && a2enmod expires headers rewrite \
