@@ -20,7 +20,6 @@ usage() {
 	echo "  -m MODULE       Build module (only dolibarr is available)"
 	echo "  -e ENV          Build environment label (default: prod)"
 	echo "  -v VERSION      Application image tag (default: v1.0.0)"
-	echo "  -p              Push the application image"
 	echo "  -h              Display this help message"
 	echo
 	echo "Environment variables:"
@@ -39,9 +38,6 @@ while getopts ":m:e:v:ph" opt; do
 		v)
 			version="${OPTARG}"
 			;;
-		p)
-			push=1
-			;;
 		h)
 			usage
 			;;
@@ -57,7 +53,6 @@ while getopts ":m:e:v:ph" opt; do
 done
 
 version="${version:-v1.0.0}"
-push="${push:-0}"
 
 if [ "${module}" != "dolibarr" ] && [ "${module}" != "all" ]; then
 	echo "Only the dolibarr module is available" >&2
@@ -106,9 +101,7 @@ echo "Preparing application source with package environment"
 docker exec "${CONTAINER_NAME}" \
 	/bin/bash -c "bash ${CONTAINER_DIR}/build/${module}/build.sh ${environment}"
 
-if [ "${push}" -eq 1 ]; then
-	docker login "${IMAGE%%/*}"
-fi
+docker login "${IMAGE%%/*}"
 
 echo "Building application image: ${IMAGE}/${module}:${version}"
 docker build \
@@ -116,9 +109,7 @@ docker build \
 	-f "${project_dir}/output/${module}/Dockerfile" \
 	"${project_dir}/output/${module}"
 
-if [ "${push}" -eq 1 ]; then
-	docker push "${IMAGE}/${module}:${version}"
-fi
+docker push "${IMAGE}/${module}:${version}"
 
 echo
 echo "Application image: ${IMAGE}/${module}:${version}"
