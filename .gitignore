@@ -42,6 +42,9 @@ htdocs/install/install.forced.php
 htdocs/.well-known/apple-developer-merchantid-domain-association
 /output/
 
+# Local application configuration, not committed
+/config/*/config.php
+
 # For module authors
 /factory/
 

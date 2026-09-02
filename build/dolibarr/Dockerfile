@@ -5,6 +5,8 @@ FROM hkccr.ccs.tencentyun.com/kol-base/box:v1.0.2
 WORKDIR /var/www/html
 
 COPY htdocs/ /var/www/html/
+COPY config.php /var/www/html/conf/conf.php
+COPY php.ini /usr/local/etc/php/conf.d/dolibarr.ini
 COPY entrypoint /usr/local/bin/dolibarr-entrypoint
 
 RUN mkdir -p /var/www/html/conf /var/www/documents \

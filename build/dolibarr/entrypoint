@@ -21,18 +21,10 @@ chgrp -hR www-data /var/www/html
 chmod g+rwx /var/www/html/conf
 chown -R www-data:www-data /var/www/documents
 
-cat <<EOF > "${PHP_INI_DIR}/conf.d/dolibarr-php.ini"
-date.timezone = ${PHP_INI_DATE_TIMEZONE:-UTC}
-memory_limit = ${PHP_INI_MEMORY_LIMIT:-256M}
-upload_max_filesize = ${PHP_INI_UPLOAD_MAX_FILESIZE:-32M}
-post_max_size = ${PHP_INI_POST_MAX_SIZE:-8M}
-allow_url_fopen = ${PHP_INI_ALLOW_URL_FOPEN:-0}
-EOF
-
-if [ ! -e /var/www/html/install/install.forced.php ] \
+if [ "${DOLI_AUTO_INSTALL:-0}" = "1" ] \
+	&& [ ! -e /var/www/html/install/install.forced.php ] \
 	&& [ -e /var/www/html/install/install.forced.sample.php ]; then
 	cp /var/www/html/install/install.forced.sample.php /var/www/html/install/install.forced.php
 fi
 
 exec "$@"
-
