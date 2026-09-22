@@ -290,6 +290,18 @@ class modAi extends DolibarrModules
 		/* END MODULEBUILDER TOPMENU */
 
 		/* BEGIN MODULEBUILDER LEFTMENU AI */
+		$this->menu[$r++] = array(
+			'fk_menu' => 'fk_mainmenu=home,fk_leftmenu=home',
+			'type' => 'left',
+			'titre' => 'AIDashboard',
+			'url' => '/ai/dashboard.php?mainmenu=home&leftmenu=home',
+			'langs' => 'main',
+			'position' => 5,
+			'enabled' => 'isModEnabled("ai") && preg_match(\'/^(home|all)/\', $leftmenu)',
+			'perms' => '$user->hasRight("ai", "assistant", "use")',
+			'target' => '',
+			'user' => 0,
+		);
 		/* END MODULEBUILDER LEFTMENU AI */
 
 		/* BEGIN MODULEBUILDER LEFTMENU AVAILABILITIES

@@ -548,3 +548,16 @@ $dolibarr_cron_allow_cli='0';
 //##############################
 // External modules
 //##############################
+
+// Hermes AI dashboard (optional)
+// =============================
+// The dashboard sends business questions to an OpenAI-compatible Hermes endpoint.
+// Keep real credentials in the deployed conf.php only; never commit them.
+// $dolibarr_hermes_endpoint='http://127.0.0.1:8000/v1/chat/completions';
+// $dolibarr_hermes_api_key='';
+// $dolibarr_hermes_model='hermes';
+// $dolibarr_hermes_timeout=120;
+// $dolibarr_hermes_system_prompt='';
+// Set to 1 only when the endpoint is intentionally private/local and the
+// deployment policy allows it. Keep API keys and database credentials secret.
+// $dolibarr_ai_allow_local_endpoints=0;
