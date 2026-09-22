@@ -1,0 +1,1127 @@
+﻿table_name	index_name	index_type	unique	columns	source_file	status	notes
+llx_accounting_account	idx_accounting_account_account_parent	INDEX	N	account_parent	htdocs/install/mysql/tables/llx_accounting_account.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_account	idx_accounting_account_fk_pcg_version	INDEX	N	fk_pcg_version	htdocs/install/mysql/tables/llx_accounting_account.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_account	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_accounting_account.sql	启用	主键在建表文件中定义
+llx_accounting_account	uk_accounting_account	INDEX	Y	account_number, entity, fk_pcg_version	htdocs/install/mysql/tables/llx_accounting_account.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_analytic_account	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_accounting_analytic_account-accounting.sql	启用	主键在建表文件中定义
+llx_accounting_analytic_account	uk_accounting_analytic_account	INDEX	Y	code, entity	htdocs/install/mysql/tables/llx_accounting_analytic_account-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_analytic_axis	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_accounting_analytic_axis-accounting.sql	启用	主键在建表文件中定义
+llx_accounting_analytic_axis	uk_accounting_analytic_axis	INDEX	Y	code, entity	htdocs/install/mysql/tables/llx_accounting_analytic_axis-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_analytic_distribution	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_accounting_analytic_distribution-accounting.sql	启用	主键在建表文件中定义
+llx_accounting_balance_snapshot	idx_accounting_balance_snapshot_account	INDEX	N	entity, fk_fiscalyear, account_number, debit, credit	htdocs/install/mysql/tables/llx_accounting_balance_snapshot-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_balance_snapshot	idx_accounting_balance_snapshot_subaccount	INDEX	N	entity, fk_fiscalyear, subledger_account, debit, credit	htdocs/install/mysql/tables/llx_accounting_balance_snapshot-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_balance_snapshot	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_accounting_balance_snapshot-accounting.sql	启用	主键在建表文件中定义
+llx_accounting_balance_snapshot	uk_accounting_balance_snapshot	INDEX	Y	entity, fk_fiscalyear, account_number, subledger_account	htdocs/install/mysql/tables/llx_accounting_balance_snapshot-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_bookkeeping_piece	idx_accounting_bookkeeping_piece_fk_user_author	INDEX	N	fk_user_author	htdocs/install/mysql/tables/llx_accounting_bookkeeping_piece-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_bookkeeping_piece	idx_accounting_bookkeeping_piece_fk_user_closing	INDEX	N	fk_user_closing	htdocs/install/mysql/tables/llx_accounting_bookkeeping_piece-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_bookkeeping_piece	idx_accounting_bookkeeping_piece_fk_user_modif	INDEX	N	fk_user_modif	htdocs/install/mysql/tables/llx_accounting_bookkeeping_piece-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_bookkeeping_piece	idx_accounting_bookkeeping_piece_fk_user_valid	INDEX	N	fk_user_valid	htdocs/install/mysql/tables/llx_accounting_bookkeeping_piece-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_bookkeeping_piece	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_accounting_bookkeeping_piece-accounting.sql	启用	主键在建表文件中定义
+llx_accounting_bookkeeping_piece	uk_accounting_bookkeeping_piece_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_accounting_bookkeeping_piece-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_bookkeeping_tmp	idx_accounting_bookkeeping_tmp_code_journal	INDEX	N	code_journal	htdocs/install/mysql/tables/llx_accounting_bookkeeping_tmp-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_bookkeeping_tmp	idx_accounting_bookkeeping_tmp_doc_date	INDEX	N	doc_date	htdocs/install/mysql/tables/llx_accounting_bookkeeping_tmp-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_bookkeeping_tmp	idx_accounting_bookkeeping_tmp_fk_docdet	INDEX	N	fk_docdet	htdocs/install/mysql/tables/llx_accounting_bookkeeping_tmp-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_bookkeeping_tmp	idx_accounting_bookkeeping_tmp_numero_compte	INDEX	N	numero_compte	htdocs/install/mysql/tables/llx_accounting_bookkeeping_tmp-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_bookkeeping_tmp	idx_accounting_bookkeeping_tmp_ref	INDEX	N	ref	htdocs/install/mysql/tables/llx_accounting_bookkeeping_tmp-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_bookkeeping_tmp	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_accounting_bookkeeping_tmp-accounting.sql	启用	主键在建表文件中定义
+llx_accounting_bookkeeping	idx_accounting_bookkeeping_code_journal	INDEX	N	code_journal, entity	htdocs/install/mysql/tables/llx_accounting_bookkeeping-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_bookkeeping	idx_accounting_bookkeeping_doc_date	INDEX	N	doc_date	htdocs/install/mysql/tables/llx_accounting_bookkeeping-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_bookkeeping	idx_accounting_bookkeeping_fk_doc	INDEX	N	fk_doc	htdocs/install/mysql/tables/llx_accounting_bookkeeping-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_bookkeeping	idx_accounting_bookkeeping_fk_docdet	INDEX	N	fk_docdet	htdocs/install/mysql/tables/llx_accounting_bookkeeping-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_bookkeeping	idx_accounting_bookkeeping_numero_compte	INDEX	N	numero_compte, entity	htdocs/install/mysql/tables/llx_accounting_bookkeeping-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_bookkeeping	idx_accounting_bookkeeping_piece_num	INDEX	N	piece_num, entity	htdocs/install/mysql/tables/llx_accounting_bookkeeping-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_bookkeeping	idx_accounting_bookkeeping_ref	INDEX	N	ref	htdocs/install/mysql/tables/llx_accounting_bookkeeping-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_bookkeeping	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_accounting_bookkeeping-accounting.sql	启用	主键在建表文件中定义
+llx_accounting_category_account	idx_accounting_category_account_fk_accounting_account	INDEX	N	fk_accounting_account	htdocs/install/mysql/tables/llx_accounting_category_account-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_category_account	idx_accounting_category_account_fk_accounting_category	INDEX	N	fk_accounting_category	htdocs/install/mysql/tables/llx_accounting_category_account-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_category_account	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_accounting_category_account-accounting.sql	启用	主键在建表文件中定义
+llx_accounting_category_account	uk_accounting_category_account	INDEX	Y	fk_accounting_category, fk_accounting_account	htdocs/install/mysql/tables/llx_accounting_category_account-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_fiscalyear	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_accounting_fiscalyear.sql	启用	主键在建表文件中定义
+llx_accounting_groups_account	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_accounting_groups_account.sql	启用	主键在建表文件中定义
+llx_accounting_journal	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_accounting_journal.sql	启用	主键在建表文件中定义
+llx_accounting_journal	uk_accounting_journal_code	INDEX	Y	code, entity	htdocs/install/mysql/tables/llx_accounting_journal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_system	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_accounting_system.sql	启用	主键在建表文件中定义
+llx_accounting_system	uk_accounting_system_pcg_version	INDEX	Y	pcg_version	htdocs/install/mysql/tables/llx_accounting_system.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_transaction_template_det	idx_accounting_transaction_template_det_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_accounting_transaction_template_det-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_transaction_template_det	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_accounting_transaction_template_det-accounting.sql	启用	主键在建表文件中定义
+llx_accounting_transaction_template	idx_accounting_transaction_template_code	INDEX	N	code	htdocs/install/mysql/tables/llx_accounting_transaction_template-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_transaction_template	idx_accounting_transaction_template_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_accounting_transaction_template-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_accounting_transaction_template	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_accounting_transaction_template-accounting.sql	启用	主键在建表文件中定义
+llx_accounting_transaction_template	uk_accounting_transaction_template_code	INDEX	Y	code, entity	htdocs/install/mysql/tables/llx_accounting_transaction_template-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_actioncomm_extrafields.sql	启用	主键在建表文件中定义
+llx_actioncomm_extrafields	uk_actioncomm_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_actioncomm_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm_reminder	idx_actioncomm_reminder_dateremind	INDEX	N	dateremind	htdocs/install/mysql/tables/llx_actioncomm_reminder.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm_reminder	idx_actioncomm_reminder_fk_contact	INDEX	N	fk_contact	htdocs/install/mysql/tables/llx_actioncomm_reminder.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm_reminder	idx_actioncomm_reminder_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_actioncomm_reminder.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm_reminder	idx_actioncomm_reminder_fk_user	INDEX	N	fk_user	htdocs/install/mysql/tables/llx_actioncomm_reminder.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm_reminder	idx_actioncomm_reminder_status	INDEX	N	status	htdocs/install/mysql/tables/llx_actioncomm_reminder.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm_reminder	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_actioncomm_reminder.sql	启用	主键在建表文件中定义
+llx_actioncomm_reminder	uk_actioncomm_reminder_unique	INDEX	Y	fk_actioncomm, fk_user, fk_soc, fk_contact, typeremind, offsetvalue, offsetunit	htdocs/install/mysql/tables/llx_actioncomm_reminder.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm_resources	idx_actioncomm_resources_fk_element	INDEX	N	fk_element	htdocs/install/mysql/tables/llx_actioncomm_resources.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm_resources	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_actioncomm_resources.sql	启用	主键在建表文件中定义
+llx_actioncomm_resources	uk_actioncomm_resources	INDEX	Y	fk_actioncomm, element_type, fk_element	htdocs/install/mysql/tables/llx_actioncomm_resources.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm	idx_actioncomm_code	INDEX	N	code	htdocs/install/mysql/tables/llx_actioncomm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm	idx_actioncomm_datep	INDEX	N	datep	htdocs/install/mysql/tables/llx_actioncomm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm	idx_actioncomm_datep2	INDEX	N	datep2	htdocs/install/mysql/tables/llx_actioncomm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm	idx_actioncomm_fk_contact	INDEX	N	fk_contact	htdocs/install/mysql/tables/llx_actioncomm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm	idx_actioncomm_fk_element	INDEX	N	fk_element	htdocs/install/mysql/tables/llx_actioncomm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm	idx_actioncomm_fk_project	INDEX	N	fk_project	htdocs/install/mysql/tables/llx_actioncomm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm	idx_actioncomm_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_actioncomm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm	idx_actioncomm_fk_user_action	INDEX	N	fk_user_action	htdocs/install/mysql/tables/llx_actioncomm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm	idx_actioncomm_max_participants	INDEX	N	max_participants	htdocs/install/mysql/tables/llx_actioncomm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm	idx_actioncomm_percent	INDEX	N	percent	htdocs/install/mysql/tables/llx_actioncomm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm	idx_actioncomm_recurid	INDEX	N	recurid	htdocs/install/mysql/tables/llx_actioncomm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm	idx_actioncomm_ref	INDEX	N	ref, entity	htdocs/install/mysql/tables/llx_actioncomm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm	idx_actioncomm_ref_ext	INDEX	N	ref_ext	htdocs/install/mysql/tables/llx_actioncomm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_actioncomm	PRIMARY	PRIMARY KEY	Y	id	htdocs/install/mysql/tables/llx_actioncomm.sql	启用	主键在建表文件中定义
+llx_adherent_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_adherent_extrafields.sql	启用	主键在建表文件中定义
+llx_adherent_extrafields	uk_adherent_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_adherent_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_adherent_type_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_adherent_type_extrafields.sql	启用	主键在建表文件中定义
+llx_adherent_type_extrafields	uk_adherent_type_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_adherent_type_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_adherent_type_lang	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_adherent_type_lang.sql	启用	主键在建表文件中定义
+llx_adherent_type	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_adherent_type.sql	启用	主键在建表文件中定义
+llx_adherent_type	uk_adherent_type_libelle	INDEX	Y	libelle, entity	htdocs/install/mysql/tables/llx_adherent_type.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_adherent	idx_adherent_fk_adherent_type	INDEX	N	fk_adherent_type	htdocs/install/mysql/tables/llx_adherent.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_adherent	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_adherent.sql	启用	主键在建表文件中定义
+llx_adherent	uk_adherent_fk_soc	INDEX	Y	fk_soc	htdocs/install/mysql/tables/llx_adherent.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_adherent	uk_adherent_login	INDEX	Y	login, entity	htdocs/install/mysql/tables/llx_adherent.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_adherent	uk_adherent_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_adherent.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ai_request_log	idx_ai_request_log_date	INDEX	N	date_request	htdocs/install/mysql/tables/llx_ai_request_log-ai.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ai_request_log	idx_ai_request_log_entity	INDEX	N	entity	htdocs/install/mysql/tables/llx_ai_request_log-ai.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ai_request_log	idx_ai_request_log_fk_actioncomm	INDEX	N	fk_actioncomm	htdocs/install/mysql/tables/llx_ai_request_log-ai.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ai_request_log	idx_ai_request_log_input_hash	INDEX	N	input_hash	htdocs/install/mysql/tables/llx_ai_request_log-ai.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ai_request_log	idx_ai_request_log_security_hash	INDEX	N	security_hash	htdocs/install/mysql/tables/llx_ai_request_log-ai.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ai_request_log	idx_ai_request_log_status	INDEX	N	status	htdocs/install/mysql/tables/llx_ai_request_log-ai.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ai_request_log	idx_ai_request_log_user	INDEX	N	fk_user	htdocs/install/mysql/tables/llx_ai_request_log-ai.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ai_request_log	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_ai_request_log-ai.sql	启用	主键在建表文件中定义
+llx_asset_accountancy_codes_economic	idx_asset_ace_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_asset_accountancy_codes_economic-asset.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_asset_accountancy_codes_economic	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_asset_accountancy_codes_economic-asset.sql	启用	主键在建表文件中定义
+llx_asset_accountancy_codes_fiscal	idx_asset_acf_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_asset_accountancy_codes_fiscal-asset.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_asset_accountancy_codes_fiscal	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_asset_accountancy_codes_fiscal-asset.sql	启用	主键在建表文件中定义
+llx_asset_depreciation_options_economic	idx_asset_doe_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_asset_depreciation_options_economic-asset.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_asset_depreciation_options_economic	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_asset_depreciation_options_economic-asset.sql	启用	主键在建表文件中定义
+llx_asset_depreciation_options_fiscal	idx_asset_dof_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_asset_depreciation_options_fiscal-asset.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_asset_depreciation_options_fiscal	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_asset_depreciation_options_fiscal-asset.sql	启用	主键在建表文件中定义
+llx_asset_depreciation	idx_asset_depreciation_depreciation_mode	INDEX	N	depreciation_mode	htdocs/install/mysql/tables/llx_asset_depreciation-asset.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_asset_depreciation	idx_asset_depreciation_fk_asset	INDEX	N	fk_asset	htdocs/install/mysql/tables/llx_asset_depreciation-asset.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_asset_depreciation	idx_asset_depreciation_ref	INDEX	N	ref	htdocs/install/mysql/tables/llx_asset_depreciation-asset.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_asset_depreciation	idx_asset_depreciation_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_asset_depreciation-asset.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_asset_depreciation	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_asset_depreciation-asset.sql	启用	主键在建表文件中定义
+llx_asset_extrafields	idx_asset_extrafields	INDEX	N	fk_object	htdocs/install/mysql/tables/llx_asset_extrafields-asset.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_asset_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_asset_extrafields-asset.sql	启用	主键在建表文件中定义
+llx_asset_model_extrafields	idx_asset_model_extrafields	INDEX	N	fk_object	htdocs/install/mysql/tables/llx_asset_model_extrafields-asset.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_asset_model_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_asset_model_extrafields-asset.sql	启用	主键在建表文件中定义
+llx_asset_model	idx_asset_model_entity	INDEX	N	entity	htdocs/install/mysql/tables/llx_asset_model-asset.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_asset_model	idx_asset_model_pays	INDEX	N	fk_pays	htdocs/install/mysql/tables/llx_asset_model-asset.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_asset_model	idx_asset_model_ref	INDEX	N	ref	htdocs/install/mysql/tables/llx_asset_model-asset.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_asset_model	idx_asset_model_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_asset_model-asset.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_asset_model	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_asset_model-asset.sql	启用	主键在建表文件中定义
+llx_asset_model	uk_asset_model	INDEX	Y	entity, ref	htdocs/install/mysql/tables/llx_asset_model-asset.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_asset	idx_asset_fk_asset_model	INDEX	N	fk_asset_model	htdocs/install/mysql/tables/llx_asset-asset.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_asset	idx_asset_fk_disposal_type	INDEX	N	fk_disposal_type	htdocs/install/mysql/tables/llx_asset-asset.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_asset	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_asset-asset.sql	启用	主键在建表文件中定义
+llx_bank_account_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_bank_account_extrafields.sql	启用	主键在建表文件中定义
+llx_bank_account_extrafields	uk_bank_account_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_bank_account_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bank_account	idx_fk_accountancy_journal	INDEX	N	fk_accountancy_journal	htdocs/install/mysql/tables/llx_bank_account.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bank_account	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_bank_account.sql	启用	主键在建表文件中定义
+llx_bank_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_bank_extrafields.sql	启用	主键在建表文件中定义
+llx_bank_extrafields	uk_bank_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_bank_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bank_import	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_bank_import-bank.sql	启用	主键在建表文件中定义
+llx_bank_record_link	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_bank_record_link-bank.sql	启用	主键在建表文件中定义
+llx_bank_record	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_bank_record-bank.sql	启用	主键在建表文件中定义
+llx_bank_url	idx_bank_url_url_id	INDEX	N	url_id	htdocs/install/mysql/tables/llx_bank_url.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bank_url	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_bank_url.sql	启用	主键在建表文件中定义
+llx_bank_url	uk_bank_url	INDEX	Y	fk_bank, url_id, type	htdocs/install/mysql/tables/llx_bank_url.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bank	idx_bank_dateo	INDEX	N	dateo	htdocs/install/mysql/tables/llx_bank.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bank	idx_bank_datev	INDEX	N	datev	htdocs/install/mysql/tables/llx_bank.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bank	idx_bank_fk_account	INDEX	N	fk_account	htdocs/install/mysql/tables/llx_bank.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bank	idx_bank_num_releve	INDEX	N	num_releve	htdocs/install/mysql/tables/llx_bank.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bank	idx_bank_rappro	INDEX	N	rappro	htdocs/install/mysql/tables/llx_bank.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bank	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_bank.sql	启用	主键在建表文件中定义
+llx_blockedlog	entity_rowid	INDEX	N	entity, rowid	htdocs/install/mysql/tables/llx_blockedlog.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_blockedlog	fk_object_element	INDEX	N	fk_object, element	htdocs/install/mysql/tables/llx_blockedlog.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_blockedlog	fk_user	INDEX	N	fk_user	htdocs/install/mysql/tables/llx_blockedlog.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_blockedlog	idx_entity_action_certified	INDEX	N	entity, action	htdocs/install/mysql/tables/llx_blockedlog.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_blockedlog	idx_ref_object	INDEX	N	ref_object	htdocs/install/mysql/tables/llx_blockedlog.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_blockedlog	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_blockedlog.sql	启用	主键在建表文件中定义
+llx_blockedlog	signature	INDEX	N	signature	htdocs/install/mysql/tables/llx_blockedlog.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_blockedlog	signature_backward	INDEX	N	signature_backward	htdocs/install/mysql/tables/llx_blockedlog.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bom_bom_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_bom_bom_extrafields-bom.sql	启用	主键在建表文件中定义
+llx_bom_bom_extrafields	uk_bom_bom_extrafields_fk_object	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_bom_bom_extrafields-bom.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bom_bom	idx_bom_bom_fk_product	INDEX	N	fk_product	htdocs/install/mysql/tables/llx_bom_bom-bom.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bom_bom	idx_bom_bom_ref	INDEX	N	ref	htdocs/install/mysql/tables/llx_bom_bom-bom.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bom_bom	idx_bom_bom_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_bom_bom-bom.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bom_bom	idx_bom_bom_status	INDEX	N	status	htdocs/install/mysql/tables/llx_bom_bom-bom.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bom_bom	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_bom_bom-bom.sql	启用	主键在建表文件中定义
+llx_bom_bom	uk_bom_bom_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_bom_bom-bom.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bom_bomline_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_bom_bomline_extrafields-bom.sql	启用	主键在建表文件中定义
+llx_bom_bomline	idx_bom_bomline_fk_bom	INDEX	N	fk_bom	htdocs/install/mysql/tables/llx_bom_bomline-bom.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bom_bomline	idx_bom_bomline_fk_product	INDEX	N	fk_product	htdocs/install/mysql/tables/llx_bom_bomline-bom.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bom_bomline	idx_bom_bomline_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_bom_bomline-bom.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bom_bomline	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_bom_bomline-bom.sql	启用	主键在建表文件中定义
+llx_bookcal_availabilities_extrafields	idx_availabilities_fk_object	INDEX	N	fk_object	htdocs/install/mysql/tables/llx_bookcal_availabilities_extrafields-bookcal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bookcal_availabilities_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_bookcal_availabilities_extrafields-bookcal.sql	启用	主键在建表文件中定义
+llx_bookcal_availabilities	idx_bookcal_availabilities_fk_bookcal_calendar	INDEX	N	fk_bookcal_calendar	htdocs/install/mysql/tables/llx_bookcal_availabilities-bookcal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bookcal_availabilities	idx_bookcal_availabilities_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_bookcal_availabilities-bookcal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bookcal_availabilities	idx_bookcal_availabilities_status	INDEX	N	status	htdocs/install/mysql/tables/llx_bookcal_availabilities-bookcal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bookcal_availabilities	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_bookcal_availabilities-bookcal.sql	启用	主键在建表文件中定义
+llx_bookcal_calendar_extrafields	idx_calendar_fk_object	INDEX	N	fk_object	htdocs/install/mysql/tables/llx_bookcal_calendar_extrafields-bookcal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bookcal_calendar_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_bookcal_calendar_extrafields-bookcal.sql	启用	主键在建表文件中定义
+llx_bookcal_calendar	idx_bookcal_calendar_fk_project	INDEX	N	fk_project	htdocs/install/mysql/tables/llx_bookcal_calendar-bookcal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bookcal_calendar	idx_bookcal_calendar_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_bookcal_calendar-bookcal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bookcal_calendar	idx_bookcal_calendar_ref	INDEX	N	ref	htdocs/install/mysql/tables/llx_bookcal_calendar-bookcal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bookcal_calendar	idx_bookcal_calendar_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_bookcal_calendar-bookcal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bookcal_calendar	idx_bookcal_calendar_status	INDEX	N	status	htdocs/install/mysql/tables/llx_bookcal_calendar-bookcal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_bookcal_calendar	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_bookcal_calendar-bookcal.sql	启用	主键在建表文件中定义
+llx_bookmark	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_bookmark.sql	启用	主键在建表文件中定义
+llx_bordereau_cheque	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_bordereau_cheque.sql	启用	主键在建表文件中定义
+llx_bordereau_cheque	uk_bordereau_cheque	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_bordereau_cheque.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_boxes_def	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_boxes_def.sql	启用	主键在建表文件中定义
+llx_boxes_def	uk_boxes_def	INDEX	Y	file, entity, note	htdocs/install/mysql/tables/llx_boxes_def.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_boxes	idx_boxes_boxid	INDEX	N	box_id	htdocs/install/mysql/tables/llx_boxes.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_boxes	idx_boxes_fk_user	INDEX	N	fk_user	htdocs/install/mysql/tables/llx_boxes.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_boxes	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_boxes.sql	启用	主键在建表文件中定义
+llx_boxes	uk_boxes	INDEX	Y	entity, box_id, position, fk_user	htdocs/install/mysql/tables/llx_boxes.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_budget_lines	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_budget_lines-budget.sql	启用	主键在建表文件中定义
+llx_budget_lines	uk_budget_lines	INDEX	Y	fk_budget, fk_project_ids	htdocs/install/mysql/tables/llx_budget_lines-budget.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_budget	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_budget-budget.sql	启用	主键在建表文件中定义
+llx_c_accounting_category	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_accounting_category-accounting.sql	启用	主键在建表文件中定义
+llx_c_accounting_category	uk_c_accounting_category	INDEX	Y	code, entity, fk_report	htdocs/install/mysql/tables/llx_c_accounting_category-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_accounting_report	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_accounting_report-accounting.sql	启用	主键在建表文件中定义
+llx_c_accounting_report	uk_c_accounting_report	INDEX	Y	code, entity	htdocs/install/mysql/tables/llx_c_accounting_report-accounting.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_action_trigger	idx_action_trigger_rang	INDEX	N	rang	htdocs/install/mysql/tables/llx_c_action_trigger.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_action_trigger	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_action_trigger.sql	启用	主键在建表文件中定义
+llx_c_action_trigger	uk_action_trigger_code	INDEX	Y	code	htdocs/install/mysql/tables/llx_c_action_trigger.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_actioncomm	PRIMARY	PRIMARY KEY	Y	id	htdocs/install/mysql/tables/llx_c_actioncomm.sql	启用	主键在建表文件中定义
+llx_c_actioncomm	uk_c_actioncomm	INDEX	Y	code	htdocs/install/mysql/tables/llx_c_actioncomm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_asset_disposal_type	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_asset_disposal_type-asset.sql	启用	主键在建表文件中定义
+llx_c_asset_disposal_type	uk_c_asset_disposal_type	INDEX	Y	code, entity	htdocs/install/mysql/tables/llx_c_asset_disposal_type-asset.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_availability	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_availability.sql	启用	主键在建表文件中定义
+llx_c_availability	uk_c_availability	INDEX	Y	code	htdocs/install/mysql/tables/llx_c_availability.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_barcode_type	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_barcode_type.sql	启用	主键在建表文件中定义
+llx_c_barcode_type	uk_c_barcode_type	INDEX	Y	code, entity	htdocs/install/mysql/tables/llx_c_barcode_type.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_chargesociales	PRIMARY	PRIMARY KEY	Y	id	htdocs/install/mysql/tables/llx_c_chargesociales.sql	启用	主键在建表文件中定义
+llx_c_civility	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_civility.sql	启用	主键在建表文件中定义
+llx_c_civility	uk_c_civility	INDEX	Y	code	htdocs/install/mysql/tables/llx_c_civility.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_country	idx_c_country_code	INDEX	Y	code	htdocs/install/mysql/tables/llx_c_country.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_country	idx_c_country_code_iso	INDEX	Y	code_iso	htdocs/install/mysql/tables/llx_c_country.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_country	idx_c_country_label	INDEX	Y	label	htdocs/install/mysql/tables/llx_c_country.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_country	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_country.sql	启用	主键在建表文件中定义
+llx_c_currencies	PRIMARY	PRIMARY KEY	Y	code_iso	htdocs/install/mysql/tables/llx_c_currencies.sql	启用	主键在建表文件中定义
+llx_c_departements	idx_departements_fk_region	INDEX	N	fk_region	htdocs/install/mysql/tables/llx_c_departements.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_departements	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_departements.sql	启用	主键在建表文件中定义
+llx_c_ecotaxe	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_ecotaxe.sql	启用	主键在建表文件中定义
+llx_c_ecotaxe	uk_c_ecotaxe	INDEX	Y	code	htdocs/install/mysql/tables/llx_c_ecotaxe.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_effectif	PRIMARY	PRIMARY KEY	Y	id	htdocs/install/mysql/tables/llx_c_effectif.sql	启用	主键在建表文件中定义
+llx_c_effectif	uk_c_effectif	INDEX	Y	code	htdocs/install/mysql/tables/llx_c_effectif.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_email_senderprofile	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_email_senderprofile.sql	启用	主键在建表文件中定义
+llx_c_email_senderprofile	uk_c_email_senderprofile	INDEX	Y	entity, label, email	htdocs/install/mysql/tables/llx_c_email_senderprofile.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_email_templates	idx_type	INDEX	N	type_template	htdocs/install/mysql/tables/llx_c_email_templates.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_email_templates	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_email_templates.sql	启用	主键在建表文件中定义
+llx_c_email_templates	uk_c_email_templates	INDEX	Y	entity, label, lang	htdocs/install/mysql/tables/llx_c_email_templates.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_exp_tax_cat	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_exp_tax_cat-expensereport.sql	启用	主键在建表文件中定义
+llx_c_exp_tax_range	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_exp_tax_range-expensereport.sql	启用	主键在建表文件中定义
+llx_c_field_list	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_field_list.sql	启用	主键在建表文件中定义
+llx_c_format_cards	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_format_cards.sql	启用	主键在建表文件中定义
+llx_c_forme_juridique	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_forme_juridique.sql	启用	主键在建表文件中定义
+llx_c_forme_juridique	uk_c_forme_juridique	INDEX	Y	code	htdocs/install/mysql/tables/llx_c_forme_juridique.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_holiday_types	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_holiday_types.sql	启用	主键在建表文件中定义
+llx_c_holiday_types	uk_c_holiday_types	INDEX	Y	entity, code	htdocs/install/mysql/tables/llx_c_holiday_types.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_hrm_department	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_hrm_department.sql	启用	主键在建表文件中定义
+llx_c_hrm_function	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_hrm_function.sql	启用	主键在建表文件中定义
+llx_c_hrm_public_holiday	PRIMARY	PRIMARY KEY	Y	id	htdocs/install/mysql/tables/llx_c_hrm_public_holiday.sql	启用	主键在建表文件中定义
+llx_c_hrm_public_holiday	uk_c_hrm_public_holiday	INDEX	Y	entity, code	htdocs/install/mysql/tables/llx_c_hrm_public_holiday.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_hrm_public_holiday	uk_c_hrm_public_holiday2	INDEX	Y	entity, fk_country, dayrule, day, month, year	htdocs/install/mysql/tables/llx_c_hrm_public_holiday.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_incoterms	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_incoterms.sql	启用	主键在建表文件中定义
+llx_c_incoterms	uk_c_incoterms	INDEX	Y	code	htdocs/install/mysql/tables/llx_c_incoterms.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_input_method	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_input_method.sql	启用	主键在建表文件中定义
+llx_c_input_method	uk_c_input_method	INDEX	Y	code	htdocs/install/mysql/tables/llx_c_input_method.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_input_reason	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_input_reason.sql	启用	主键在建表文件中定义
+llx_c_input_reason	uk_c_input_reason	INDEX	Y	code	htdocs/install/mysql/tables/llx_c_input_reason.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_invoice_subtype	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_invoice_subtype.sql	启用	主键在建表文件中定义
+llx_c_invoice_subtype	uk_c_invoice_subtype	INDEX	Y	entity, code, fk_country	htdocs/install/mysql/tables/llx_c_invoice_subtype.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_lead_status	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_lead_status.sql	启用	主键在建表文件中定义
+llx_c_lead_status	uk_c_lead_status_code	INDEX	Y	code	htdocs/install/mysql/tables/llx_c_lead_status.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_paiement	PRIMARY	PRIMARY KEY	Y	id	htdocs/install/mysql/tables/llx_c_paiement.sql	启用	主键在建表文件中定义
+llx_c_paiement	uk_c_paiement_code	INDEX	Y	entity, code	htdocs/install/mysql/tables/llx_c_paiement.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_paper_format	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_paper_format.sql	启用	主键在建表文件中定义
+llx_c_partnership_type	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_partnership_type-partnership.sql	启用	主键在建表文件中定义
+llx_c_partnership_type	uk_c_partnership_type	INDEX	Y	entity, code	htdocs/install/mysql/tables/llx_c_partnership_type-partnership.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_payment_term	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_payment_term.sql	启用	主键在建表文件中定义
+llx_c_payment_term	uk_c_payment_term_code	INDEX	Y	entity, code	htdocs/install/mysql/tables/llx_c_payment_term.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_price_expression	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_price_expression-dynamicprices.sql	启用	主键在建表文件中定义
+llx_c_price_global_variable_updater	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_price_global_variable_updater-dynamicprices.sql	启用	主键在建表文件中定义
+llx_c_price_global_variable	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_price_global_variable-dynamicprices.sql	启用	主键在建表文件中定义
+llx_c_product_nature	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_product_nature.sql	启用	主键在建表文件中定义
+llx_c_product_nature	uk_c_product_nature	INDEX	Y	code	htdocs/install/mysql/tables/llx_c_product_nature.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_product_thirdparty_relation_type	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_product_thirdparty_relation_type.sql	启用	主键在建表文件中定义
+llx_c_productbatch_qcstatus	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_productbatch_qcstatus-productbatch.sql	启用	主键在建表文件中定义
+llx_c_productbatch_qcstatus	uk_c_productbatch_qcstatus	INDEX	Y	code, entity	htdocs/install/mysql/tables/llx_c_productbatch_qcstatus-productbatch.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_propalst	PRIMARY	PRIMARY KEY	Y	id	htdocs/install/mysql/tables/llx_c_propalst.sql	启用	主键在建表文件中定义
+llx_c_propalst	uk_c_propalst	INDEX	Y	code	htdocs/install/mysql/tables/llx_c_propalst.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_prospectcontactlevel	PRIMARY	PRIMARY KEY	Y	code	htdocs/install/mysql/tables/llx_c_prospectcontactlevel.sql	启用	主键在建表文件中定义
+llx_c_prospectlevel	PRIMARY	PRIMARY KEY	Y	code	htdocs/install/mysql/tables/llx_c_prospectlevel.sql	启用	主键在建表文件中定义
+llx_c_recruitment_origin	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_recruitment_origin-recruitment.sql	启用	主键在建表文件中定义
+llx_c_regions	idx_c_regions_fk_pays	INDEX	N	fk_pays	htdocs/install/mysql/tables/llx_c_regions.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_regions	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_regions.sql	启用	主键在建表文件中定义
+llx_c_regions	uk_code_region	INDEX	Y	code_region	htdocs/install/mysql/tables/llx_c_departements.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_regions	uk_code_region	INDEX	Y	code_region	htdocs/install/mysql/tables/llx_c_regions.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_revenuestamp	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_revenuestamp.sql	启用	主键在建表文件中定义
+llx_c_shipment_mode	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_shipment_mode.sql	启用	主键在建表文件中定义
+llx_c_shipment_mode	uk_c_shipment_mode	INDEX	Y	code, entity	htdocs/install/mysql/tables/llx_c_shipment_mode.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_shipment_package_type	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_shipment_package_type.sql	启用	主键在建表文件中定义
+llx_c_socialnetworks	idx_c_socialnetworks_code_entity	INDEX	Y	entity, code	htdocs/install/mysql/tables/llx_c_socialnetworks.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_socialnetworks	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_socialnetworks.sql	启用	主键在建表文件中定义
+llx_c_stcomm	PRIMARY	PRIMARY KEY	Y	id	htdocs/install/mysql/tables/llx_c_stcomm.sql	启用	主键在建表文件中定义
+llx_c_stcomm	uk_c_stcomm	INDEX	Y	code	htdocs/install/mysql/tables/llx_c_stcomm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_stcommcontact	PRIMARY	PRIMARY KEY	Y	id	htdocs/install/mysql/tables/llx_c_stcommcontact.sql	启用	主键在建表文件中定义
+llx_c_stcommcontact	uk_c_stcommcontact	INDEX	Y	code	htdocs/install/mysql/tables/llx_c_stcommcontact.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_subtotals_texts	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_subtotals_texts-subtotals.sql	启用	主键在建表文件中定义
+llx_c_subtotals_texts	uk_c_subtotals_texts_code_entity	INDEX	Y	entity, code	htdocs/install/mysql/tables/llx_c_subtotals_texts-subtotals.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_subtotals_titles	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_subtotals_titles-subtotals.sql	启用	主键在建表文件中定义
+llx_c_subtotals_titles	uk_c_subtotals_titles_code_entity	INDEX	Y	entity, code	htdocs/install/mysql/tables/llx_c_subtotals_titles-subtotals.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_ticket_category	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_ticket_category-ticket.sql	启用	主键在建表文件中定义
+llx_c_ticket_category	uk_code	INDEX	Y	code, entity	htdocs/install/mysql/tables/llx_c_ticket_category-ticket.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_ticket_resolution	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_ticket_resolution-ticket.sql	启用	主键在建表文件中定义
+llx_c_ticket_resolution	uk_code	INDEX	Y	code, entity	htdocs/install/mysql/tables/llx_c_ticket_resolution-ticket.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_ticket_severity	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_ticket_severity-ticket.sql	启用	主键在建表文件中定义
+llx_c_ticket_severity	uk_code	INDEX	Y	code, entity	htdocs/install/mysql/tables/llx_c_ticket_severity-ticket.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_ticket_type	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_ticket_type-ticket.sql	启用	主键在建表文件中定义
+llx_c_ticket_type	uk_code	INDEX	Y	code, entity	htdocs/install/mysql/tables/llx_c_ticket_type-ticket.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_transport_mode	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_transport_mode.sql	启用	主键在建表文件中定义
+llx_c_transport_mode	uk_c_transport_mode	INDEX	Y	code, entity	htdocs/install/mysql/tables/llx_c_transport_mode.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_tva	idx_tva_fk_department_buyer	INDEX	N	fk_department_buyer	htdocs/install/mysql/tables/llx_c_tva.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_tva	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_tva.sql	启用	主键在建表文件中定义
+llx_c_tva	uk_c_tva_id	INDEX	Y	entity, fk_pays, code, taux, recuperableonly	htdocs/install/mysql/tables/llx_c_tva.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_type_contact	idx_c_type_contact_code	INDEX	N	code	htdocs/install/mysql/tables/llx_c_type_contact.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_type_contact	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_type_contact.sql	启用	主键在建表文件中定义
+llx_c_type_contact	uk_c_type_contact_id	INDEX	Y	element, source, code	htdocs/install/mysql/tables/llx_c_type_contact.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_type_container	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_type_container-website.sql	启用	主键在建表文件中定义
+llx_c_type_container	uk_c_type_container_id	INDEX	Y	code, entity	htdocs/install/mysql/tables/llx_c_type_container-website.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_type_fees	PRIMARY	PRIMARY KEY	Y	id	htdocs/install/mysql/tables/llx_c_type_fees.sql	启用	主键在建表文件中定义
+llx_c_type_fees	uk_c_type_fees	INDEX	Y	code	htdocs/install/mysql/tables/llx_c_type_fees.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_type_resource	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_type_resource.sql	启用	主键在建表文件中定义
+llx_c_type_resource	uk_c_type_resource_id	INDEX	Y	label, code	htdocs/install/mysql/tables/llx_c_type_resource.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_typent	PRIMARY	PRIMARY KEY	Y	id	htdocs/install/mysql/tables/llx_c_typent.sql	启用	主键在建表文件中定义
+llx_c_typent	uk_c_typent	INDEX	Y	code	htdocs/install/mysql/tables/llx_c_typent.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_units	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_units.sql	启用	主键在建表文件中定义
+llx_c_ziptown	idx_c_ziptown_fk_county	INDEX	N	fk_county	htdocs/install/mysql/tables/llx_c_ziptown.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_ziptown	idx_c_ziptown_fk_pays	INDEX	N	fk_pays	htdocs/install/mysql/tables/llx_c_ziptown.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_ziptown	idx_c_ziptown_zip	INDEX	N	zip	htdocs/install/mysql/tables/llx_c_ziptown.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_c_ziptown	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_c_ziptown.sql	启用	主键在建表文件中定义
+llx_c_ziptown	uk_ziptown_fk_pays	INDEX	Y	zip, town, fk_pays	htdocs/install/mysql/tables/llx_c_ziptown.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_account	idx_categorie_account_fk_account	INDEX	N	fk_account	htdocs/install/mysql/tables/llx_categorie_account.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_account	idx_categorie_account_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_account.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_actioncomm	idx_categorie_actioncomm_fk_actioncomm	INDEX	N	fk_actioncomm	htdocs/install/mysql/tables/llx_categorie_actioncomm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_actioncomm	idx_categorie_actioncomm_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_actioncomm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_contact	idx_categorie_contact_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_contact.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_contact	idx_categorie_contact_fk_socpeople	INDEX	N	fk_socpeople	htdocs/install/mysql/tables/llx_categorie_contact.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_fichinter	idx_categorie_fichinter_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_fichinter-fichinter.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_fichinter	idx_categorie_fichinter_fk_fichinter	INDEX	N	fk_fichinter	htdocs/install/mysql/tables/llx_categorie_fichinter-fichinter.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_fournisseur	idx_categorie_fournisseur_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_fournisseur.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_fournisseur	idx_categorie_fournisseur_fk_societe	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_categorie_fournisseur.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_invoice	idx_categorie_invoice_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_invoice-facture.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_invoice	idx_categorie_invoice_fk_invoice	INDEX	N	fk_invoice	htdocs/install/mysql/tables/llx_categorie_invoice-facture.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_knowledgemanagement	idx_categorie_knowledgemanagement_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_knowledgemanagement-knowledgemanagement.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_knowledgemanagement	idx_categorie_knowledgemanagement_fk_knowledgemanagement	INDEX	N	fk_knowledgemanagement	htdocs/install/mysql/tables/llx_categorie_knowledgemanagement-knowledgemanagement.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_lang_extrafields	idx_categorie_lang_fk_object	INDEX	N	fk_object	htdocs/install/mysql/tables/llx_categorie_lang_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_lang_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_categorie_lang_extrafields.sql	启用	主键在建表文件中定义
+llx_categorie_lang	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_categorie_lang.sql	启用	主键在建表文件中定义
+llx_categorie_lang	uk_category_lang	INDEX	Y	fk_category, lang	htdocs/install/mysql/tables/llx_categorie_lang.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_member	idx_categorie_member_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_member.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_member	idx_categorie_member_fk_member	INDEX	N	fk_member	htdocs/install/mysql/tables/llx_categorie_member.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_mo	idx_categorie_mo_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_mo-mrp.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_mo	idx_categorie_mo_fk_mo	INDEX	N	fk_mo	htdocs/install/mysql/tables/llx_categorie_mo-mrp.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_order	idx_categorie_order_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_order-commande.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_order	idx_categorie_order_fk_order	INDEX	N	fk_order	htdocs/install/mysql/tables/llx_categorie_order-commande.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_product	idx_categorie_product_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_product.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_product	idx_categorie_product_fk_product	INDEX	N	fk_product	htdocs/install/mysql/tables/llx_categorie_product.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_project_task	idx_categorie_project_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_project_task-project.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_project_task	idx_categorie_project_fk_task	INDEX	N	fk_project_task	htdocs/install/mysql/tables/llx_categorie_project_task-project.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_project	idx_categorie_project_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_project.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_project	idx_categorie_project_fk_project	INDEX	N	fk_project	htdocs/install/mysql/tables/llx_categorie_project.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_propal	idx_categorie_propal_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_propal-propal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_propal	idx_categorie_propal_fk_propal	INDEX	N	fk_propal	htdocs/install/mysql/tables/llx_categorie_propal-propal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_societe	idx_categorie_societe_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_societe.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_societe	idx_categorie_societe_fk_societe	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_categorie_societe.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_supplier_invoice	idx_categorie_supplier_invoice_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_supplier_invoice.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_supplier_invoice	idx_categorie_supplier_invoice_fk_supplier_invoice	INDEX	N	fk_supplier_invoice	htdocs/install/mysql/tables/llx_categorie_supplier_invoice.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_supplier_order	idx_categorie_supplier_order_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_supplier_order.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_supplier_order	idx_categorie_supplier_order_fk_supplier_order	INDEX	N	fk_supplier_order	htdocs/install/mysql/tables/llx_categorie_supplier_order.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_supplier_proposal	idx_categorie_supplier_proposal_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_supplier_proposal-supplier_proposal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_supplier_proposal	idx_categorie_supplier_proposal_fk_supplier_proposal	INDEX	N	fk_supplier_proposal	htdocs/install/mysql/tables/llx_categorie_supplier_proposal-supplier_proposal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_ticket	idx_categorie_ticket_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_ticket-ticket.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_ticket	idx_categorie_ticket_fk_ticket	INDEX	N	fk_ticket	htdocs/install/mysql/tables/llx_categorie_ticket-ticket.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_user	idx_categorie_user_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_user.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_user	idx_categorie_user_fk_user	INDEX	N	fk_user	htdocs/install/mysql/tables/llx_categorie_user.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_warehouse	idx_categorie_warehouse_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_warehouse-stock.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_warehouse	idx_categorie_warehouse_fk_warehouse	INDEX	N	fk_warehouse	htdocs/install/mysql/tables/llx_categorie_warehouse-stock.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_website_page	idx_categorie_website_page_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_categorie_website_page-website.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie_website_page	idx_categorie_website_page_fk_website_page	INDEX	N	fk_website_page	htdocs/install/mysql/tables/llx_categorie_website_page-website.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categorie	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_categorie.sql	启用	主键在建表文件中定义
+llx_categorie	uk_categorie_ref	INDEX	Y	entity, fk_parent, label, type	htdocs/install/mysql/tables/llx_categorie.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_categories_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_categories_extrafields.sql	启用	主键在建表文件中定义
+llx_categories_extrafields	uk_categories_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_categories_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_category_bankline	uk_category_bankline_lineid	INDEX	Y	lineid, fk_categ	htdocs/install/mysql/tables/llx_category_bankline.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_chargesociales	idx_chargesociales_fk_account	INDEX	N	fk_account	htdocs/install/mysql/tables/llx_chargesociales.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_chargesociales	idx_chargesociales_fk_mode_reglement	INDEX	N	fk_mode_reglement	htdocs/install/mysql/tables/llx_chargesociales.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_chargesociales	idx_chargesociales_fk_projet	INDEX	N	fk_projet	htdocs/install/mysql/tables/llx_chargesociales.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_chargesociales	idx_chargesociales_fk_type	INDEX	N	fk_type	htdocs/install/mysql/tables/llx_chargesociales.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_chargesociales	idx_chargesociales_fk_user	INDEX	N	fk_user	htdocs/install/mysql/tables/llx_chargesociales.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_chargesociales	idx_chargesociales_fk_user_author	INDEX	N	fk_user_author	htdocs/install/mysql/tables/llx_chargesociales.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_chargesociales	idx_chargesociales_fk_user_modif	INDEX	N	fk_user_modif	htdocs/install/mysql/tables/llx_chargesociales.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_chargesociales	idx_chargesociales_fk_user_valid	INDEX	N	fk_user_valid	htdocs/install/mysql/tables/llx_chargesociales.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_chargesociales	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_chargesociales.sql	启用	主键在建表文件中定义
+llx_commande_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_commande_extrafields.sql	启用	主键在建表文件中定义
+llx_commande_extrafields	uk_commande_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_commande_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_commande_fournisseur_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_commande_fournisseur_extrafields.sql	启用	主键在建表文件中定义
+llx_commande_fournisseur_extrafields	uk_commande_fournisseur_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_commande_fournisseur_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_commande_fournisseur_log	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_commande_fournisseur_log.sql	启用	主键在建表文件中定义
+llx_commande_fournisseur	billed	INDEX	N	billed	htdocs/install/mysql/tables/llx_commande_fournisseur.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_commande_fournisseur	idx_commande_fournisseur_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_commande_fournisseur.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_commande_fournisseur	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_commande_fournisseur.sql	启用	主键在建表文件中定义
+llx_commande_fournisseur	uk_commande_fournisseur_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_commande_fournisseur.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_commande_fournisseurdet_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_commande_fournisseurdet_extrafields.sql	启用	主键在建表文件中定义
+llx_commande_fournisseurdet_extrafields	uk_commande_fournisseurdet_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_commande_fournisseurdet_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_commande_fournisseurdet	idx_commande_fournisseurdet_fk_commande	INDEX	N	fk_commande	htdocs/install/mysql/tables/llx_commande_fournisseurdet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_commande_fournisseurdet	idx_commande_fournisseurdet_fk_product	INDEX	N	fk_product	htdocs/install/mysql/tables/llx_commande_fournisseurdet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_commande_fournisseurdet	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_commande_fournisseurdet.sql	启用	主键在建表文件中定义
+llx_commande	idx_commande_fk_account	INDEX	N	fk_account	htdocs/install/mysql/tables/llx_commande.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_commande	idx_commande_fk_currency	INDEX	N	fk_currency	htdocs/install/mysql/tables/llx_commande.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_commande	idx_commande_fk_projet	INDEX	N	fk_projet	htdocs/install/mysql/tables/llx_commande.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_commande	idx_commande_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_commande.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_commande	idx_commande_fk_statut	INDEX	N	fk_statut	htdocs/install/mysql/tables/llx_commande.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_commande	idx_commande_fk_user_author	INDEX	N	fk_user_author	htdocs/install/mysql/tables/llx_commande.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_commande	idx_commande_fk_user_cloture	INDEX	N	fk_user_cloture	htdocs/install/mysql/tables/llx_commande.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_commande	idx_commande_fk_user_valid	INDEX	N	fk_user_valid	htdocs/install/mysql/tables/llx_commande.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_commande	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_commande.sql	启用	主键在建表文件中定义
+llx_commande	uk_commande_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_commande.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_commandedet_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_commandedet_extrafields.sql	启用	主键在建表文件中定义
+llx_commandedet_extrafields	uk_commandedet_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_commandedet_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_commandedet	idx_commandedet_fk_commande	INDEX	N	fk_commande	htdocs/install/mysql/tables/llx_commandedet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_commandedet	idx_commandedet_fk_product	INDEX	N	fk_product	htdocs/install/mysql/tables/llx_commandedet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_commandedet	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_commandedet.sql	启用	主键在建表文件中定义
+llx_comment	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_comment.sql	启用	主键在建表文件中定义
+llx_const	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_const.sql	启用	主键在建表文件中定义
+llx_const	uk_const	INDEX	Y	name, entity	htdocs/install/mysql/tables/llx_const.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_contrat_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_contrat_extrafields.sql	启用	主键在建表文件中定义
+llx_contrat_extrafields	uk_contrat_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_contrat_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_contrat	idx_contrat_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_contrat.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_contrat	idx_contrat_fk_user_author	INDEX	N	fk_user_author	htdocs/install/mysql/tables/llx_contrat.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_contrat	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_contrat.sql	启用	主键在建表文件中定义
+llx_contrat	uk_contrat_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_contrat.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_contratdet_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_contratdet_extrafields.sql	启用	主键在建表文件中定义
+llx_contratdet_extrafields	uk_contratdet_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_contratdet_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_contratdet	idx_contratdet_date_fin_validite	INDEX	N	date_fin_validite	htdocs/install/mysql/tables/llx_contratdet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_contratdet	idx_contratdet_date_ouverture	INDEX	N	date_ouverture	htdocs/install/mysql/tables/llx_contratdet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_contratdet	idx_contratdet_date_ouverture_prevue	INDEX	N	date_ouverture_prevue	htdocs/install/mysql/tables/llx_contratdet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_contratdet	idx_contratdet_fk_contrat	INDEX	N	fk_contrat	htdocs/install/mysql/tables/llx_contratdet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_contratdet	idx_contratdet_fk_product	INDEX	N	fk_product	htdocs/install/mysql/tables/llx_contratdet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_contratdet	idx_contratdet_statut	INDEX	N	statut	htdocs/install/mysql/tables/llx_contratdet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_contratdet	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_contratdet.sql	启用	主键在建表文件中定义
+llx_cronjob	idx_cronjob_dateend	INDEX	N	dateend	htdocs/install/mysql/tables/llx_cronjob.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_cronjob	idx_cronjob_datelastrun	INDEX	N	datelastrun	htdocs/install/mysql/tables/llx_cronjob.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_cronjob	idx_cronjob_datenextrun	INDEX	N	datenextrun	htdocs/install/mysql/tables/llx_cronjob.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_cronjob	idx_cronjob_datestart	INDEX	N	datestart	htdocs/install/mysql/tables/llx_cronjob.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_cronjob	idx_cronjob_status	INDEX	N	status	htdocs/install/mysql/tables/llx_cronjob.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_cronjob	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_cronjob.sql	启用	主键在建表文件中定义
+llx_cronjob	uk_cronjob	INDEX	Y	label, entity	htdocs/install/mysql/tables/llx_cronjob.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_default_values	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_default_values.sql	启用	主键在建表文件中定义
+llx_default_values	uk_default_values	INDEX	Y	type, entity, user_id, page, param	htdocs/install/mysql/tables/llx_default_values.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_delivery_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_delivery_extrafields.sql	启用	主键在建表文件中定义
+llx_delivery_extrafields	uk_delivery_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_delivery_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_delivery	idx_delivery_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_delivery.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_delivery	idx_delivery_fk_user_author	INDEX	N	fk_user_author	htdocs/install/mysql/tables/llx_delivery.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_delivery	idx_delivery_fk_user_valid	INDEX	N	fk_user_valid	htdocs/install/mysql/tables/llx_delivery.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_delivery	idx_delivery_uk_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_delivery.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_delivery	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_delivery.sql	启用	主键在建表文件中定义
+llx_deliverydet_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_deliverydet_extrafields.sql	启用	主键在建表文件中定义
+llx_deliverydet_extrafields	uk_deliverydet_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_deliverydet_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_deliverydet	idx_deliverydet_fk_delivery	INDEX	N	fk_delivery	htdocs/install/mysql/tables/llx_deliverydet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_deliverydet	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_deliverydet.sql	启用	主键在建表文件中定义
+llx_deplacement	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_deplacement-deplacement.sql	启用	主键在建表文件中定义
+llx_document_model	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_document_model.sql	启用	主键在建表文件中定义
+llx_don_extrafields	idx_don_extrafields	INDEX	N	fk_object	htdocs/install/mysql/tables/llx_don_extrafields-don.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_don_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_don_extrafields-don.sql	启用	主键在建表文件中定义
+llx_don	idx_don_fk_project	INDEX	N	fk_projet	htdocs/install/mysql/tables/llx_don-don.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_don	idx_don_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_don-don.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_don	idx_don_fk_user_author	INDEX	N	fk_user_author	htdocs/install/mysql/tables/llx_don-don.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_don	idx_don_fk_user_valid	INDEX	N	fk_user_valid	htdocs/install/mysql/tables/llx_don-don.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_don	idx_don_uk_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_don-don.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_don	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_don-don.sql	启用	主键在建表文件中定义
+llx_ecm_directories_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_ecm_directories_extrafields.sql	启用	主键在建表文件中定义
+llx_ecm_directories_extrafields	uk_ecm_directories_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_ecm_directories_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ecm_directories	idx_ecm_directories_fk_user_c	INDEX	N	fk_user_c	htdocs/install/mysql/tables/llx_ecm_directories.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ecm_directories	idx_ecm_directories_fk_user_m	INDEX	N	fk_user_m	htdocs/install/mysql/tables/llx_ecm_directories.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ecm_directories	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_ecm_directories.sql	启用	主键在建表文件中定义
+llx_ecm_directories	uk_ecm_directories	INDEX	Y	label, fk_parent, entity	htdocs/install/mysql/tables/llx_ecm_directories.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ecm_files_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_ecm_files_extrafields.sql	启用	主键在建表文件中定义
+llx_ecm_files_extrafields	uk_ecm_files_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_ecm_files_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ecm_files	idx_ecm_files_label	INDEX	N	label	htdocs/install/mysql/tables/llx_ecm_files.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ecm_files	idx_ecm_files_src_object_type_id	INDEX	N	src_object_type, src_object_id	htdocs/install/mysql/tables/llx_ecm_files.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ecm_files	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_ecm_files.sql	启用	主键在建表文件中定义
+llx_ecm_files	uk_ecm_files	INDEX	Y	filepath, filename, entity	htdocs/install/mysql/tables/llx_ecm_files.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_element_categorie	idx_element_categorie_fk_categorie	INDEX	N	fk_categorie	htdocs/install/mysql/tables/llx_element_categorie.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_element_categorie	idx_element_categorie_idx	INDEX	Y	fk_element, fk_categorie	htdocs/install/mysql/tables/llx_element_categorie.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_element_categorie	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_element_categorie.sql	启用	主键在建表文件中定义
+llx_element_contact	idx_element_contact_fk_socpeople	INDEX	N	fk_socpeople	htdocs/install/mysql/tables/llx_element_contact.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_element_contact	idx_element_contact_idx1	INDEX	Y	element_id, fk_c_type_contact, fk_socpeople	htdocs/install/mysql/tables/llx_element_contact.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_element_contact	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_element_contact.sql	启用	主键在建表文件中定义
+llx_element_element	idx_element_element_fk_target	INDEX	N	fk_target	htdocs/install/mysql/tables/llx_element_element.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_element_element	idx_element_element_idx1	INDEX	Y	fk_source, sourcetype, fk_target, targettype	htdocs/install/mysql/tables/llx_element_element.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_element_element	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_element_element.sql	启用	主键在建表文件中定义
+llx_element_resources	idx_element_element_element_id	INDEX	N	element_id	htdocs/install/mysql/tables/llx_element_resources.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_element_resources	idx_element_resources_idx1	INDEX	Y	resource_id, resource_type, element_id, element_type	htdocs/install/mysql/tables/llx_element_resources.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_element_resources	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_element_resources.sql	启用	主键在建表文件中定义
+llx_element_time	idx_element_time_date	INDEX	N	element_date	htdocs/install/mysql/tables/llx_element_time.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_element_time	idx_element_time_datehour	INDEX	N	element_datehour	htdocs/install/mysql/tables/llx_element_time.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_element_time	idx_element_time_task	INDEX	N	fk_element	htdocs/install/mysql/tables/llx_element_time.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_element_time	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_element_time.sql	启用	主键在建表文件中定义
+llx_emailcollector_emailcollector	idx_emailcollector_entity	INDEX	N	entity	htdocs/install/mysql/tables/llx_emailcollector_emailcollector.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_emailcollector_emailcollector	idx_emailcollector_status	INDEX	N	status	htdocs/install/mysql/tables/llx_emailcollector_emailcollector.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_emailcollector_emailcollector	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_emailcollector_emailcollector.sql	启用	主键在建表文件中定义
+llx_emailcollector_emailcollector	uk_emailcollector_emailcollector_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_emailcollector_emailcollector.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_emailcollector_emailcollectoraction	idx_emailcollector_fk_emailcollector	INDEX	N	fk_emailcollector	htdocs/install/mysql/tables/llx_emailcollector_emailcollectoraction.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_emailcollector_emailcollectoraction	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_emailcollector_emailcollectoraction.sql	启用	主键在建表文件中定义
+llx_emailcollector_emailcollectoraction	uk_emailcollector_emailcollectoraction	INDEX	Y	fk_emailcollector, type	htdocs/install/mysql/tables/llx_emailcollector_emailcollectoraction.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_emailcollector_emailcollectorfilter	idx_emailcollector_fk_emailcollector	INDEX	N	fk_emailcollector	htdocs/install/mysql/tables/llx_emailcollector_emailcollectorfilter.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_emailcollector_emailcollectorfilter	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_emailcollector_emailcollectorfilter.sql	启用	主键在建表文件中定义
+llx_emailcollector_emailcollectorfilter	uk_emailcollector_emailcollectorfilter	INDEX	Y	fk_emailcollector, type, rulevalue	htdocs/install/mysql/tables/llx_emailcollector_emailcollectorfilter.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_entrepot_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_entrepot_extrafields.sql	启用	主键在建表文件中定义
+llx_entrepot_extrafields	uk_entrepot_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_entrepot_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_entrepot	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_entrepot.sql	启用	主键在建表文件中定义
+llx_entrepot	uk_entrepot_label	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_entrepot.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_establishment	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_establishment.sql	启用	主键在建表文件中定义
+llx_eventorganization_conferenceorboothattendee_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_eventorganization_conferenceorboothattendee_extrafields.sql	启用	主键在建表文件中定义
+llx_eventorganization_conferenceorboothattendee_extrafields	uk_conferenceorboothattendee_fk_object	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_eventorganization_conferenceorboothattendee_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_eventorganization_conferenceorboothattendee	idx_eventorganization_conferenceorboothattendee_email	INDEX	N	email	htdocs/install/mysql/tables/llx_eventorganization_conferenceorboothattendee.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_eventorganization_conferenceorboothattendee	idx_eventorganization_conferenceorboothattendee_fk_actioncomm	INDEX	N	fk_actioncomm	htdocs/install/mysql/tables/llx_eventorganization_conferenceorboothattendee.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_eventorganization_conferenceorboothattendee	idx_eventorganization_conferenceorboothattendee_fk_project	INDEX	N	fk_project	htdocs/install/mysql/tables/llx_eventorganization_conferenceorboothattendee.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_eventorganization_conferenceorboothattendee	idx_eventorganization_conferenceorboothattendee_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_eventorganization_conferenceorboothattendee.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_eventorganization_conferenceorboothattendee	idx_eventorganization_conferenceorboothattendee_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_eventorganization_conferenceorboothattendee.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_eventorganization_conferenceorboothattendee	idx_eventorganization_conferenceorboothattendee_status	INDEX	N	status	htdocs/install/mysql/tables/llx_eventorganization_conferenceorboothattendee.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_eventorganization_conferenceorboothattendee	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_eventorganization_conferenceorboothattendee.sql	启用	主键在建表文件中定义
+llx_eventorganization_conferenceorboothattendee	uk_eventorganization_confboothattendee	INDEX	Y	ref	htdocs/install/mysql/tables/llx_eventorganization_conferenceorboothattendee.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_eventorganization_conferenceorboothattendee	uk_eventorganization_confboothattendee_replacement	INDEX	Y	fk_replacement	htdocs/install/mysql/tables/llx_eventorganization_conferenceorboothattendee.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_eventorganization_conferenceorboothattendee	uk_eventorganization_conferenceorboothattendee	INDEX	Y	fk_project, email, fk_actioncomm	htdocs/install/mysql/tables/llx_eventorganization_conferenceorboothattendee.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_events	idx_events_dateevent	INDEX	N	dateevent	htdocs/install/mysql/tables/llx_events.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_events	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_events.sql	启用	主键在建表文件中定义
+llx_expedition_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_expedition_extrafields.sql	启用	主键在建表文件中定义
+llx_expedition_extrafields	uk_expedition_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_expedition_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expedition_package	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_expedition_package.sql	启用	主键在建表文件中定义
+llx_expedition	idx_expedition_fk_shipping_method	INDEX	N	fk_shipping_method	htdocs/install/mysql/tables/llx_expedition.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expedition	idx_expedition_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_expedition.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expedition	idx_expedition_fk_user_author	INDEX	N	fk_user_author	htdocs/install/mysql/tables/llx_expedition.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expedition	idx_expedition_fk_user_valid	INDEX	N	fk_user_valid	htdocs/install/mysql/tables/llx_expedition.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expedition	idx_expedition_uk_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_expedition.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expedition	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_expedition.sql	启用	主键在建表文件中定义
+llx_expeditiondet_batch	idx_fk_expeditiondet	INDEX	N	fk_expeditiondet	htdocs/install/mysql/tables/llx_expeditiondet_batch.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expeditiondet_batch	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_expeditiondet_batch.sql	启用	主键在建表文件中定义
+llx_expeditiondet_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_expeditiondet_extrafields.sql	启用	主键在建表文件中定义
+llx_expeditiondet_extrafields	uk_expeditiondet_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_expeditiondet_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expeditiondet	idx_expeditiondet_fk_elementdet	INDEX	N	fk_elementdet	htdocs/install/mysql/tables/llx_expeditiondet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expeditiondet	idx_expeditiondet_fk_expedition	INDEX	N	fk_expedition	htdocs/install/mysql/tables/llx_expeditiondet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expeditiondet	idx_expeditiondet_fk_parent	INDEX	N	fk_parent	htdocs/install/mysql/tables/llx_expeditiondet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expeditiondet	idx_expeditiondet_fk_product	INDEX	N	fk_product	htdocs/install/mysql/tables/llx_expeditiondet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expeditiondet	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_expeditiondet.sql	启用	主键在建表文件中定义
+llx_expensereport_det_extrafields	idx_expensereport_det_fk_object	INDEX	N	fk_object	htdocs/install/mysql/tables/llx_expensereport_det_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expensereport_det_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_expensereport_det_extrafields.sql	启用	主键在建表文件中定义
+llx_expensereport_det	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_expensereport_det.sql	启用	主键在建表文件中定义
+llx_expensereport_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_expensereport_extrafields.sql	启用	主键在建表文件中定义
+llx_expensereport_extrafields	uk_expensereport_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_expensereport_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expensereport_ik	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_expensereport_ik-expensereport.sql	启用	主键在建表文件中定义
+llx_expensereport_rules	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_expensereport_rules-expensereport.sql	启用	主键在建表文件中定义
+llx_expensereport	idx_expensereport_date_debut	INDEX	N	date_debut	htdocs/install/mysql/tables/llx_expensereport.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expensereport	idx_expensereport_date_fin	INDEX	N	date_fin	htdocs/install/mysql/tables/llx_expensereport.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expensereport	idx_expensereport_fk_refuse	INDEX	N	fk_user_refuse	htdocs/install/mysql/tables/llx_expensereport.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expensereport	idx_expensereport_fk_statut	INDEX	N	fk_statut	htdocs/install/mysql/tables/llx_expensereport.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expensereport	idx_expensereport_fk_user_approve	INDEX	N	fk_user_approve	htdocs/install/mysql/tables/llx_expensereport.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expensereport	idx_expensereport_fk_user_author	INDEX	N	fk_user_author	htdocs/install/mysql/tables/llx_expensereport.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expensereport	idx_expensereport_fk_user_valid	INDEX	N	fk_user_valid	htdocs/install/mysql/tables/llx_expensereport.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expensereport	idx_expensereport_uk_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_expensereport.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_expensereport	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_expensereport.sql	启用	主键在建表文件中定义
+llx_export_model	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_export_model.sql	启用	主键在建表文件中定义
+llx_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_extrafields.sql	启用	主键在建表文件中定义
+llx_extrafields	uk_extrafields_name	INDEX	Y	name, entity, elementtype	htdocs/install/mysql/tables/llx_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_facture_extrafields.sql	启用	主键在建表文件中定义
+llx_facture_extrafields	uk_facture_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_facture_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_fourn_det_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_facture_fourn_det_extrafields.sql	启用	主键在建表文件中定义
+llx_facture_fourn_det_extrafields	uk_facture_fourn_det_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_facture_fourn_det_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_fourn_det_rec_extrafields	llx_facture_fourn_det_rec_extrafields	INDEX	N	fk_object	htdocs/install/mysql/tables/llx_facture_fourn_det_rec_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_fourn_det_rec_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_facture_fourn_det_rec_extrafields.sql	启用	主键在建表文件中定义
+llx_facture_fourn_det_rec	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_facture_fourn_det_rec.sql	启用	主键在建表文件中定义
+llx_facture_fourn_det	idx_facture_fourn_det_fk_code_ventilation	INDEX	N	fk_code_ventilation	htdocs/install/mysql/tables/llx_facture_fourn_det.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_fourn_det	idx_facture_fourn_det_fk_facture	INDEX	N	fk_facture_fourn	htdocs/install/mysql/tables/llx_facture_fourn_det.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_fourn_det	idx_facture_fourn_det_fk_product	INDEX	N	fk_product	htdocs/install/mysql/tables/llx_facture_fourn_det.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_fourn_det	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_facture_fourn_det.sql	启用	主键在建表文件中定义
+llx_facture_fourn_det	uk_fk_remise_except	INDEX	Y	fk_remise_except, fk_facture_fourn	htdocs/install/mysql/tables/llx_facture_fourn_det.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_fourn_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_facture_fourn_extrafields.sql	启用	主键在建表文件中定义
+llx_facture_fourn_extrafields	uk_facture_fourn_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_facture_fourn_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_fourn_rec_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_facture_fourn_rec_extrafields.sql	启用	主键在建表文件中定义
+llx_facture_fourn_rec_extrafields	uk_facture_fourn_rec_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_facture_fourn_rec_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_fourn_rec	idx_facture_fourn_rec_fk_projet	INDEX	N	fk_projet	htdocs/install/mysql/tables/llx_facture_fourn_rec.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_fourn_rec	idx_facture_fourn_rec_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_facture_fourn_rec.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_fourn_rec	idx_facture_fourn_rec_fk_user_author	INDEX	N	fk_user_author	htdocs/install/mysql/tables/llx_facture_fourn_rec.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_fourn_rec	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_facture_fourn_rec.sql	启用	主键在建表文件中定义
+llx_facture_fourn_rec	uk_facture_fourn_rec_ref	INDEX	Y	titre, entity	htdocs/install/mysql/tables/llx_facture_fourn_rec.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_fourn	idx_facture_fourn_date_lim_reglement	INDEX	N	date_lim_reglement	htdocs/install/mysql/tables/llx_facture_fourn.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_fourn	idx_facture_fourn_fk_projet	INDEX	N	fk_projet	htdocs/install/mysql/tables/llx_facture_fourn.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_fourn	idx_facture_fourn_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_facture_fourn.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_fourn	idx_facture_fourn_fk_user_author	INDEX	N	fk_user_author	htdocs/install/mysql/tables/llx_facture_fourn.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_fourn	idx_facture_fourn_fk_user_valid	INDEX	N	fk_user_valid	htdocs/install/mysql/tables/llx_facture_fourn.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_fourn	idx_facture_fourn_tms	INDEX	N	tms	htdocs/install/mysql/tables/llx_facture_fourn.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_fourn	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_facture_fourn.sql	启用	主键在建表文件中定义
+llx_facture_fourn	uk_facture_fourn_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_facture_fourn.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_fourn	uk_facture_fourn_ref_supplier	INDEX	Y	ref_supplier, fk_soc, entity	htdocs/install/mysql/tables/llx_facture_fourn.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_rec_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_facture_rec_extrafields.sql	启用	主键在建表文件中定义
+llx_facture_rec_extrafields	uk_facture_rec_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_facture_rec_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_rec	idx_facture_rec_datec	INDEX	N	datec	htdocs/install/mysql/tables/llx_facture_rec.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_rec	idx_facture_rec_fk_projet	INDEX	N	fk_projet	htdocs/install/mysql/tables/llx_facture_rec.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_rec	idx_facture_rec_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_facture_rec.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_rec	idx_facture_rec_fk_user_author	INDEX	N	fk_user_author	htdocs/install/mysql/tables/llx_facture_rec.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_rec	idx_facture_rec_uk_titre	INDEX	Y	titre, entity	htdocs/install/mysql/tables/llx_facture_rec.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture_rec	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_facture_rec.sql	启用	主键在建表文件中定义
+llx_facture	idx_facture_datef	INDEX	N	datef	htdocs/install/mysql/tables/llx_facture.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture	idx_facture_fk_account	INDEX	N	fk_account	htdocs/install/mysql/tables/llx_facture.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture	idx_facture_fk_currency	INDEX	N	fk_currency	htdocs/install/mysql/tables/llx_facture.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture	idx_facture_fk_facture_source	INDEX	N	fk_facture_source	htdocs/install/mysql/tables/llx_facture.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture	idx_facture_fk_input_reason	INDEX	N	fk_input_reason	htdocs/install/mysql/tables/llx_facture.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture	idx_facture_fk_projet	INDEX	N	fk_projet	htdocs/install/mysql/tables/llx_facture.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture	idx_facture_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_facture.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture	idx_facture_fk_statut	INDEX	N	fk_statut	htdocs/install/mysql/tables/llx_facture.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture	idx_facture_fk_user_author	INDEX	N	fk_user_author	htdocs/install/mysql/tables/llx_facture.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture	idx_facture_fk_user_valid	INDEX	N	fk_user_valid	htdocs/install/mysql/tables/llx_facture.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture	idx_facture_situation_cycle_ref	INDEX	N	situation_cycle_ref	htdocs/install/mysql/tables/llx_facture.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture	idx_facture_tms	INDEX	N	tms	htdocs/install/mysql/tables/llx_facture.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facture	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_facture.sql	启用	主键在建表文件中定义
+llx_facture	uk_facture_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_facture.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facturedet_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_facturedet_extrafields.sql	启用	主键在建表文件中定义
+llx_facturedet_extrafields	uk_facturedet_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_facturedet_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facturedet_rec_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_facturedet_rec_extrafields.sql	启用	主键在建表文件中定义
+llx_facturedet_rec_extrafields	uk_facturedet_rec_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_facturedet_rec_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facturedet_rec	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_facturedet_rec.sql	启用	主键在建表文件中定义
+llx_facturedet	idx_facturedet_fk_code_ventilation	INDEX	N	fk_code_ventilation	htdocs/install/mysql/tables/llx_facturedet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facturedet	idx_facturedet_fk_facture	INDEX	N	fk_facture	htdocs/install/mysql/tables/llx_facturedet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facturedet	idx_facturedet_fk_prev_id	INDEX	N	fk_prev_id	htdocs/install/mysql/tables/llx_facturedet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facturedet	idx_facturedet_fk_product	INDEX	N	fk_product	htdocs/install/mysql/tables/llx_facturedet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_facturedet	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_facturedet.sql	启用	主键在建表文件中定义
+llx_facturedet	uk_fk_remise_except	INDEX	Y	fk_remise_except, fk_facture	htdocs/install/mysql/tables/llx_facturedet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_fichinter_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_fichinter_extrafields.sql	启用	主键在建表文件中定义
+llx_fichinter_extrafields	uk_ficheinter_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_fichinter_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_fichinter_rec	idx_fichinter_rec_fk_projet	INDEX	N	fk_projet	htdocs/install/mysql/tables/llx_fichinter_rec.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_fichinter_rec	idx_fichinter_rec_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_fichinter_rec.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_fichinter_rec	idx_fichinter_rec_fk_user_author	INDEX	N	fk_user_author	htdocs/install/mysql/tables/llx_fichinter_rec.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_fichinter_rec	idx_fichinter_rec_uk_titre	INDEX	Y	title, entity	htdocs/install/mysql/tables/llx_fichinter_rec.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_fichinter_rec	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_fichinter_rec.sql	启用	主键在建表文件中定义
+llx_fichinter	idx_fichinter_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_fichinter.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_fichinter	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_fichinter.sql	启用	主键在建表文件中定义
+llx_fichinter	uk_fichinter_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_fichinter.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_fichinterdet_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_fichinterdet_extrafields.sql	启用	主键在建表文件中定义
+llx_fichinterdet_extrafields	uk_ficheinterdet_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_fichinterdet_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_fichinterdet_rec	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_fichinterdet_rec.sql	启用	主键在建表文件中定义
+llx_fichinterdet	idx_fichinterdet_fk_fichinter	INDEX	N	fk_fichinter	htdocs/install/mysql/tables/llx_fichinterdet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_fichinterdet	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_fichinterdet.sql	启用	主键在建表文件中定义
+llx_holiday_config	idx_holiday_config	INDEX	Y	entity, name	htdocs/install/mysql/tables/llx_holiday_config.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_holiday_config	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_holiday_config.sql	启用	主键在建表文件中定义
+llx_holiday_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_holiday_extrafields.sql	启用	主键在建表文件中定义
+llx_holiday_extrafields	uk_holiday_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_holiday_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_holiday_logs	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_holiday_logs.sql	启用	主键在建表文件中定义
+llx_holiday_users	uk_holiday_users	INDEX	Y	fk_user, fk_type	htdocs/install/mysql/tables/llx_holiday_users.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_holiday	idx_holiday_date_create	INDEX	N	date_create	htdocs/install/mysql/tables/llx_holiday.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_holiday	idx_holiday_date_debut	INDEX	N	date_debut	htdocs/install/mysql/tables/llx_holiday.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_holiday	idx_holiday_date_fin	INDEX	N	date_fin	htdocs/install/mysql/tables/llx_holiday.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_holiday	idx_holiday_entity	INDEX	N	entity	htdocs/install/mysql/tables/llx_holiday.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_holiday	idx_holiday_fk_user	INDEX	N	fk_user	htdocs/install/mysql/tables/llx_holiday.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_holiday	idx_holiday_fk_user_create	INDEX	N	fk_user_create	htdocs/install/mysql/tables/llx_holiday.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_holiday	idx_holiday_fk_validator	INDEX	N	fk_validator	htdocs/install/mysql/tables/llx_holiday.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_holiday	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_holiday.sql	启用	主键在建表文件中定义
+llx_hrm_evaluation_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_hrm_evaluation_extrafields-hrm.sql	启用	主键在建表文件中定义
+llx_hrm_evaluation_extrafields	uk_evaluation_fk_object	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_hrm_evaluation_extrafields-hrm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_hrm_evaluation	idx_hrm_evaluation_ref	INDEX	N	ref	htdocs/install/mysql/tables/llx_hrm_evaluation-hrm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_hrm_evaluation	idx_hrm_evaluation_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_hrm_evaluation-hrm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_hrm_evaluation	idx_hrm_evaluation_status	INDEX	N	status	htdocs/install/mysql/tables/llx_hrm_evaluation-hrm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_hrm_evaluation	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_hrm_evaluation-hrm.sql	启用	主键在建表文件中定义
+llx_hrm_evaluationdet_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_hrm_evaluationdet_extrafields-hrm.sql	启用	主键在建表文件中定义
+llx_hrm_evaluationdet_extrafields	uk_evaluationdet_fk_object	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_hrm_evaluationdet_extrafields-hrm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_hrm_evaluationdet	idx_hrm_evaluationdet_fk_evaluation	INDEX	N	fk_evaluation	htdocs/install/mysql/tables/llx_hrm_evaluationdet-hrm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_hrm_evaluationdet	idx_hrm_evaluationdet_fk_skill	INDEX	N	fk_skill	htdocs/install/mysql/tables/llx_hrm_evaluationdet-hrm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_hrm_evaluationdet	idx_hrm_evaluationdet_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_hrm_evaluationdet-hrm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_hrm_evaluationdet	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_hrm_evaluationdet-hrm.sql	启用	主键在建表文件中定义
+llx_hrm_job_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_hrm_job_extrafields-hrm.sql	启用	主键在建表文件中定义
+llx_hrm_job_extrafields	uk_job_fk_object	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_hrm_job_extrafields-hrm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_hrm_job_user	idx_hrm_job_user_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_hrm_job_user-hrm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_hrm_job_user	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_hrm_job_user-hrm.sql	启用	主键在建表文件中定义
+llx_hrm_job	idx_hrm_job_label	INDEX	N	label	htdocs/install/mysql/tables/llx_hrm_job-hrm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_hrm_job	idx_hrm_job_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_hrm_job-hrm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_hrm_job	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_hrm_job-hrm.sql	启用	主键在建表文件中定义
+llx_hrm_skill_extrafields	idx_skill_fk_object	INDEX	N	fk_object	htdocs/install/mysql/tables/llx_hrm_skill_extrafields-hrm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_hrm_skill_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_hrm_skill_extrafields-hrm.sql	启用	主键在建表文件中定义
+llx_hrm_skill	idx_hrm_skill_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_hrm_skill-hrm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_hrm_skill	idx_hrm_skill_skill_type	INDEX	N	skill_type	htdocs/install/mysql/tables/llx_hrm_skill-hrm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_hrm_skill	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_hrm_skill-hrm.sql	启用	主键在建表文件中定义
+llx_hrm_skilldet	idx_hrm_skilldet_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_hrm_skilldet-hrm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_hrm_skilldet	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_hrm_skilldet-hrm.sql	启用	主键在建表文件中定义
+llx_hrm_skillrank	idx_hrm_skillrank_fk_skill	INDEX	N	fk_skill	htdocs/install/mysql/tables/llx_hrm_skillrank-hrm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_hrm_skillrank	idx_hrm_skillrank_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_hrm_skillrank-hrm.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_hrm_skillrank	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_hrm_skillrank-hrm.sql	启用	主键在建表文件中定义
+llx_import_model	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_import_model.sql	启用	主键在建表文件中定义
+llx_import_model	uk_import_model	INDEX	Y	label, type	htdocs/install/mysql/tables/llx_import_model.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_intracommreport	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_intracommreport-intracommreport.sql	启用	主键在建表文件中定义
+llx_inventory_extrafields	idx_inventory_extrafields	INDEX	N	fk_object	htdocs/install/mysql/tables/llx_inventory_extrafields-stock.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_inventory_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_inventory_extrafields-stock.sql	启用	主键在建表文件中定义
+llx_inventory	idx_inventory_date_creation	INDEX	N	date_creation	htdocs/install/mysql/tables/llx_inventory-stock.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_inventory	idx_inventory_tms	INDEX	N	tms	htdocs/install/mysql/tables/llx_inventory-stock.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_inventory	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_inventory-stock.sql	启用	主键在建表文件中定义
+llx_inventory	uk_inventory_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_inventory-stock.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_inventorydet	idx_inventorydet_datec	INDEX	N	datec	htdocs/install/mysql/tables/llx_inventorydet-stock.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_inventorydet	idx_inventorydet_fk_inventory	INDEX	N	fk_inventory	htdocs/install/mysql/tables/llx_inventorydet-stock.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_inventorydet	idx_inventorydet_tms	INDEX	N	tms	htdocs/install/mysql/tables/llx_inventorydet-stock.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_inventorydet	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_inventorydet-stock.sql	启用	主键在建表文件中定义
+llx_knowledgemanagement_knowledgerecord_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_knowledgemanagement_knowledgerecord_extrafields-knowledgemanagement.sql	启用	主键在建表文件中定义
+llx_knowledgemanagement_knowledgerecord_extrafields	uk_knowledgerecord_fk_object	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_knowledgemanagement_knowledgerecord_extrafields-knowledgemanagement.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_knowledgemanagement_knowledgerecord	idx_knowledgemanagement_knowledgerecord_ref	INDEX	N	ref	htdocs/install/mysql/tables/llx_knowledgemanagement_knowledgerecord-knowledgemanagement.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_knowledgemanagement_knowledgerecord	idx_knowledgemanagement_knowledgerecord_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_knowledgemanagement_knowledgerecord-knowledgemanagement.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_knowledgemanagement_knowledgerecord	idx_knowledgemanagement_knowledgerecord_status	INDEX	N	status	htdocs/install/mysql/tables/llx_knowledgemanagement_knowledgerecord-knowledgemanagement.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_knowledgemanagement_knowledgerecord	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_knowledgemanagement_knowledgerecord-knowledgemanagement.sql	启用	主键在建表文件中定义
+llx_links_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_links_extrafields.sql	启用	主键在建表文件中定义
+llx_links_extrafields	uk_links_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_links_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_links	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_links.sql	启用	主键在建表文件中定义
+llx_links	uk_links	INDEX	Y	objectid, objecttype, label	htdocs/install/mysql/tables/llx_links.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_loan_schedule	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_loan_schedule-loan.sql	启用	主键在建表文件中定义
+llx_loan_schedule	uk_loan_schedule_ref	INDEX	Y	fk_loan, datep	htdocs/install/mysql/tables/llx_loan_schedule-loan.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_loan	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_loan-loan.sql	启用	主键在建表文件中定义
+llx_localtax	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_localtax.sql	启用	主键在建表文件中定义
+llx_mailing_advtarget	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_mailing_advtarget-mailing.sql	启用	主键在建表文件中定义
+llx_mailing_advtarget	uk_advtargetemailing_name	INDEX	Y	name	htdocs/install/mysql/tables/llx_mailing_advtarget-mailing.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_mailing_cibles	idx_mailing_cibles_email	INDEX	N	email	htdocs/install/mysql/tables/llx_mailing_cibles-mailing.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_mailing_cibles	idx_mailing_cibles_tag	INDEX	N	tag	htdocs/install/mysql/tables/llx_mailing_cibles-mailing.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_mailing_cibles	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_mailing_cibles-mailing.sql	启用	主键在建表文件中定义
+llx_mailing_unsubscribe	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_mailing_unsubscribe.sql	启用	主键在建表文件中定义
+llx_mailing	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_mailing-mailing.sql	启用	主键在建表文件中定义
+llx_menu	idx_menu_menuhandler_type	INDEX	N	menu_handler, type	htdocs/install/mysql/tables/llx_menu.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_menu	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_menu.sql	启用	主键在建表文件中定义
+llx_mrp_mo_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_mrp_mo_extrafields-mrp.sql	启用	主键在建表文件中定义
+llx_mrp_mo_extrafields	uk_mrp_mo_fk_object	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_mrp_mo_extrafields-mrp.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_mrp_mo	idx_mrp_mo_date_end_planned	INDEX	N	date_end_planned	htdocs/install/mysql/tables/llx_mrp_mo-mrp.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_mrp_mo	idx_mrp_mo_date_start_planned	INDEX	N	date_start_planned	htdocs/install/mysql/tables/llx_mrp_mo-mrp.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_mrp_mo	idx_mrp_mo_entity	INDEX	N	entity	htdocs/install/mysql/tables/llx_mrp_mo-mrp.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_mrp_mo	idx_mrp_mo_fk_bom	INDEX	N	fk_bom	htdocs/install/mysql/tables/llx_mrp_mo-mrp.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_mrp_mo	idx_mrp_mo_fk_product	INDEX	N	fk_product	htdocs/install/mysql/tables/llx_mrp_mo-mrp.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_mrp_mo	idx_mrp_mo_fk_project	INDEX	N	fk_project	htdocs/install/mysql/tables/llx_mrp_mo-mrp.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_mrp_mo	idx_mrp_mo_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_mrp_mo-mrp.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_mrp_mo	idx_mrp_mo_ref	INDEX	N	ref	htdocs/install/mysql/tables/llx_mrp_mo-mrp.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_mrp_mo	idx_mrp_mo_status	INDEX	N	status	htdocs/install/mysql/tables/llx_mrp_mo-mrp.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_mrp_mo	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_mrp_mo-mrp.sql	启用	主键在建表文件中定义
+llx_mrp_production_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_mrp_production_extrafields-mrp.sql	启用	主键在建表文件中定义
+llx_mrp_production_extrafields	uk_mrp_production_fk_object	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_mrp_production_extrafields-mrp.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_mrp_production	idx_mrp_production_fk_mo	INDEX	N	fk_mo	htdocs/install/mysql/tables/llx_mrp_production-mrp.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_mrp_production	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_mrp_production-mrp.sql	启用	主键在建表文件中定义
+llx_multicurrency_rate	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_multicurrency_rate.sql	启用	主键在建表文件中定义
+llx_multicurrency	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_multicurrency.sql	启用	主键在建表文件中定义
+llx_notify_def_object	PRIMARY	PRIMARY KEY	Y	id	htdocs/install/mysql/tables/llx_notify_def_object.sql	启用	主键在建表文件中定义
+llx_notify_def	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_notify_def.sql	启用	主键在建表文件中定义
+llx_notify	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_notify.sql	启用	主键在建表文件中定义
+llx_oauth_state	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_oauth_state.sql	启用	主键在建表文件中定义
+llx_oauth_token	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_oauth_token.sql	启用	主键在建表文件中定义
+llx_object_lang	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_object_lang.sql	启用	主键在建表文件中定义
+llx_object_lang	uk_object_lang	INDEX	Y	fk_object, type_object, property, lang	htdocs/install/mysql/tables/llx_object_lang.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_onlinesignature	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_onlinesignature.sql	启用	主键在建表文件中定义
+llx_opensurvey_comments	idx_id_comment	INDEX	N	id_comment	htdocs/install/mysql/tables/llx_opensurvey_comments-opensurvey.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_opensurvey_comments	idx_id_sondage	INDEX	N	id_sondage	htdocs/install/mysql/tables/llx_opensurvey_comments-opensurvey.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_opensurvey_comments	PRIMARY	PRIMARY KEY	Y	id_comment	htdocs/install/mysql/tables/llx_opensurvey_comments-opensurvey.sql	启用	主键在建表文件中定义
+llx_opensurvey_formquestions	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_opensurvey_formquestions-opensurvey.sql	启用	主键在建表文件中定义
+llx_opensurvey_sondage	idx_date_fin	INDEX	N	date_fin	htdocs/install/mysql/tables/llx_opensurvey_sondage-opensurvey.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_opensurvey_sondage	PRIMARY	PRIMARY KEY	Y	id_sondage	htdocs/install/mysql/tables/llx_opensurvey_sondage-opensurvey.sql	启用	主键在建表文件中定义
+llx_opensurvey_user_studs	idx_opensurvey_user_studs_id_sondage	INDEX	N	id_sondage	htdocs/install/mysql/tables/llx_opensurvey_user_studs-opensurvey.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_opensurvey_user_studs	idx_opensurvey_user_studs_id_users	INDEX	N	id_users	htdocs/install/mysql/tables/llx_opensurvey_user_studs-opensurvey.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_opensurvey_user_studs	idx_opensurvey_user_studs_nom	INDEX	N	nom	htdocs/install/mysql/tables/llx_opensurvey_user_studs-opensurvey.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_opensurvey_user_studs	PRIMARY	PRIMARY KEY	Y	id_users	htdocs/install/mysql/tables/llx_opensurvey_user_studs-opensurvey.sql	启用	主键在建表文件中定义
+llx_overwrite_trans	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_overwrite_trans.sql	启用	主键在建表文件中定义
+llx_overwrite_trans	uk_overwrite_trans	INDEX	Y	entity, lang, transkey	htdocs/install/mysql/tables/llx_overwrite_trans.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_paiement_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_paiement_extrafields.sql	启用	主键在建表文件中定义
+llx_paiement_extrafields	uk_paiement_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_paiement_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_paiement_facture	idx_paiement_facture_fk_facture	INDEX	N	fk_facture	htdocs/install/mysql/tables/llx_paiement_facture.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_paiement_facture	idx_paiement_facture_fk_paiement	INDEX	N	fk_paiement	htdocs/install/mysql/tables/llx_paiement_facture.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_paiement_facture	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_paiement_facture.sql	启用	主键在建表文件中定义
+llx_paiement_facture	uk_paiement_facture	INDEX	Y	fk_paiement, fk_facture	htdocs/install/mysql/tables/llx_paiement_facture.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_paiement	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_paiement.sql	启用	主键在建表文件中定义
+llx_paiementcharge	idx_paiementcharge_fk_charge	INDEX	N	fk_charge	htdocs/install/mysql/tables/llx_paiementcharge.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_paiementcharge	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_paiementcharge.sql	启用	主键在建表文件中定义
+llx_paiementfourn_facturefourn	idx_paiementfourn_facturefourn_fk_facture	INDEX	N	fk_facturefourn	htdocs/install/mysql/tables/llx_paiementfourn_facturefourn.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_paiementfourn_facturefourn	idx_paiementfourn_facturefourn_fk_paiement	INDEX	N	fk_paiementfourn	htdocs/install/mysql/tables/llx_paiementfourn_facturefourn.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_paiementfourn_facturefourn	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_paiementfourn_facturefourn.sql	启用	主键在建表文件中定义
+llx_paiementfourn_facturefourn	uk_paiementfourn_facturefourn	INDEX	Y	fk_paiementfourn, fk_facturefourn	htdocs/install/mysql/tables/llx_paiementfourn_facturefourn.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_paiementfourn	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_paiementfourn.sql	启用	主键在建表文件中定义
+llx_partnership_extrafields	idx_partnership_extrafields	INDEX	N	fk_object	htdocs/install/mysql/tables/llx_partnership_extrafields-partnership.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_partnership_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_partnership_extrafields-partnership.sql	启用	主键在建表文件中定义
+llx_partnership	idx_partnership_entity	INDEX	N	entity	htdocs/install/mysql/tables/llx_partnership-partnership.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_partnership	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_partnership-partnership.sql	启用	主键在建表文件中定义
+llx_partnership	uk_fk_type_fk_member	INDEX	Y	fk_type, fk_member, date_partnership_start	htdocs/install/mysql/tables/llx_partnership-partnership.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_partnership	uk_fk_type_fk_soc	INDEX	Y	fk_type, fk_soc, date_partnership_start	htdocs/install/mysql/tables/llx_partnership-partnership.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_partnership	uk_partnership_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_partnership-partnership.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_payment_donation	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_payment_donation.sql	启用	主键在建表文件中定义
+llx_payment_expensereport	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_payment_expensereport.sql	启用	主键在建表文件中定义
+llx_payment_loan	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_payment_loan.sql	启用	主键在建表文件中定义
+llx_payment_salary	idx_payment_salary_dateep	INDEX	N	dateep	htdocs/install/mysql/tables/llx_payment_salary.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_payment_salary	idx_payment_salary_datep	INDEX	N	datep	htdocs/install/mysql/tables/llx_payment_salary.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_payment_salary	idx_payment_salary_datesp	INDEX	N	datesp	htdocs/install/mysql/tables/llx_payment_salary.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_payment_salary	idx_payment_salary_ref	INDEX	N	num_payment	htdocs/install/mysql/tables/llx_payment_salary.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_payment_salary	idx_payment_salary_user	INDEX	N	fk_user, entity	htdocs/install/mysql/tables/llx_payment_salary.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_payment_salary	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_payment_salary.sql	启用	主键在建表文件中定义
+llx_payment_various_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_payment_various_extrafields.sql	启用	主键在建表文件中定义
+llx_payment_various_extrafields	uk_payment_various_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_payment_various_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_payment_various	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_payment_various.sql	启用	主键在建表文件中定义
+llx_payment_vat	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_payment_vat.sql	启用	主键在建表文件中定义
+llx_paymentexpensereport_expensereport	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_paymentexpensereport_expensereport.sql	启用	主键在建表文件中定义
+llx_pos_cash_fence_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_pos_cash_fence_extrafields.sql	启用	主键在建表文件中定义
+llx_pos_cash_fence_extrafields	uk_pos_cash_fence_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_pos_cash_fence_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_pos_cash_fence	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_pos_cash_fence.sql	启用	主键在建表文件中定义
+llx_prelevement_bons	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_prelevement_bons.sql	启用	主键在建表文件中定义
+llx_prelevement_bons	uk_prelevement_bons_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_prelevement_bons.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_prelevement_demande	idx_prelevement_demande_ext_payment_id	INDEX	N	ext_payment_id	htdocs/install/mysql/tables/llx_prelevement_demande.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_prelevement_demande	idx_prelevement_demande_fk_facture	INDEX	N	fk_facture	htdocs/install/mysql/tables/llx_prelevement_demande.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_prelevement_demande	idx_prelevement_demande_fk_facture_fourn	INDEX	N	fk_facture_fourn	htdocs/install/mysql/tables/llx_prelevement_demande.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_prelevement_demande	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_prelevement_demande.sql	启用	主键在建表文件中定义
+llx_prelevement_lignes	idx_prelevement_lignes_fk_prelevement_bons	INDEX	N	fk_prelevement_bons	htdocs/install/mysql/tables/llx_prelevement_lignes.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_prelevement_lignes	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_prelevement_lignes.sql	启用	主键在建表文件中定义
+llx_prelevement_rejet	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_prelevement_rejet.sql	启用	主键在建表文件中定义
+llx_prelevement	idx_prelevement_fk_prelevement_lignes	INDEX	N	fk_prelevement_lignes	htdocs/install/mysql/tables/llx_prelevement.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_prelevement	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_prelevement.sql	启用	主键在建表文件中定义
+llx_printer_receipt_template	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_printing_receipt_template-receiptprinter.sql	启用	主键在建表文件中定义
+llx_printer_receipt	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_printing_receipt-receiptprinter.sql	启用	主键在建表文件中定义
+llx_printer_receipt	uk_printer_receipt	INDEX	Y	name, entity	htdocs/install/mysql/tables/llx_printing_receipt-receiptprinter.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_printing	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_printing.sql	启用	主键在建表文件中定义
+llx_product_association	idx_product_association_fils	INDEX	N	fk_product_fils	htdocs/install/mysql/tables/llx_product_association.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_association	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_association.sql	启用	主键在建表文件中定义
+llx_product_association	uk_product_association	INDEX	Y	fk_product_pere, fk_product_fils	htdocs/install/mysql/tables/llx_product_association.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_attribute_combination_price_level	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_attribute_combination_price_level-variants.sql	启用	主键在建表文件中定义
+llx_product_attribute_combination_price_level	uk_prod_att_comb_price_level	INDEX	Y	fk_product_attribute_combination, fk_price_level	htdocs/install/mysql/tables/llx_product_attribute_combination_price_level-variants.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_attribute_combination	idx_product_att_com_product_child	INDEX	N	fk_product_child	htdocs/install/mysql/tables/llx_product_attribute_combination-variants.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_attribute_combination	idx_product_att_com_product_parent	INDEX	N	fk_product_parent	htdocs/install/mysql/tables/llx_product_attribute_combination-variants.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_attribute_combination	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_attribute_combination-variants.sql	启用	主键在建表文件中定义
+llx_product_attribute_combination2val	idx_product_att_com2v_prod_attr	INDEX	N	fk_prod_attr	htdocs/install/mysql/tables/llx_product_attribute_combination2val-variants.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_attribute_combination2val	idx_product_att_com2v_prod_attr_val	INDEX	N	fk_prod_attr_val	htdocs/install/mysql/tables/llx_product_attribute_combination2val-variants.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_attribute_combination2val	idx_product_att_com2v_prod_combination	INDEX	N	fk_prod_combination	htdocs/install/mysql/tables/llx_product_attribute_combination2val-variants.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_attribute_combination2val	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_attribute_combination2val-variants.sql	启用	主键在建表文件中定义
+llx_product_attribute_extrafields	idx_product_attribute_extrafields	INDEX	N	fk_object	htdocs/install/mysql/tables/llx_product_attribute_extrafields-variants.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_attribute_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_attribute_extrafields-variants.sql	启用	主键在建表文件中定义
+llx_product_attribute_value_extrafields	idx_product_attribute_value_extrafields	INDEX	N	fk_object	htdocs/install/mysql/tables/llx_product_attribute_value_extrafields-variants.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_attribute_value_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_attribute_value_extrafields-variants.sql	启用	主键在建表文件中定义
+llx_product_attribute_value	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_attribute_value-variants.sql	启用	主键在建表文件中定义
+llx_product_attribute_value	uk_product_attribute_value	INDEX	Y	fk_product_attribute, ref	htdocs/install/mysql/tables/llx_product_attribute_value-variants.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_attribute	idx_product_attribute_entity	INDEX	N	entity	htdocs/install/mysql/tables/llx_product_attribute-variants.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_attribute	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_attribute-variants.sql	启用	主键在建表文件中定义
+llx_product_attribute	uk_product_attribute_ref	INDEX	Y	ref	htdocs/install/mysql/tables/llx_product_attribute-variants.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_batch	idx_batch	INDEX	N	batch	htdocs/install/mysql/tables/llx_product_batch.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_batch	idx_fk_product_stock	INDEX	N	fk_product_stock	htdocs/install/mysql/tables/llx_product_batch.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_batch	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_batch.sql	启用	主键在建表文件中定义
+llx_product_batch	uk_product_batch	INDEX	Y	fk_product_stock, batch	htdocs/install/mysql/tables/llx_product_batch.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_customer_price_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_customer_price_extrafields.sql	启用	主键在建表文件中定义
+llx_product_customer_price_extrafields	uk_product_customer_price_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_product_customer_price_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_customer_price_log	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_customer_price_log.sql	启用	主键在建表文件中定义
+llx_product_customer_price	idx_product_customer_price_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_product_customer_price.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_customer_price	idx_product_customer_price_fk_user	INDEX	N	fk_user	htdocs/install/mysql/tables/llx_product_customer_price.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_customer_price	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_customer_price.sql	启用	主键在建表文件中定义
+llx_product_customer_price	uk_customer_price_fk_product_fk_soc	INDEX	Y	fk_product, fk_soc, date_begin	htdocs/install/mysql/tables/llx_product_customer_price.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_extrafields.sql	启用	主键在建表文件中定义
+llx_product_extrafields	uk_product_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_product_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_fournisseur_price_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_fournisseur_price_extrafields.sql	启用	主键在建表文件中定义
+llx_product_fournisseur_price_extrafields	uk_product_fournisseur_price_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_product_fournisseur_price_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_fournisseur_price_log	idx_product_fournisseur_price_log_fk_product_fournisseur	INDEX	N	fk_product_fournisseur	htdocs/install/mysql/tables/llx_product_fournisseur_price_log.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_fournisseur_price_log	idx_product_fournisseur_price_log_fk_user	INDEX	N	fk_user	htdocs/install/mysql/tables/llx_product_fournisseur_price_log.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_fournisseur_price_log	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_fournisseur_price_log.sql	启用	主键在建表文件中定义
+llx_product_fournisseur_price	idx_product_barcode	INDEX	N	barcode	htdocs/install/mysql/tables/llx_product_fournisseur_price.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_fournisseur_price	idx_product_fk_barcode_type	INDEX	N	fk_barcode_type	htdocs/install/mysql/tables/llx_product_fournisseur_price.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_fournisseur_price	idx_product_fourn_price_fk_product	INDEX	N	fk_product, entity	htdocs/install/mysql/tables/llx_product_fournisseur_price.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_fournisseur_price	idx_product_fourn_price_fk_soc	INDEX	N	fk_soc, entity	htdocs/install/mysql/tables/llx_product_fournisseur_price.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_fournisseur_price	idx_product_fournisseur_price_fk_user	INDEX	N	fk_user	htdocs/install/mysql/tables/llx_product_fournisseur_price.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_fournisseur_price	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_fournisseur_price.sql	启用	主键在建表文件中定义
+llx_product_fournisseur_price	uk_product_barcode	INDEX	Y	barcode, fk_barcode_type, entity	htdocs/install/mysql/tables/llx_product_fournisseur_price.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_fournisseur_price	uk_product_fournisseur_price_ref	INDEX	Y	ref_fourn, fk_soc, quantity, entity	htdocs/install/mysql/tables/llx_product_fournisseur_price.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_lang_extrafields	idx_product_lang_fk_object	INDEX	N	fk_object	htdocs/install/mysql/tables/llx_product_lang_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_lang_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_lang_extrafields.sql	启用	主键在建表文件中定义
+llx_product_lang	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_lang.sql	启用	主键在建表文件中定义
+llx_product_lang	uk_product_lang	INDEX	Y	fk_product, lang	htdocs/install/mysql/tables/llx_product_lang.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_lot_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_lot_extrafields.sql	启用	主键在建表文件中定义
+llx_product_lot_extrafields	uk_product_lot_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_product_lot_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_lot	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_lot.sql	启用	主键在建表文件中定义
+llx_product_lot	uk_product_lot	INDEX	Y	fk_product, batch	htdocs/install/mysql/tables/llx_product_lot.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_perentity	idx_product_perentity_fk_product	INDEX	N	fk_product	htdocs/install/mysql/tables/llx_product_perentity-multicompany.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_perentity	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_perentity-multicompany.sql	启用	主键在建表文件中定义
+llx_product_perentity	uk_product_perentity	INDEX	Y	fk_product, entity	htdocs/install/mysql/tables/llx_product_perentity-multicompany.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_price_by_qty	idx_product_price_by_qty_fk_product_price	INDEX	N	fk_product_price	htdocs/install/mysql/tables/llx_product_price_by_qty.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_price_by_qty	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_price_by_qty.sql	启用	主键在建表文件中定义
+llx_product_price_by_qty	uk_product_price_by_qty_level	INDEX	Y	fk_product_price, quantity	htdocs/install/mysql/tables/llx_product_price_by_qty.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_price_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_price_extrafields.sql	启用	主键在建表文件中定义
+llx_product_price_extrafields	uk_product_price_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_product_price_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_price	idx_product_price_fk_product	INDEX	N	fk_product	htdocs/install/mysql/tables/llx_product_price.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_price	idx_product_price_fk_user_author	INDEX	N	fk_user_author	htdocs/install/mysql/tables/llx_product_price.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_price	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_price.sql	启用	主键在建表文件中定义
+llx_product_pricerules	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_pricerules.sql	启用	主键在建表文件中定义
+llx_product_stock	idx_product_stock_fk_entrepot	INDEX	N	fk_entrepot	htdocs/install/mysql/tables/llx_product_stock.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_stock	idx_product_stock_fk_product	INDEX	N	fk_product	htdocs/install/mysql/tables/llx_product_stock.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_stock	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_stock.sql	启用	主键在建表文件中定义
+llx_product_stock	uk_product_stock	INDEX	Y	fk_product, fk_entrepot	htdocs/install/mysql/tables/llx_product_stock.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_thirdparty	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_thirdparty.sql	启用	主键在建表文件中定义
+llx_product_warehouse_properties	idx_product_warehouse_properties_fk_entrepot	INDEX	N	fk_entrepot	htdocs/install/mysql/tables/llx_product_warehouse_properties-stock.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_warehouse_properties	idx_product_warehouse_properties_fk_product	INDEX	N	fk_product	htdocs/install/mysql/tables/llx_product_warehouse_properties-stock.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product_warehouse_properties	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product_warehouse_properties-stock.sql	启用	主键在建表文件中定义
+llx_product	idx_product_barcode	INDEX	N	barcode	htdocs/install/mysql/tables/llx_product.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product	idx_product_datec	INDEX	N	datec	htdocs/install/mysql/tables/llx_product.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product	idx_product_entity_fk_product_type	INDEX	N	entity, fk_product_type	htdocs/install/mysql/tables/llx_product.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product	idx_product_entity_tobuy	INDEX	N	entity, tobuy	htdocs/install/mysql/tables/llx_product.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product	idx_product_entity_tosell	INDEX	N	entity, tosell	htdocs/install/mysql/tables/llx_product.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product	idx_product_fk_barcode_type	INDEX	N	fk_barcode_type	htdocs/install/mysql/tables/llx_product.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product	idx_product_fk_country	INDEX	N	fk_country	htdocs/install/mysql/tables/llx_product.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product	idx_product_fk_project	INDEX	N	fk_project	htdocs/install/mysql/tables/llx_product.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product	idx_product_fk_user_author	INDEX	N	fk_user_author	htdocs/install/mysql/tables/llx_product.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product	idx_product_import_key	INDEX	N	import_key	htdocs/install/mysql/tables/llx_product.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product	idx_product_label	INDEX	N	label	htdocs/install/mysql/tables/llx_product.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product	idx_product_seuil_stock_alerte	INDEX	N	seuil_stock_alerte	htdocs/install/mysql/tables/llx_product.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product	idx_product_tms	INDEX	N	tms	htdocs/install/mysql/tables/llx_product.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_product.sql	启用	主键在建表文件中定义
+llx_product	uk_product_barcode	INDEX	Y	barcode, fk_barcode_type, entity	htdocs/install/mysql/tables/llx_product.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_product	uk_product_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_product.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_projet_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_projet_extrafields.sql	启用	主键在建表文件中定义
+llx_projet_extrafields	uk_projet_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_projet_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_projet_task_dependency	idx_projet_task_dependency_fk_task	INDEX	N	fk_task	htdocs/install/mysql/tables/llx_projet_task_dependency-project.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_projet_task_dependency	idx_projet_task_dependency_fk_task_depend	INDEX	N	fk_task_depend	htdocs/install/mysql/tables/llx_projet_task_dependency-project.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_projet_task_dependency	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_projet_task_dependency-project.sql	启用	主键在建表文件中定义
+llx_projet_task_dependency	uk_projet_task_dependency	INDEX	Y	fk_task, fk_task_depend	htdocs/install/mysql/tables/llx_projet_task_dependency-project.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_projet_task_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_projet_task_extrafields.sql	启用	主键在建表文件中定义
+llx_projet_task_extrafields	uk_projet_task_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_projet_task_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_projet_task	idx_projet_task_fk_projet	INDEX	N	fk_projet	htdocs/install/mysql/tables/llx_projet_task.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_projet_task	idx_projet_task_fk_user_creat	INDEX	N	fk_user_creat	htdocs/install/mysql/tables/llx_projet_task.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_projet_task	idx_projet_task_fk_user_valid	INDEX	N	fk_user_valid	htdocs/install/mysql/tables/llx_projet_task.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_projet_task	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_projet_task.sql	启用	主键在建表文件中定义
+llx_projet_task	uk_projet_task_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_projet_task.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_projet	idx_projet_fk_opp_status	INDEX	N	fk_opp_status	htdocs/install/mysql/tables/llx_projet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_projet	idx_projet_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_projet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_projet	idx_projet_fk_statut	INDEX	N	fk_statut	htdocs/install/mysql/tables/llx_projet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_projet	idx_projet_ref	INDEX	N	ref	htdocs/install/mysql/tables/llx_projet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_projet	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_projet.sql	启用	主键在建表文件中定义
+llx_projet	uk_projet_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_projet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_propal_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_propal_extrafields.sql	启用	主键在建表文件中定义
+llx_propal_extrafields	uk_propal_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_propal_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_propal_merge_pdf_product	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_propal_merge_pdf_product.sql	启用	主键在建表文件中定义
+llx_propal	idx_propal_fk_account	INDEX	N	fk_account	htdocs/install/mysql/tables/llx_propal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_propal	idx_propal_fk_currency	INDEX	N	fk_currency	htdocs/install/mysql/tables/llx_propal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_propal	idx_propal_fk_projet	INDEX	N	fk_projet	htdocs/install/mysql/tables/llx_propal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_propal	idx_propal_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_propal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_propal	idx_propal_fk_user_author	INDEX	N	fk_user_author	htdocs/install/mysql/tables/llx_propal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_propal	idx_propal_fk_user_cloture	INDEX	N	fk_user_cloture	htdocs/install/mysql/tables/llx_propal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_propal	idx_propal_fk_user_signature	INDEX	N	fk_user_signature	htdocs/install/mysql/tables/llx_propal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_propal	idx_propal_fk_user_valid	INDEX	N	fk_user_valid	htdocs/install/mysql/tables/llx_propal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_propal	idx_propal_fk_warehouse	INDEX	N	fk_warehouse	htdocs/install/mysql/tables/llx_propal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_propal	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_propal.sql	启用	主键在建表文件中定义
+llx_propal	uk_propal_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_propal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_propaldet_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_propaldet_extrafields.sql	启用	主键在建表文件中定义
+llx_propaldet_extrafields	uk_propaldet_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_propaldet_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_propaldet	idx_propaldet_fk_product	INDEX	N	fk_product	htdocs/install/mysql/tables/llx_propaldet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_propaldet	idx_propaldet_fk_propal	INDEX	N	fk_propal	htdocs/install/mysql/tables/llx_propaldet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_propaldet	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_propaldet.sql	启用	主键在建表文件中定义
+llx_quickmemo_memo_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_quickmemo_memo_extrafields-quickmemo.sql	启用	主键在建表文件中定义
+llx_quickmemo_memo_extrafields	uk_memo_fk_object	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_quickmemo_memo_extrafields-quickmemo.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_quickmemo_memo_user	idx_quickmemo_memo_rowid	INDEX	N	fk_memo	htdocs/install/mysql/tables/llx_quickmemo_memo_user-quickmemo.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_quickmemo_memo_user	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_quickmemo_memo_user-quickmemo.sql	启用	主键在建表文件中定义
+llx_quickmemo_memo_user	uk_memo_user	INDEX	Y	fk_memo, fk_user	htdocs/install/mysql/tables/llx_quickmemo_memo_user-quickmemo.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_quickmemo_memo	idx_quickmemo_memo_element	INDEX	N	fk_element, element_type	htdocs/install/mysql/tables/llx_quickmemo_memo-quickmemo.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_quickmemo_memo	idx_quickmemo_memo_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_quickmemo_memo-quickmemo.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_quickmemo_memo	idx_quickmemo_memo_status	INDEX	N	status	htdocs/install/mysql/tables/llx_quickmemo_memo-quickmemo.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_quickmemo_memo	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_quickmemo_memo-quickmemo.sql	启用	主键在建表文件中定义
+llx_reception_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_reception_extrafields.sql	启用	主键在建表文件中定义
+llx_reception_extrafields	uk_reception_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_reception_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_reception	idx_reception_fk_shipping_method	INDEX	N	fk_shipping_method	htdocs/install/mysql/tables/llx_reception.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_reception	idx_reception_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_reception.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_reception	idx_reception_fk_user_author	INDEX	N	fk_user_author	htdocs/install/mysql/tables/llx_reception.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_reception	idx_reception_fk_user_valid	INDEX	N	fk_user_valid	htdocs/install/mysql/tables/llx_reception.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_reception	idx_reception_uk_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_reception.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_reception	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_reception.sql	启用	主键在建表文件中定义
+llx_receptiondet_batch_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_receptiondet_batch_extrafields.sql	启用	主键在建表文件中定义
+llx_receptiondet_batch_extrafields	uk_receptiondet_batch_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_receptiondet_batch_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_receptiondet_batch	idx_receptiondet_batch_fk_element	INDEX	N	fk_element	htdocs/install/mysql/tables/llx_receptiondet_batch.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_receptiondet_batch	idx_receptiondet_batch_fk_elementdet	INDEX	N	fk_elementdet	htdocs/install/mysql/tables/llx_receptiondet_batch.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_receptiondet_batch	idx_receptiondet_batch_fk_product	INDEX	N	fk_product	htdocs/install/mysql/tables/llx_receptiondet_batch.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_receptiondet_batch	idx_receptiondet_batch_fk_reception	INDEX	N	fk_reception	htdocs/install/mysql/tables/llx_receptiondet_batch.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_receptiondet_batch	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_receptiondet_batch.sql	启用	主键在建表文件中定义
+llx_recruitment_recruitmentcandidature_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_recruitment_recruitmentcandidature_extrafields-recruitment.sql	启用	主键在建表文件中定义
+llx_recruitment_recruitmentcandidature_extrafields	uk_recruitmentcandidature_fk_object	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_recruitment_recruitmentcandidature_extrafields-recruitment.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_recruitment_recruitmentcandidature	idx_recruitment_recruitmentcandidature_ref	INDEX	N	ref	htdocs/install/mysql/tables/llx_recruitment_recruitmentcandidature-recruitment.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_recruitment_recruitmentcandidature	idx_recruitment_recruitmentcandidature_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_recruitment_recruitmentcandidature-recruitment.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_recruitment_recruitmentcandidature	idx_recruitment_recruitmentcandidature_status	INDEX	N	status	htdocs/install/mysql/tables/llx_recruitment_recruitmentcandidature-recruitment.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_recruitment_recruitmentcandidature	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_recruitment_recruitmentcandidature-recruitment.sql	启用	主键在建表文件中定义
+llx_recruitment_recruitmentcandidature	uk_recruitmentcandidature_email_msgid	INDEX	Y	email_msgid	htdocs/install/mysql/tables/llx_recruitment_recruitmentcandidature-recruitment.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_recruitment_recruitmentjobposition_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_recruitment_recruitmentjobposition_extrafields-recruitment.sql	启用	主键在建表文件中定义
+llx_recruitment_recruitmentjobposition_extrafields	uk_recruitmentjobposition_fk_object	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_recruitment_recruitmentjobposition_extrafields-recruitment.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_recruitment_recruitmentjobposition	idx_recruitment_recruitmentjobposition_fk_project	INDEX	N	fk_project	htdocs/install/mysql/tables/llx_recruitment_recruitmentjobposition-recruitment.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_recruitment_recruitmentjobposition	idx_recruitment_recruitmentjobposition_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_recruitment_recruitmentjobposition-recruitment.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_recruitment_recruitmentjobposition	idx_recruitment_recruitmentjobposition_ref	INDEX	N	ref	htdocs/install/mysql/tables/llx_recruitment_recruitmentjobposition-recruitment.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_recruitment_recruitmentjobposition	idx_recruitment_recruitmentjobposition_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_recruitment_recruitmentjobposition-recruitment.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_recruitment_recruitmentjobposition	idx_recruitment_recruitmentjobposition_status	INDEX	N	status	htdocs/install/mysql/tables/llx_recruitment_recruitmentjobposition-recruitment.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_recruitment_recruitmentjobposition	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_recruitment_recruitmentjobposition-recruitment.sql	启用	主键在建表文件中定义
+llx_resource_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_resource_extrafields.sql	启用	主键在建表文件中定义
+llx_resource_extrafields	uk_resource_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_resource_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_resource	fk_code_type_resource_idx	INDEX	N	fk_code_type_resource	htdocs/install/mysql/tables/llx_resource.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_resource	idx_resource_fk_country	INDEX	N	fk_country	htdocs/install/mysql/tables/llx_resource.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_resource	idx_resource_fk_state	INDEX	N	fk_state	htdocs/install/mysql/tables/llx_resource.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_resource	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_resource.sql	启用	主键在建表文件中定义
+llx_resource	uk_resource_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_resource.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_salary_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_salary_extrafields.sql	启用	主键在建表文件中定义
+llx_salary_extrafields	uk_salary_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_salary_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_salary	idx_salary_entity	INDEX	N	entity	htdocs/install/mysql/tables/llx_salary.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_salary	idx_salary_fk_account	INDEX	N	fk_account	htdocs/install/mysql/tables/llx_salary.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_salary	idx_salary_fk_bank	INDEX	N	fk_bank	htdocs/install/mysql/tables/llx_salary.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_salary	idx_salary_fk_projet	INDEX	N	fk_projet	htdocs/install/mysql/tables/llx_salary.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_salary	idx_salary_fk_typepayment	INDEX	N	fk_typepayment	htdocs/install/mysql/tables/llx_salary.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_salary	idx_salary_fk_user	INDEX	N	fk_user	htdocs/install/mysql/tables/llx_salary.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_salary	idx_salary_fk_user_author	INDEX	N	fk_user_author	htdocs/install/mysql/tables/llx_salary.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_salary	idx_salary_fk_user_modif	INDEX	N	fk_user_modif	htdocs/install/mysql/tables/llx_salary.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_salary	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_salary.sql	启用	主键在建表文件中定义
+llx_salary	uk_salary_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_salary.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_session	PRIMARY	PRIMARY KEY	Y	session_id	htdocs/install/mysql/tables/llx_session-disabled.sql	启用	主键在建表文件中定义
+llx_societe_account	idx_societe_account_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_societe_account.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe_account	idx_societe_account_fk_website	INDEX	N	fk_website	htdocs/install/mysql/tables/llx_societe_account.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe_account	idx_societe_account_login	INDEX	N	login	htdocs/install/mysql/tables/llx_societe_account.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe_account	idx_societe_account_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_societe_account.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe_account	idx_societe_account_status	INDEX	N	status	htdocs/install/mysql/tables/llx_societe_account.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe_account	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_societe_account.sql	启用	主键在建表文件中定义
+llx_societe_account	uk_societe_account_key_account_soc	INDEX	Y	entity, fk_soc, key_account, site, fk_website	htdocs/install/mysql/tables/llx_societe_account.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe_account	uk_societe_account_login_website	INDEX	Y	entity, login, site, fk_website	htdocs/install/mysql/tables/llx_societe_account.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe_commerciaux	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_societe_commerciaux.sql	启用	主键在建表文件中定义
+llx_societe_commerciaux	uk_societe_commerciaux_c_type_contact	INDEX	Y	fk_soc, fk_user, fk_c_type_contact_code	htdocs/install/mysql/tables/llx_societe_commerciaux.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe_contacts	idx_societe_contacts_idx1	INDEX	Y	entity, fk_soc, fk_c_type_contact, fk_socpeople	htdocs/install/mysql/tables/llx_societe_contacts.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe_contacts	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_societe_contacts.sql	启用	主键在建表文件中定义
+llx_societe_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_societe_extrafields.sql	启用	主键在建表文件中定义
+llx_societe_extrafields	uk_societe_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_societe_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe_perentity	idx_societe_perentity_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_societe_perentity-multicompany.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe_perentity	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_societe_perentity-multicompany.sql	启用	主键在建表文件中定义
+llx_societe_perentity	uk_societe_perentity	INDEX	Y	fk_soc, entity	htdocs/install/mysql/tables/llx_societe_perentity-multicompany.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe_prices	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_societe_prices.sql	启用	主键在建表文件中定义
+llx_societe_remise_except	idx_societe_remise_except_discount_type	INDEX	N	discount_type	htdocs/install/mysql/tables/llx_societe_remise_except.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe_remise_except	idx_societe_remise_except_fk_facture	INDEX	N	fk_facture	htdocs/install/mysql/tables/llx_societe_remise_except.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe_remise_except	idx_societe_remise_except_fk_facture_line	INDEX	N	fk_facture_line	htdocs/install/mysql/tables/llx_societe_remise_except.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe_remise_except	idx_societe_remise_except_fk_facture_source	INDEX	N	fk_facture_source	htdocs/install/mysql/tables/llx_societe_remise_except.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe_remise_except	idx_societe_remise_except_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_societe_remise_except.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe_remise_except	idx_societe_remise_except_fk_user	INDEX	N	fk_user	htdocs/install/mysql/tables/llx_societe_remise_except.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe_remise_except	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_societe_remise_except.sql	启用	主键在建表文件中定义
+llx_societe_remise_supplier	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_societe_remise_supplier.sql	启用	主键在建表文件中定义
+llx_societe_remise	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_societe_remise.sql	启用	主键在建表文件中定义
+llx_societe_rib	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_societe_rib.sql	启用	主键在建表文件中定义
+llx_societe_rib	uk_societe_rib	INDEX	Y	entity, label, fk_soc	htdocs/install/mysql/tables/llx_societe_rib.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe	idx_societe_account	INDEX	N	fk_account	htdocs/install/mysql/tables/llx_societe.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe	idx_societe_forme_juridique	INDEX	N	fk_forme_juridique	htdocs/install/mysql/tables/llx_societe.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe	idx_societe_nom	INDEX	N	nom	htdocs/install/mysql/tables/llx_societe.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe	idx_societe_pays	INDEX	N	fk_pays	htdocs/install/mysql/tables/llx_societe.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe	idx_societe_prospectlevel	INDEX	N	fk_prospectlevel	htdocs/install/mysql/tables/llx_societe.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe	idx_societe_shipping_method	INDEX	N	fk_shipping_method	htdocs/install/mysql/tables/llx_societe.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe	idx_societe_stcomm	INDEX	N	fk_stcomm	htdocs/install/mysql/tables/llx_societe.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe	idx_societe_typent	INDEX	N	fk_typent	htdocs/install/mysql/tables/llx_societe.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe	idx_societe_user_creat	INDEX	N	fk_user_creat	htdocs/install/mysql/tables/llx_societe.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe	idx_societe_user_modif	INDEX	N	fk_user_modif	htdocs/install/mysql/tables/llx_societe.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_societe.sql	启用	主键在建表文件中定义
+llx_societe	uk_societe_barcode	INDEX	Y	barcode, fk_barcode_type, entity	htdocs/install/mysql/tables/llx_societe.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe	uk_societe_code_client	INDEX	Y	code_client, entity	htdocs/install/mysql/tables/llx_societe.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe	uk_societe_code_fournisseur	INDEX	Y	code_fournisseur, entity	htdocs/install/mysql/tables/llx_societe.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_societe	uk_societe_prefix_comm	INDEX	Y	prefix_comm, entity	htdocs/install/mysql/tables/llx_societe.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_socpeople_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_socpeople_extrafields.sql	启用	主键在建表文件中定义
+llx_socpeople_extrafields	uk_socpeople_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_socpeople_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_socpeople	idx_socpeople_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_socpeople.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_socpeople	idx_socpeople_fk_user_creat	INDEX	N	fk_user_creat	htdocs/install/mysql/tables/llx_socpeople.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_socpeople	idx_socpeople_lastname	INDEX	N	lastname	htdocs/install/mysql/tables/llx_socpeople.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_socpeople	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_socpeople.sql	启用	主键在建表文件中定义
+llx_stock_mouvement_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_stock_mouvement_extrafields.sql	启用	主键在建表文件中定义
+llx_stock_mouvement_extrafields	uk_stock_mouvement_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_stock_mouvement_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_stock_mouvement	idx_stock_mouvement_batch_entrepot_type_datem	INDEX	N	batch, fk_entrepot, type_mouvement, datem	htdocs/install/mysql/tables/llx_stock_mouvement.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_stock_mouvement	idx_stock_mouvement_fk_entrepot	INDEX	N	fk_entrepot	htdocs/install/mysql/tables/llx_stock_mouvement.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_stock_mouvement	idx_stock_mouvement_fk_product	INDEX	N	fk_product	htdocs/install/mysql/tables/llx_stock_mouvement.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_stock_mouvement	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_stock_mouvement.sql	启用	主键在建表文件中定义
+llx_stocktransfer_stocktransfer_extrafields	idx_fk_object	INDEX	N	fk_object	htdocs/install/mysql/tables/llx_stocktransfer_stocktransfer_extrafields-stocktransfer.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_stocktransfer_stocktransfer_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_stocktransfer_stocktransfer_extrafields-stocktransfer.sql	启用	主键在建表文件中定义
+llx_stocktransfer_stocktransfer	idx_stocktransfer_stocktransfer_fk_project	INDEX	N	fk_project	htdocs/install/mysql/tables/llx_stocktransfer_stocktransfer-stocktransfer.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_stocktransfer_stocktransfer	idx_stocktransfer_stocktransfer_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_stocktransfer_stocktransfer-stocktransfer.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_stocktransfer_stocktransfer	idx_stocktransfer_stocktransfer_ref	INDEX	N	ref	htdocs/install/mysql/tables/llx_stocktransfer_stocktransfer-stocktransfer.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_stocktransfer_stocktransfer	idx_stocktransfer_stocktransfer_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_stocktransfer_stocktransfer-stocktransfer.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_stocktransfer_stocktransfer	idx_stocktransfer_stocktransfer_status	INDEX	N	status	htdocs/install/mysql/tables/llx_stocktransfer_stocktransfer-stocktransfer.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_stocktransfer_stocktransfer	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_stocktransfer_stocktransfer-stocktransfer.sql	启用	主键在建表文件中定义
+llx_stocktransfer_stocktransferline_extrafields	idx_fk_object	INDEX	N	fk_object	htdocs/install/mysql/tables/llx_stocktransfer_stocktransferline_extrafields-stocktransfer.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_stocktransfer_stocktransferline_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_stocktransfer_stocktransferline_extrafields-stocktransfer.sql	启用	主键在建表文件中定义
+llx_stocktransfer_stocktransferline	idx_stocktransfer_stocktransferline_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_stocktransfer_stocktransferline-stocktransfer.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_stocktransfer_stocktransferline	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_stocktransfer_stocktransferline-stocktransfer.sql	启用	主键在建表文件中定义
+llx_subscription	idx_subscription_dateadh	INDEX	N	dateadh	htdocs/install/mysql/tables/llx_subscription.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_subscription	idx_subscription_fk_adherent	INDEX	N	fk_adherent	htdocs/install/mysql/tables/llx_subscription.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_subscription	idx_subscription_fk_bank	INDEX	N	fk_bank	htdocs/install/mysql/tables/llx_subscription.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_subscription	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_subscription.sql	启用	主键在建表文件中定义
+llx_subscription	uk_subscription	INDEX	Y	fk_adherent, dateadh	htdocs/install/mysql/tables/llx_subscription.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_supplier_proposal_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_supplier_proposal_extrafields.sql	启用	主键在建表文件中定义
+llx_supplier_proposal_extrafields	uk_supplier_proposal_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_supplier_proposal_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_supplier_proposal	idx_supplier_proposal_fk_account	INDEX	N	fk_account	htdocs/install/mysql/tables/llx_supplier_proposal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_supplier_proposal	idx_supplier_proposal_fk_projet	INDEX	N	fk_projet	htdocs/install/mysql/tables/llx_supplier_proposal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_supplier_proposal	idx_supplier_proposal_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_supplier_proposal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_supplier_proposal	idx_supplier_proposal_fk_user_author	INDEX	N	fk_user_author	htdocs/install/mysql/tables/llx_supplier_proposal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_supplier_proposal	idx_supplier_proposal_fk_user_valid	INDEX	N	fk_user_valid	htdocs/install/mysql/tables/llx_supplier_proposal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_supplier_proposal	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_supplier_proposal.sql	启用	主键在建表文件中定义
+llx_supplier_proposal	uk_supplier_proposal_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_supplier_proposal.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_supplier_proposaldet_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_supplier_proposaldet_extrafields.sql	启用	主键在建表文件中定义
+llx_supplier_proposaldet_extrafields	uk_supplier_proposaldet_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_supplier_proposaldet_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_supplier_proposaldet	idx_supplier_proposaldet_fk_product	INDEX	N	fk_product	htdocs/install/mysql/tables/llx_supplier_proposaldet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_supplier_proposaldet	idx_supplier_proposaldet_fk_supplier_proposal	INDEX	N	fk_supplier_proposal	htdocs/install/mysql/tables/llx_supplier_proposaldet.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_supplier_proposaldet	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_supplier_proposaldet.sql	启用	主键在建表文件中定义
+llx_takepos_floor_tables	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_takepos_floor_tables-takepos.sql	启用	主键在建表文件中定义
+llx_takepos_floor_tables	uk_takepos_floor_tables	INDEX	Y	entity, label	htdocs/install/mysql/tables/llx_takepos_floor_tables-takepos.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ticket_extrafields	idx_ticket_extrafields	INDEX	N	fk_object	htdocs/install/mysql/tables/llx_ticket_extrafields-ticket.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ticket_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_ticket_extrafields-ticket.sql	启用	主键在建表文件中定义
+llx_ticket	idx_ticket_entity	INDEX	N	entity	htdocs/install/mysql/tables/llx_ticket-ticket.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ticket	idx_ticket_fk_project	INDEX	N	fk_project	htdocs/install/mysql/tables/llx_ticket-ticket.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ticket	idx_ticket_fk_soc	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_ticket-ticket.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ticket	idx_ticket_fk_statut	INDEX	N	fk_statut	htdocs/install/mysql/tables/llx_ticket-ticket.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ticket	idx_ticket_fk_user_assign	INDEX	N	fk_user_assign	htdocs/install/mysql/tables/llx_ticket-ticket.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_ticket	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_ticket-ticket.sql	启用	主键在建表文件中定义
+llx_ticket	uk_ticket_barcode_barcode_type	INDEX	Y	barcode, fk_barcode_type, entity	htdocs/install/mysql/tables/llx_ticket-ticket.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_tva	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_tva.sql	启用	主键在建表文件中定义
+llx_user_alert	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_user_alert.sql	启用	主键在建表文件中定义
+llx_user_clicktodial	PRIMARY	PRIMARY KEY	Y	fk_user	htdocs/install/mysql/tables/llx_user_clicktodial.sql	启用	主键在建表文件中定义
+llx_user_employment	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_user_employment.sql	启用	主键在建表文件中定义
+llx_user_employment	uk_user_employment	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_user_employment.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_user_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_user_extrafields.sql	启用	主键在建表文件中定义
+llx_user_extrafields	uk_user_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_user_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_user_param	uk_user_param	INDEX	Y	fk_user, param, entity	htdocs/install/mysql/tables/llx_user_param.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_user_rib	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_user_rib.sql	启用	主键在建表文件中定义
+llx_user_rights	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_user_rights.sql	启用	主键在建表文件中定义
+llx_user_rights	uk_user_rights	INDEX	Y	entity, fk_user, fk_id	htdocs/install/mysql/tables/llx_user_rights.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_user	idx_user_fk_societe	INDEX	N	fk_soc	htdocs/install/mysql/tables/llx_user.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_user	idx_user_status_employee	INDEX	N	statut, employee	htdocs/install/mysql/tables/llx_user.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_user	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_user.sql	启用	主键在建表文件中定义
+llx_user	uk_user_api_key	INDEX	Y	api_key	htdocs/install/mysql/tables/llx_user.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_user	uk_user_fk_member	INDEX	Y	fk_member	htdocs/install/mysql/tables/llx_user.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_user	uk_user_fk_socpeople	INDEX	Y	fk_socpeople	htdocs/install/mysql/tables/llx_user.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_user	uk_user_login	INDEX	Y	login, entity	htdocs/install/mysql/tables/llx_user.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_usergroup_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_usergroup_extrafields.sql	启用	主键在建表文件中定义
+llx_usergroup_extrafields	uk_usergroup_extrafields	INDEX	Y	fk_object	htdocs/install/mysql/tables/llx_usergroup_extrafields.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_usergroup_rights	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_usergroup_rights.sql	启用	主键在建表文件中定义
+llx_usergroup_rights	uk_usergroup_rights	INDEX	Y	entity, fk_usergroup, fk_id	htdocs/install/mysql/tables/llx_usergroup_rights.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_usergroup_user	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_usergroup_user.sql	启用	主键在建表文件中定义
+llx_usergroup_user	uk_usergroup_user	INDEX	Y	entity, fk_user, fk_usergroup	htdocs/install/mysql/tables/llx_usergroup_user.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_usergroup	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_usergroup.sql	启用	主键在建表文件中定义
+llx_usergroup	uk_usergroup_name	INDEX	Y	nom, entity	htdocs/install/mysql/tables/llx_usergroup.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_webhook_history	idx_webhook_history_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_webhook_history-webhook.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_webhook_history	idx_webhook_history_status	INDEX	N	status	htdocs/install/mysql/tables/llx_webhook_history-webhook.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_webhook_history	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_webhook_history-webhook.sql	启用	主键在建表文件中定义
+llx_webhook_target	idx_webhook_target_ref	INDEX	N	ref	htdocs/install/mysql/tables/llx_webhook_target-webhook.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_webhook_target	idx_webhook_target_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_webhook_target-webhook.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_webhook_target	idx_webhook_target_status	INDEX	N	status	htdocs/install/mysql/tables/llx_webhook_target-webhook.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_webhook_target	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_webhook_target-webhook.sql	启用	主键在建表文件中定义
+llx_website_extrafields	idx_website_extrafields	INDEX	N	fk_object	htdocs/install/mysql/tables/llx_website_extrafields-website.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_website_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_website_extrafields-website.sql	启用	主键在建表文件中定义
+llx_website_page	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_website_page-website.sql	启用	主键在建表文件中定义
+llx_website_page	uk_website_page_url	INDEX	Y	fk_website, pageurl	htdocs/install/mysql/tables/llx_website_page-website.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_website	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_website-website.sql	启用	主键在建表文件中定义
+llx_website	uk_website_ref	INDEX	Y	ref, entity	htdocs/install/mysql/tables/llx_website-website.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_workstation_workstation_extrafields	idx_workstation_workstation_extrafields	INDEX	N	fk_object	htdocs/install/mysql/tables/llx_workstation_workstation_extrafields-workstation.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_workstation_workstation_extrafields	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_workstation_workstation_extrafields-workstation.sql	启用	主键在建表文件中定义
+llx_workstation_workstation_resource	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_workstation_workstation_resource-workstation.sql	启用	主键在建表文件中定义
+llx_workstation_workstation_usergroup	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_workstation_workstation_usergroup-workstation.sql	启用	主键在建表文件中定义
+llx_workstation_workstation	idx_workstation_workstation_ref	INDEX	N	ref	htdocs/install/mysql/tables/llx_workstation_workstation-workstation.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_workstation_workstation	idx_workstation_workstation_rowid	INDEX	N	rowid	htdocs/install/mysql/tables/llx_workstation_workstation-workstation.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_workstation_workstation	idx_workstation_workstation_status	INDEX	N	status	htdocs/install/mysql/tables/llx_workstation_workstation-workstation.key.sql	启用	索引由 .key.sql 安装脚本创建
+llx_workstation_workstation	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_workstation_workstation-workstation.sql	启用	主键在建表文件中定义
+llx_zapier_hook	PRIMARY	PRIMARY KEY	Y	rowid	htdocs/install/mysql/tables/llx_zapier_hook-zapier.sql	启用	主键在建表文件中定义

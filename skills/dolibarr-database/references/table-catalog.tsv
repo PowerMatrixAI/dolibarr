@@ -1,0 +1,415 @@
+﻿table_name	module_key	business_module	table_role	source_description	primary_key	field_count	index_count	explicit_fk_count	has_entity	create_file	notes
+llx_accounting_account	accounting	会计/总账	业务实体表	Table of 'accounts' for accountancy module	rowid	18	4	1	Y	htdocs/install/mysql/tables/llx_accounting_account.sql	
+llx_accounting_analytic_account	accounting	会计/总账	业务实体表	Table of 'analytic account' for accountancy module	rowid	14	2	0	Y	htdocs/install/mysql/tables/llx_accounting_analytic_account-accounting.sql	
+llx_accounting_analytic_axis	accounting	会计/总账	业务实体表	Table of 'analytic axis' for accountancy module	rowid	10	2	0	Y	htdocs/install/mysql/tables/llx_accounting_analytic_axis-accounting.sql	
+llx_accounting_analytic_distribution	accounting	会计/总账	业务实体表	Table of 'analytic distribution' for accountancy module	rowid	12	1	1	Y	htdocs/install/mysql/tables/llx_accounting_analytic_distribution-accounting.sql	
+llx_accounting_balance_snapshot	accounting	会计/总账	业务实体表		rowid	11	4	0	Y	htdocs/install/mysql/tables/llx_accounting_balance_snapshot-accounting.sql	
+llx_accounting_bookkeeping	accounting	会计/总账	业务实体表		rowid	36	8	0	Y	htdocs/install/mysql/tables/llx_accounting_bookkeeping-accounting.sql	
+llx_accounting_bookkeeping_piece	accounting	会计/总账	业务实体表		rowid	15	6	0	Y	htdocs/install/mysql/tables/llx_accounting_bookkeeping_piece-accounting.sql	
+llx_accounting_bookkeeping_tmp	accounting	会计/总账	业务实体表		rowid	35	6	0	Y	htdocs/install/mysql/tables/llx_accounting_bookkeeping_tmp-accounting.sql	
+llx_accounting_category_account	accounting	会计/总账	多对多/关联表	Table for connect accounting category with accounting account	rowid	3	4	0	N	htdocs/install/mysql/tables/llx_accounting_category_account-accounting.sql	
+llx_accounting_fiscalyear	accounting	会计/总账	业务实体表		rowid	10	1	0	Y	htdocs/install/mysql/tables/llx_accounting_fiscalyear.sql	
+llx_accounting_groups_account	accounting	会计/总账	业务实体表	Table of 'accounts' for accountancy expert module	rowid	3	1	0	N	htdocs/install/mysql/tables/llx_accounting_groups_account.sql	
+llx_accounting_journal	accounting	会计/总账	业务实体表	Table of journals for accountancy	rowid	6	2	0	Y	htdocs/install/mysql/tables/llx_accounting_journal.sql	
+llx_accounting_system	accounting	会计/总账	业务实体表	Table of chart of accounts	rowid	7	2	0	N	htdocs/install/mysql/tables/llx_accounting_system.sql	
+llx_accounting_transaction_template	accounting	会计/总账	业务实体表	Table of transaction template for accounting	rowid	9	4	0	Y	htdocs/install/mysql/tables/llx_accounting_transaction_template-accounting.sql	
+llx_accounting_transaction_template_det	accounting	会计/总账	明细/行表	Table of line of transaction template for accounting	rowid	9	2	1	N	htdocs/install/mysql/tables/llx_accounting_transaction_template_det-accounting.sql	
+llx_actioncomm	actioncomm	日程活动	业务实体表	Table of events and actions (past and to do).	id	50	14	0	Y	htdocs/install/mysql/tables/llx_actioncomm.sql	
+llx_actioncomm_extrafields	actioncomm	日程活动	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_actioncomm_extrafields.sql	
+llx_actioncomm_reminder	actioncomm	日程活动	业务实体表		rowid	14	7	0	Y	htdocs/install/mysql/tables/llx_actioncomm_reminder.sql	
+llx_actioncomm_resources	actioncomm	日程活动	多对多/关联表	Table used for relations between an action event and a resource (in most cases	rowid	7	3	0	N	htdocs/install/mysql/tables/llx_actioncomm_resources.sql	
+llx_adherent	adherent	会员	业务实体表		rowid	45	5	2	Y	htdocs/install/mysql/tables/llx_adherent.sql	
+llx_adherent_extrafields	adherent	会员	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_adherent_extrafields.sql	
+llx_adherent_type	adherent	会员	业务实体表		rowid	15	2	0	Y	htdocs/install/mysql/tables/llx_adherent_type.sql	
+llx_adherent_type_extrafields	adherent	会员	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_adherent_type_extrafields.sql	
+llx_adherent_type_lang	adherent	会员	业务实体表		rowid	7	1	0	N	htdocs/install/mysql/tables/llx_adherent_type_lang.sql	
+llx_ai_request_log	ai	AI	日志/历史表		rowid	17	8	0	Y	htdocs/install/mysql/tables/llx_ai_request_log-ai.sql	
+llx_asset	asset	资产	业务实体表	Table for fixed asset	rowid	32	3	4	Y	htdocs/install/mysql/tables/llx_asset-asset.sql	
+llx_asset_accountancy_codes_economic	asset	资产	业务实体表	Table to store the configuration of the accounting accounts of a fixed asset for economic status (fk_asset will be filled and fk_asset_model will be null)	rowid	13	2	3	N	htdocs/install/mysql/tables/llx_asset_accountancy_codes_economic-asset.sql	
+llx_asset_accountancy_codes_fiscal	asset	资产	业务实体表	Table to store the configuration of the accounting accounts of a fixed asset for fiscal status	rowid	8	2	3	N	htdocs/install/mysql/tables/llx_asset_accountancy_codes_fiscal-asset.sql	
+llx_asset_depreciation	asset	资产	业务实体表	Table to store depreciation of a fixed asset	rowid	11	5	2	N	htdocs/install/mysql/tables/llx_asset_depreciation-asset.sql	
+llx_asset_depreciation_options_economic	asset	资产	业务实体表	Table to store economical depreciation of a fixed asset	rowid	13	2	3	N	htdocs/install/mysql/tables/llx_asset_depreciation_options_economic-asset.sql	
+llx_asset_depreciation_options_fiscal	asset	资产	业务实体表	Table to store fiscal depreciation of a fixed asset	rowid	12	2	3	N	htdocs/install/mysql/tables/llx_asset_depreciation_options_fiscal-asset.sql	
+llx_asset_extrafields	asset	资产	扩展字段值表	Table for extrafields of fixed asset	rowid	4	2	0	N	htdocs/install/mysql/tables/llx_asset_extrafields-asset.sql	
+llx_asset_model	asset	资产	业务实体表	Table for fixed asset model	rowid	15	6	0	Y	htdocs/install/mysql/tables/llx_asset_model-asset.sql	
+llx_asset_model_extrafields	asset	资产	扩展字段值表	Table for extrafields of fixed asset model	rowid	4	2	0	N	htdocs/install/mysql/tables/llx_asset_model_extrafields-asset.sql	
+llx_bank	bank	银行与现金	业务实体表		rowid	25	6	0	N	htdocs/install/mysql/tables/llx_bank.sql	
+llx_bank_account	bank	银行与现金	业务实体表		rowid	43	2	1	Y	htdocs/install/mysql/tables/llx_bank_account.sql	
+llx_bank_account_extrafields	bank	银行与现金	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_bank_account_extrafields.sql	
+llx_bank_extrafields	bank	银行与现金	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_bank_extrafields.sql	
+llx_bank_import	bank	银行与现金	业务实体表	Table to receive manual import of a bank statement	rowid	25	1	0	N	htdocs/install/mysql/tables/llx_bank_import-bank.sql	
+llx_bank_record	bank	银行与现金	业务实体表	Table to receive manual import of a bank statement	rowid	8	1	1	N	htdocs/install/mysql/tables/llx_bank_record-bank.sql	
+llx_bank_record_link	bank	银行与现金	多对多/关联表	Table to receive manual import of a bank statement	rowid	3	1	2	N	htdocs/install/mysql/tables/llx_bank_record_link-bank.sql	
+llx_bank_url	bank	银行与现金	业务实体表		rowid	6	3	0	N	htdocs/install/mysql/tables/llx_bank_url.sql	
+llx_blockedlog	core	核心/系统	业务实体表		rowid	27	8	0	Y	htdocs/install/mysql/tables/llx_blockedlog.sql	
+llx_bom_bom	bom	物料清单	业务实体表		rowid	23	6	1	Y	htdocs/install/mysql/tables/llx_bom_bom-bom.sql	
+llx_bom_bom_extrafields	bom	物料清单	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_bom_bom_extrafields-bom.sql	
+llx_bom_bomline	bom	物料清单	明细/行表		rowid	14	4	1	N	htdocs/install/mysql/tables/llx_bom_bomline-bom.sql	
+llx_bom_bomline_extrafields	bom	物料清单	扩展字段值表		rowid	4	1	0	N	htdocs/install/mysql/tables/llx_bom_bomline_extrafields-bom.sql	
+llx_bookcal_availabilities	bookcal	预约日历	业务实体表		rowid	19	4	2	N	htdocs/install/mysql/tables/llx_bookcal_availabilities-bookcal.sql	
+llx_bookcal_availabilities_extrafields	bookcal	预约日历	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_bookcal_availabilities_extrafields-bookcal.sql	
+llx_bookcal_calendar	bookcal	预约日历	业务实体表		rowid	17	6	1	Y	htdocs/install/mysql/tables/llx_bookcal_calendar-bookcal.sql	
+llx_bookcal_calendar_extrafields	bookcal	预约日历	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_bookcal_calendar_extrafields-bookcal.sql	
+llx_bookmark	core	核心/系统	业务实体表		rowid	9	1	0	Y	htdocs/install/mysql/tables/llx_bookmark.sql	
+llx_bordereau_cheque	bank	银行与现金	业务实体表		rowid	15	2	0	Y	htdocs/install/mysql/tables/llx_bordereau_cheque.sql	
+llx_boxes	core	核心/系统	业务实体表		rowid	8	4	1	Y	htdocs/install/mysql/tables/llx_boxes.sql	
+llx_boxes_def	core	核心/系统	业务实体表		rowid	6	2	0	Y	htdocs/install/mysql/tables/llx_boxes_def.sql	
+llx_budget	budget	预算	业务实体表		rowid	12	1	0	Y	htdocs/install/mysql/tables/llx_budget-budget.sql	
+llx_budget_lines	budget	预算	明细/行表		rowid	9	2	1	N	htdocs/install/mysql/tables/llx_budget_lines-budget.sql	
+llx_c_accounting_category	accounting	会计/总账	参考数据/配置表	Table with category for accounting account.	rowid	12	2	0	Y	htdocs/install/mysql/tables/llx_c_accounting_category-accounting.sql	
+llx_c_accounting_report	accounting	会计/总账	参考数据/配置表	Table for personalized report for category of accounting account	rowid	6	2	0	Y	htdocs/install/mysql/tables/llx_c_accounting_report-accounting.sql	
+llx_c_action_trigger	core	核心/系统	参考数据/配置表	This table is a list of all available possible automatic actions	rowid	8	3	0	N	htdocs/install/mysql/tables/llx_c_action_trigger.sql	
+llx_c_actioncomm	core	核心/系统	参考数据/配置表		id	10	2	0	N	htdocs/install/mysql/tables/llx_c_actioncomm.sql	
+llx_c_asset_disposal_type	asset	资产	参考数据/配置表	Table to store disposal type for a fixed asset	rowid	5	2	0	Y	htdocs/install/mysql/tables/llx_c_asset_disposal_type-asset.sql	
+llx_c_availability	core	核心/系统	参考数据/配置表		rowid	7	2	0	N	htdocs/install/mysql/tables/llx_c_availability.sql	
+llx_c_barcode_type	core	核心/系统	参考数据/配置表		rowid	6	2	0	Y	htdocs/install/mysql/tables/llx_c_barcode_type.sql	
+llx_c_chargesociales	core	核心/系统	参考数据/配置表		id	8	1	0	N	htdocs/install/mysql/tables/llx_c_chargesociales.sql	
+llx_c_civility	core	核心/系统	参考数据/配置表		rowid	5	2	0	N	htdocs/install/mysql/tables/llx_c_civility.sql	
+llx_c_country	core	核心/系统	参考数据/配置表		rowid	11	4	0	N	htdocs/install/mysql/tables/llx_c_country.sql	
+llx_c_currencies	core	核心/系统	参考数据/配置表		code_iso	6	1	0	N	htdocs/install/mysql/tables/llx_c_currencies.sql	
+llx_c_departements	core	核心/系统	参考数据/配置表		rowid	8	2	1	N	htdocs/install/mysql/tables/llx_c_departements.sql	
+llx_c_ecotaxe	core	核心/系统	参考数据/配置表		rowid	7	2	0	N	htdocs/install/mysql/tables/llx_c_ecotaxe.sql	
+llx_c_effectif	core	核心/系统	参考数据/配置表		id	5	2	0	N	htdocs/install/mysql/tables/llx_c_effectif.sql	
+llx_c_email_senderprofile	core	核心/系统	参考数据/配置表	Table with templates of emails	rowid	10	2	0	Y	htdocs/install/mysql/tables/llx_c_email_senderprofile.sql	
+llx_c_email_templates	core	核心/系统	参考数据/配置表	Table with templates of emails	rowid	22	3	0	Y	htdocs/install/mysql/tables/llx_c_email_templates.sql	
+llx_c_exp_tax_cat	expensereport	费用报告	参考数据/配置表		rowid	4	1	0	Y	htdocs/install/mysql/tables/llx_c_exp_tax_cat-expensereport.sql	
+llx_c_exp_tax_range	expensereport	费用报告	参考数据/配置表		rowid	5	1	0	Y	htdocs/install/mysql/tables/llx_c_exp_tax_range-expensereport.sql	
+llx_c_field_list	core	核心/系统	参考数据/配置表	Table not used / not required for the moment.	rowid	13	1	0	Y	htdocs/install/mysql/tables/llx_c_field_list.sql	
+llx_c_format_cards	core	核心/系统	参考数据/配置表		rowid	18	1	0	N	htdocs/install/mysql/tables/llx_c_format_cards.sql	
+llx_c_forme_juridique	core	核心/系统	参考数据/配置表		rowid	8	2	0	N	htdocs/install/mysql/tables/llx_c_forme_juridique.sql	
+llx_c_holiday_types	core	核心/系统	参考数据/配置表		rowid	11	2	0	Y	htdocs/install/mysql/tables/llx_c_holiday_types.sql	
+llx_c_hrm_department	core	核心/系统	参考数据/配置表		rowid	5	1	0	N	htdocs/install/mysql/tables/llx_c_hrm_department.sql	
+llx_c_hrm_function	core	核心/系统	参考数据/配置表		rowid	6	1	0	N	htdocs/install/mysql/tables/llx_c_hrm_function.sql	
+llx_c_hrm_public_holiday	core	核心/系统	参考数据/配置表		id	11	3	0	Y	htdocs/install/mysql/tables/llx_c_hrm_public_holiday.sql	
+llx_c_incoterms	core	核心/系统	参考数据/配置表		rowid	5	2	0	N	htdocs/install/mysql/tables/llx_c_incoterms.sql	
+llx_c_input_method	core	核心/系统	参考数据/配置表		rowid	5	2	0	N	htdocs/install/mysql/tables/llx_c_input_method.sql	
+llx_c_input_reason	core	核心/系统	参考数据/配置表		rowid	5	2	0	N	htdocs/install/mysql/tables/llx_c_input_reason.sql	
+llx_c_invoice_subtype	core	核心/系统	参考数据/配置表		rowid	6	2	0	Y	htdocs/install/mysql/tables/llx_c_invoice_subtype.sql	
+llx_c_lead_status	core	核心/系统	参考数据/配置表		rowid	6	2	0	N	htdocs/install/mysql/tables/llx_c_lead_status.sql	
+llx_c_paiement	core	核心/系统	参考数据/配置表		id	9	2	0	Y	htdocs/install/mysql/tables/llx_c_paiement.sql	
+llx_c_paper_format	core	核心/系统	参考数据/配置表		rowid	8	1	0	N	htdocs/install/mysql/tables/llx_c_paper_format.sql	
+llx_c_partnership_type	partnership	合作伙伴	参考数据/配置表		rowid	6	2	0	Y	htdocs/install/mysql/tables/llx_c_partnership_type-partnership.sql	
+llx_c_payment_term	core	核心/系统	参考数据/配置表		rowid	13	2	0	Y	htdocs/install/mysql/tables/llx_c_payment_term.sql	
+llx_c_price_expression	dynamicprices	动态价格	参考数据/配置表		rowid	3	1	0	N	htdocs/install/mysql/tables/llx_c_price_expression-dynamicprices.sql	
+llx_c_price_global_variable	dynamicprices	动态价格	参考数据/配置表		rowid	4	1	0	N	htdocs/install/mysql/tables/llx_c_price_global_variable-dynamicprices.sql	
+llx_c_price_global_variable_updater	dynamicprices	动态价格	参考数据/配置表		rowid	8	1	0	N	htdocs/install/mysql/tables/llx_c_price_global_variable_updater-dynamicprices.sql	
+llx_c_product_nature	core	核心/系统	参考数据/配置表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_c_product_nature.sql	
+llx_c_product_thirdparty_relation_type	core	核心/系统	参考数据/配置表		rowid	4	1	0	N	htdocs/install/mysql/tables/llx_c_product_thirdparty_relation_type.sql	
+llx_c_productbatch_qcstatus	productbatch	产品批次	参考数据/配置表		rowid	5	2	0	Y	htdocs/install/mysql/tables/llx_c_productbatch_qcstatus-productbatch.sql	
+llx_c_propalst	core	核心/系统	参考数据/配置表		id	5	2	0	N	htdocs/install/mysql/tables/llx_c_propalst.sql	
+llx_c_prospectcontactlevel	core	核心/系统	参考数据/配置表		code	5	1	0	N	htdocs/install/mysql/tables/llx_c_prospectcontactlevel.sql	
+llx_c_prospectlevel	core	核心/系统	参考数据/配置表		code	5	1	0	N	htdocs/install/mysql/tables/llx_c_prospectlevel.sql	
+llx_c_recruitment_origin	recruitment	招聘	参考数据/配置表		rowid	4	1	0	N	htdocs/install/mysql/tables/llx_c_recruitment_origin-recruitment.sql	
+llx_c_regions	core	核心/系统	参考数据/配置表		rowid	7	4	1	N	htdocs/install/mysql/tables/llx_c_regions.sql	
+llx_c_revenuestamp	core	核心/系统	参考数据/配置表		rowid	8	1	0	N	htdocs/install/mysql/tables/llx_c_revenuestamp.sql	
+llx_c_shipment_mode	core	核心/系统	参考数据/配置表		rowid	9	2	0	Y	htdocs/install/mysql/tables/llx_c_shipment_mode.sql	
+llx_c_shipment_package_type	core	核心/系统	参考数据/配置表		rowid	5	1	0	Y	htdocs/install/mysql/tables/llx_c_shipment_package_type.sql	
+llx_c_socialnetworks	core	核心/系统	参考数据/配置表		rowid	7	2	0	Y	htdocs/install/mysql/tables/llx_c_socialnetworks.sql	
+llx_c_stcomm	core	核心/系统	参考数据/配置表		id	6	2	0	N	htdocs/install/mysql/tables/llx_c_stcomm.sql	
+llx_c_stcommcontact	core	核心/系统	参考数据/配置表		id	5	2	0	N	htdocs/install/mysql/tables/llx_c_stcommcontact.sql	
+llx_c_subtotals_texts	core	核心/系统	参考数据/配置表		rowid	6	2	0	Y	htdocs/install/mysql/tables/llx_c_subtotals_texts-subtotals.sql	
+llx_c_subtotals_titles	core	核心/系统	参考数据/配置表		rowid	5	2	0	Y	htdocs/install/mysql/tables/llx_c_subtotals_titles-subtotals.sql	
+llx_c_ticket_category	ticket	工单	参考数据/配置表	Table with the custom group tree for the group of a ticket.	rowid	12	2	0	Y	htdocs/install/mysql/tables/llx_c_ticket_category-ticket.sql	
+llx_c_ticket_resolution	ticket	工单	参考数据/配置表		rowid	8	2	0	Y	htdocs/install/mysql/tables/llx_c_ticket_resolution-ticket.sql	
+llx_c_ticket_severity	ticket	工单	参考数据/配置表		rowid	9	2	0	Y	htdocs/install/mysql/tables/llx_c_ticket_severity-ticket.sql	
+llx_c_ticket_type	ticket	工单	参考数据/配置表		rowid	8	2	0	Y	htdocs/install/mysql/tables/llx_c_ticket_type-ticket.sql	
+llx_c_transport_mode	core	核心/系统	参考数据/配置表	Table to store transport modes (plane, boat, road, ...)	rowid	5	2	0	Y	htdocs/install/mysql/tables/llx_c_transport_mode.sql	
+llx_c_tva	core	核心/系统	参考数据/配置表		rowid	18	3	1	Y	htdocs/install/mysql/tables/llx_c_tva.sql	
+llx_c_type_contact	core	核心/系统	参考数据/配置表		rowid	8	3	0	N	htdocs/install/mysql/tables/llx_c_type_contact.sql	
+llx_c_type_container	website	网站	参考数据/配置表		rowid	8	2	0	Y	htdocs/install/mysql/tables/llx_c_type_container-website.sql	
+llx_c_type_fees	core	核心/系统	参考数据/配置表		id	8	2	0	N	htdocs/install/mysql/tables/llx_c_type_fees.sql	
+llx_c_type_resource	core	核心/系统	参考数据/配置表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_c_type_resource.sql	
+llx_c_typent	core	核心/系统	参考数据/配置表		id	7	2	0	N	htdocs/install/mysql/tables/llx_c_typent.sql	
+llx_c_units	core	核心/系统	参考数据/配置表		rowid	8	1	0	N	htdocs/install/mysql/tables/llx_c_units.sql	
+llx_c_ziptown	core	核心/系统	参考数据/配置表		rowid	8	5	2	N	htdocs/install/mysql/tables/llx_c_ziptown.sql	
+llx_categorie	categories	分类	多对多/关联表		rowid	17	2	0	Y	htdocs/install/mysql/tables/llx_categorie.sql	
+llx_categorie_account	categories	分类	多对多/关联表	Table to link bank tag/categories with bank accounts		3	2	2	N	htdocs/install/mysql/tables/llx_categorie_account.sql	
+llx_categorie_actioncomm	categories	分类	多对多/关联表	Table to link actioncomm tag/categories with actioncomms		3	2	2	N	htdocs/install/mysql/tables/llx_categorie_actioncomm.sql	
+llx_categorie_contact	categories	分类	多对多/关联表			3	2	2	N	htdocs/install/mysql/tables/llx_categorie_contact.sql	
+llx_categorie_fichinter	fichinter	干预/工单	多对多/关联表			3	2	2	N	htdocs/install/mysql/tables/llx_categorie_fichinter-fichinter.sql	
+llx_categorie_fournisseur	categories	分类	多对多/关联表			3	2	2	N	htdocs/install/mysql/tables/llx_categorie_fournisseur.sql	
+llx_categorie_invoice	facture	客户发票	多对多/关联表			3	2	2	N	htdocs/install/mysql/tables/llx_categorie_invoice-facture.sql	
+llx_categorie_knowledgemanagement	knowledgemanagement	知识管理	多对多/关联表			3	2	2	N	htdocs/install/mysql/tables/llx_categorie_knowledgemanagement-knowledgemanagement.sql	
+llx_categorie_lang	categories	分类	多对多/关联表	Table to manage the multilanguage of categories (label and description)	rowid	5	2	1	N	htdocs/install/mysql/tables/llx_categorie_lang.sql	
+llx_categorie_lang_extrafields	categories	分类	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_categorie_lang_extrafields.sql	
+llx_categorie_member	categories	分类	多对多/关联表			3	2	2	N	htdocs/install/mysql/tables/llx_categorie_member.sql	
+llx_categorie_mo	mrp	生产计划/MRP	多对多/关联表			3	2	2	N	htdocs/install/mysql/tables/llx_categorie_mo-mrp.sql	
+llx_categorie_order	commande	客户订单	多对多/关联表			3	2	2	N	htdocs/install/mysql/tables/llx_categorie_order-commande.sql	
+llx_categorie_product	categories	分类	多对多/关联表			3	2	2	N	htdocs/install/mysql/tables/llx_categorie_product.sql	
+llx_categorie_project	categories	分类	多对多/关联表			3	2	2	N	htdocs/install/mysql/tables/llx_categorie_project.sql	
+llx_categorie_project_task	project	项目	多对多/关联表			3	2	2	N	htdocs/install/mysql/tables/llx_categorie_project_task-project.sql	
+llx_categorie_propal	propal	商业提案	多对多/关联表			3	2	2	N	htdocs/install/mysql/tables/llx_categorie_propal-propal.sql	
+llx_categorie_societe	categories	分类	多对多/关联表			3	2	2	N	htdocs/install/mysql/tables/llx_categorie_societe.sql	
+llx_categorie_supplier_invoice	categories	分类	多对多/关联表			3	2	2	N	htdocs/install/mysql/tables/llx_categorie_supplier_invoice.sql	
+llx_categorie_supplier_order	categories	分类	多对多/关联表			3	2	2	N	htdocs/install/mysql/tables/llx_categorie_supplier_order.sql	
+llx_categorie_supplier_proposal	supplier_proposal	供应商提案	多对多/关联表			3	2	2	N	htdocs/install/mysql/tables/llx_categorie_supplier_proposal-supplier_proposal.sql	
+llx_categorie_ticket	ticket	工单	多对多/关联表			3	2	2	N	htdocs/install/mysql/tables/llx_categorie_ticket-ticket.sql	
+llx_categorie_user	categories	分类	多对多/关联表			3	2	2	N	htdocs/install/mysql/tables/llx_categorie_user.sql	
+llx_categorie_warehouse	stock	库存	多对多/关联表			3	2	2	N	htdocs/install/mysql/tables/llx_categorie_warehouse-stock.sql	
+llx_categorie_website_page	website	网站	多对多/关联表			3	2	2	N	htdocs/install/mysql/tables/llx_categorie_website_page-website.sql	
+llx_categories_extrafields	categories	分类	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_categories_extrafields.sql	
+llx_category_bankline	core	核心/系统	多对多/关联表	Table to link bank tag/categories with bank lines		3	1	0	N	htdocs/install/mysql/tables/llx_category_bankline.sql	
+llx_chargesociales	core	核心/系统	业务实体表		rowid	22	9	0	Y	htdocs/install/mysql/tables/llx_chargesociales.sql	
+llx_commande	commande	客户订单	业务实体表		rowid	59	10	5	Y	htdocs/install/mysql/tables/llx_commande.sql	
+llx_commande_extrafields	commande	客户订单	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_commande_extrafields.sql	
+llx_commande_fournisseur	supplier_order	供应商订单	业务实体表		rowid	50	4	1	Y	htdocs/install/mysql/tables/llx_commande_fournisseur.sql	
+llx_commande_fournisseur_extrafields	supplier_order	供应商订单	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_commande_fournisseur_extrafields.sql	
+llx_commande_fournisseur_log	supplier_order	供应商订单	日志/历史表		rowid	7	1	0	N	htdocs/install/mysql/tables/llx_commande_fournisseur_log.sql	
+llx_commande_fournisseurdet	supplier_order	供应商订单	明细/行表		rowid	39	3	1	N	htdocs/install/mysql/tables/llx_commande_fournisseurdet.sql	
+llx_commande_fournisseurdet_extrafields	supplier_order	供应商订单	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_commande_fournisseurdet_extrafields.sql	
+llx_commandedet	commande	客户订单	明细/行表		rowid	44	3	3	N	htdocs/install/mysql/tables/llx_commandedet.sql	
+llx_commandedet_extrafields	commande	客户订单	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_commandedet_extrafields.sql	
+llx_comment	core	核心/系统	业务实体表		rowid	10	1	0	Y	htdocs/install/mysql/tables/llx_comment.sql	
+llx_const	core	核心/系统	参考数据/配置表	Table for constants used to store Dolibarr setup	rowid	10	2	0	Y	htdocs/install/mysql/tables/llx_const.sql	
+llx_contrat	contrat	合同	业务实体表		rowid	35	4	2	Y	htdocs/install/mysql/tables/llx_contrat.sql	
+llx_contrat_extrafields	contrat	合同	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_contrat_extrafields.sql	
+llx_contratdet	contrat	合同	明细/行表		rowid	46	7	3	N	htdocs/install/mysql/tables/llx_contratdet.sql	
+llx_contratdet_extrafields	contrat	合同	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_contratdet_extrafields.sql	
+llx_cronjob	core	核心/系统	业务实体表		rowid	36	7	0	Y	htdocs/install/mysql/tables/llx_cronjob.sql	
+llx_default_values	core	核心/系统	业务实体表		rowid	7	2	0	Y	htdocs/install/mysql/tables/llx_default_values.sql	
+llx_delivery	delivery	交付	业务实体表		rowid	23	5	3	Y	htdocs/install/mysql/tables/llx_delivery.sql	
+llx_delivery_extrafields	delivery	交付	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_delivery_extrafields.sql	
+llx_deliverydet	delivery	交付	明细/行表		rowid	11	2	1	N	htdocs/install/mysql/tables/llx_deliverydet.sql	
+llx_deliverydet_extrafields	delivery	交付	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_deliverydet_extrafields.sql	
+llx_deplacement	deplacement	差旅费用	业务实体表		rowid	17	1	0	Y	htdocs/install/mysql/tables/llx_deplacement-deplacement.sql	
+llx_document_model	core	核心/系统	业务实体表	Table with list of document templates for document generation (odt/pdf/...)	rowid	7	1	0	Y	htdocs/install/mysql/tables/llx_document_model.sql	
+llx_don	don	捐赠	业务实体表		rowid	34	6	0	Y	htdocs/install/mysql/tables/llx_don-don.sql	
+llx_don_extrafields	don	捐赠	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_don_extrafields-don.sql	
+llx_ecm_directories	ecm	电子文档管理	业务实体表		rowid	15	4	2	Y	htdocs/install/mysql/tables/llx_ecm_directories.sql	
+llx_ecm_directories_extrafields	ecm	电子文档管理	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_ecm_directories_extrafields.sql	
+llx_ecm_files	ecm	电子文档管理	业务实体表		rowid	30	4	0	Y	htdocs/install/mysql/tables/llx_ecm_files.sql	
+llx_ecm_files_extrafields	ecm	电子文档管理	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_ecm_files_extrafields.sql	
+llx_element_categorie	categories	分类	多对多/关联表		rowid	4	3	1	N	htdocs/install/mysql/tables/llx_element_categorie.sql	
+llx_element_contact	element	通用关系	多对多/关联表		rowid	7	3	1	N	htdocs/install/mysql/tables/llx_element_contact.sql	
+llx_element_element	element	通用关系	通用元数据/关系表	Table used for relations between elements of different types:	rowid	10	3	0	N	htdocs/install/mysql/tables/llx_element_element.sql	
+llx_element_resources	element	通用关系	多对多/关联表	Table used to link an element actioncomm with a resource or user (llx_resource or llx_user)	rowid	10	3	0	N	htdocs/install/mysql/tables/llx_element_resources.sql	
+llx_element_time	element	通用关系	通用元数据/关系表		rowid	19	4	0	N	htdocs/install/mysql/tables/llx_element_time.sql	
+llx_emailcollector_emailcollector	emailcollector	邮件采集	业务实体表		rowid	30	4	0	Y	htdocs/install/mysql/tables/llx_emailcollector_emailcollector.sql	
+llx_emailcollector_emailcollectoraction	emailcollector	邮件采集	业务实体表		rowid	11	3	1	N	htdocs/install/mysql/tables/llx_emailcollector_emailcollectoraction.sql	
+llx_emailcollector_emailcollectorfilter	emailcollector	邮件采集	业务实体表		rowid	10	3	1	N	htdocs/install/mysql/tables/llx_emailcollector_emailcollectorfilter.sql	
+llx_entrepot	stock	库存	业务实体表		rowid	23	2	0	Y	htdocs/install/mysql/tables/llx_entrepot.sql	
+llx_entrepot_extrafields	stock	库存	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_entrepot_extrafields.sql	
+llx_establishment	core	核心/系统	业务实体表		rowid	19	1	0	Y	htdocs/install/mysql/tables/llx_establishment.sql	
+llx_eventorganization_conferenceorboothattendee	eventorganization	活动组织	业务实体表		rowid	24	10	0	N	htdocs/install/mysql/tables/llx_eventorganization_conferenceorboothattendee.sql	
+llx_eventorganization_conferenceorboothattendee_extrafields	eventorganization	活动组织	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_eventorganization_conferenceorboothattendee_extrafields.sql	
+llx_events	core	核心/系统	日志/历史表	This table logs all dolibarr security events	rowid	13	2	0	Y	htdocs/install/mysql/tables/llx_events.sql	
+llx_expedition	expedition	发货	业务实体表		rowid	37	6	4	Y	htdocs/install/mysql/tables/llx_expedition.sql	
+llx_expedition_extrafields	expedition	发货	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_expedition_extrafields.sql	
+llx_expedition_package	expedition	发货	业务实体表		rowid	14	1	0	N	htdocs/install/mysql/tables/llx_expedition_package.sql	
+llx_expeditiondet	expedition	发货	明细/行表		rowid	13	5	1	N	htdocs/install/mysql/tables/llx_expeditiondet.sql	
+llx_expeditiondet_batch	expedition	发货	明细/行表		rowid	8	2	1	N	htdocs/install/mysql/tables/llx_expeditiondet_batch.sql	
+llx_expeditiondet_extrafields	expedition	发货	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_expeditiondet_extrafields.sql	
+llx_expensereport	expensereport	费用报告	业务实体表		rowid	45	9	0	Y	htdocs/install/mysql/tables/llx_expensereport.sql	
+llx_expensereport_det	expensereport	费用报告	明细/行表		rowid	41	1	0	N	htdocs/install/mysql/tables/llx_expensereport_det.sql	
+llx_expensereport_det_extrafields	expensereport	费用报告	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_expensereport_det_extrafields.sql	
+llx_expensereport_extrafields	expensereport	费用报告	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_expensereport_extrafields.sql	
+llx_expensereport_ik	expensereport	费用报告	业务实体表		rowid	8	1	0	N	htdocs/install/mysql/tables/llx_expensereport_ik-expensereport.sql	
+llx_expensereport_rules	expensereport	费用报告	业务实体表		rowid	13	1	0	Y	htdocs/install/mysql/tables/llx_expensereport_rules-expensereport.sql	
+llx_export_model	core	核心/系统	业务实体表		rowid	7	1	0	Y	htdocs/install/mysql/tables/llx_export_model.sql	
+llx_extrafields	core	核心/系统	扩展字段值表		rowid	33	2	0	Y	htdocs/install/mysql/tables/llx_extrafields.sql	
+llx_facture	facture	客户发票	业务实体表		rowid	74	14	6	Y	htdocs/install/mysql/tables/llx_facture.sql	
+llx_facture_extrafields	facture	客户发票	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_facture_extrafields.sql	
+llx_facture_fourn	supplier_invoice	供应商发票	业务实体表		rowid	59	9	4	Y	htdocs/install/mysql/tables/llx_facture_fourn.sql	
+llx_facture_fourn_det	supplier_invoice	供应商发票	明细/行表		rowid	40	5	2	N	htdocs/install/mysql/tables/llx_facture_fourn_det.sql	
+llx_facture_fourn_det_extrafields	supplier_invoice	供应商发票	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_facture_fourn_det_extrafields.sql	
+llx_facture_fourn_det_rec	supplier_invoice	供应商发票	明细/行表		rowid	41	1	1	N	htdocs/install/mysql/tables/llx_facture_fourn_det_rec.sql	
+llx_facture_fourn_det_rec_extrafields	supplier_invoice	供应商发票	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_facture_fourn_det_rec_extrafields.sql	
+llx_facture_fourn_extrafields	supplier_invoice	供应商发票	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_facture_fourn_extrafields.sql	
+llx_facture_fourn_rec	supplier_invoice	供应商发票	业务实体表		rowid	44	5	3	Y	htdocs/install/mysql/tables/llx_facture_fourn_rec.sql	
+llx_facture_fourn_rec_extrafields	supplier_invoice	供应商发票	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_facture_fourn_rec_extrafields.sql	
+llx_facture_rec	facture	客户发票	业务实体表		rowid	48	6	3	Y	htdocs/install/mysql/tables/llx_facture_rec.sql	
+llx_facture_rec_extrafields	facture	客户发票	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_facture_rec_extrafields.sql	
+llx_facturedet	facture	客户发票	明细/行表		rowid	51	6	2	N	htdocs/install/mysql/tables/llx_facturedet.sql	
+llx_facturedet_extrafields	facture	客户发票	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_facturedet_extrafields.sql	
+llx_facturedet_rec	facture	客户发票	明细/行表		rowid	44	1	1	N	htdocs/install/mysql/tables/llx_facturedet_rec.sql	
+llx_facturedet_rec_extrafields	facture	客户发票	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_facturedet_rec_extrafields.sql	
+llx_fichinter	fichinter	干预/工单	业务实体表		rowid	30	3	1	Y	htdocs/install/mysql/tables/llx_fichinter.sql	
+llx_fichinter_extrafields	fichinter	干预/工单	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_fichinter_extrafields.sql	
+llx_fichinter_rec	fichinter	干预/工单	业务实体表		rowid	21	5	2	Y	htdocs/install/mysql/tables/llx_fichinter_rec.sql	
+llx_fichinterdet	fichinter	干预/工单	明细/行表		rowid	10	2	1	N	htdocs/install/mysql/tables/llx_fichinterdet.sql	
+llx_fichinterdet_extrafields	fichinter	干预/工单	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_fichinterdet_extrafields.sql	
+llx_fichinterdet_rec	fichinter	干预/工单	明细/行表		rowid	36	1	0	N	htdocs/install/mysql/tables/llx_fichinterdet_rec.sql	
+llx_holiday	holiday	休假	业务实体表		rowid	30	8	0	Y	htdocs/install/mysql/tables/llx_holiday.sql	
+llx_holiday_config	holiday	休假	参考数据/配置表		rowid	4	2	0	Y	htdocs/install/mysql/tables/llx_holiday_config.sql	
+llx_holiday_extrafields	holiday	休假	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_holiday_extrafields.sql	
+llx_holiday_logs	holiday	休假	日志/历史表		rowid	8	1	0	N	htdocs/install/mysql/tables/llx_holiday_logs.sql	
+llx_holiday_users	holiday	休假	业务实体表	Table with remain quantity of holiday for each type of leave.		4	1	0	N	htdocs/install/mysql/tables/llx_holiday_users.sql	
+llx_hrm_evaluation	hrm	人力资源	业务实体表		rowid	18	4	1	Y	htdocs/install/mysql/tables/llx_hrm_evaluation-hrm.sql	
+llx_hrm_evaluation_extrafields	hrm	人力资源	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_hrm_evaluation_extrafields-hrm.sql	
+llx_hrm_evaluationdet	hrm	人力资源	明细/行表		rowid	11	4	2	N	htdocs/install/mysql/tables/llx_hrm_evaluationdet-hrm.sql	
+llx_hrm_evaluationdet_extrafields	hrm	人力资源	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_hrm_evaluationdet_extrafields-hrm.sql	
+llx_hrm_job	hrm	人力资源	业务实体表		rowid	10	3	0	N	htdocs/install/mysql/tables/llx_hrm_job-hrm.sql	
+llx_hrm_job_extrafields	hrm	人力资源	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_hrm_job_extrafields-hrm.sql	
+llx_hrm_job_user	hrm	人力资源	业务实体表		rowid	14	2	0	N	htdocs/install/mysql/tables/llx_hrm_job_user-hrm.sql	
+llx_hrm_skill	hrm	人力资源	业务实体表		rowid	13	3	1	N	htdocs/install/mysql/tables/llx_hrm_skill-hrm.sql	
+llx_hrm_skill_extrafields	hrm	人力资源	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_hrm_skill_extrafields-hrm.sql	
+llx_hrm_skilldet	hrm	人力资源	明细/行表		rowid	6	2	2	N	htdocs/install/mysql/tables/llx_hrm_skilldet-hrm.sql	
+llx_hrm_skillrank	hrm	人力资源	业务实体表		rowid	9	3	2	N	htdocs/install/mysql/tables/llx_hrm_skillrank-hrm.sql	
+llx_import_model	core	核心/系统	业务实体表		rowid	6	2	0	Y	htdocs/install/mysql/tables/llx_import_model.sql	
+llx_intracommreport	core	核心/系统	业务实体表		rowid	10	1	0	Y	htdocs/install/mysql/tables/llx_intracommreport-intracommreport.sql	
+llx_inventory	stock	库存	业务实体表		rowid	17	4	0	Y	htdocs/install/mysql/tables/llx_inventory-stock.sql	
+llx_inventory_extrafields	stock	库存	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_inventory_extrafields-stock.sql	
+llx_inventorydet	stock	库存	明细/行表		rowid	13	4	0	N	htdocs/install/mysql/tables/llx_inventorydet-stock.sql	
+llx_knowledgemanagement_knowledgerecord	knowledgemanagement	知识管理	业务实体表		rowid	18	4	1	Y	htdocs/install/mysql/tables/llx_knowledgemanagement_knowledgerecord-knowledgemanagement.sql	
+llx_knowledgemanagement_knowledgerecord_extrafields	knowledgemanagement	知识管理	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_knowledgemanagement_knowledgerecord_extrafields-knowledgemanagement.sql	
+llx_links	core	核心/系统	多对多/关联表	Table to store external URL links to documents	rowid	9	2	0	Y	htdocs/install/mysql/tables/llx_links.sql	
+llx_links_extrafields	core	核心/系统	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_links_extrafields.sql	
+llx_loan	loan	借款	业务实体表		rowid	24	1	0	Y	htdocs/install/mysql/tables/llx_loan-loan.sql	
+llx_loan_schedule	loan	借款	业务实体表		rowid	16	2	0	N	htdocs/install/mysql/tables/llx_loan_schedule-loan.sql	
+llx_localtax	core	核心/系统	业务实体表		rowid	12	1	0	Y	htdocs/install/mysql/tables/llx_localtax.sql	
+llx_mailing	mailing	群发邮件	业务实体表		rowid	34	1	0	Y	htdocs/install/mysql/tables/llx_mailing-mailing.sql	
+llx_mailing_advtarget	mailing	群发邮件	业务实体表	Table to setup advanced targeting for emailing	rowid	10	2	0	Y	htdocs/install/mysql/tables/llx_mailing_advtarget-mailing.sql	
+llx_mailing_cibles	mailing	群发邮件	业务实体表		rowid	15	3	0	N	htdocs/install/mysql/tables/llx_mailing_cibles-mailing.sql	
+llx_mailing_unsubscribe	mailing	群发邮件	业务实体表		rowid	7	1	0	Y	htdocs/install/mysql/tables/llx_mailing_unsubscribe.sql	
+llx_menu	core	核心/系统	业务实体表		rowid	22	2	0	Y	htdocs/install/mysql/tables/llx_menu.sql	
+llx_mrp_mo	mrp	生产计划/MRP	业务实体表		rowid	27	10	1	Y	htdocs/install/mysql/tables/llx_mrp_mo-mrp.sql	
+llx_mrp_mo_extrafields	mrp	生产计划/MRP	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_mrp_mo_extrafields-mrp.sql	
+llx_mrp_production	mrp	生产计划/MRP	业务实体表		rowid	21	2	3	N	htdocs/install/mysql/tables/llx_mrp_production-mrp.sql	
+llx_mrp_production_extrafields	mrp	生产计划/MRP	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_mrp_production_extrafields-mrp.sql	
+llx_multicurrency	multicurrency	多币种	业务实体表		rowid	7	1	0	Y	htdocs/install/mysql/tables/llx_multicurrency.sql	
+llx_multicurrency_rate	multicurrency	多币种	业务实体表		rowid	7	1	0	Y	htdocs/install/mysql/tables/llx_multicurrency_rate.sql	
+llx_notify	core	核心/系统	业务实体表	Table of notification done	rowid	12	1	0	N	htdocs/install/mysql/tables/llx_notify.sql	
+llx_notify_def	core	核心/系统	业务实体表	Table to declare permanent notifications (per workflow event)	rowid	12	1	0	Y	htdocs/install/mysql/tables/llx_notify_def.sql	
+llx_notify_def_object	core	核心/系统	业务实体表	Table to declare notifications (per object)	id	8	1	0	Y	htdocs/install/mysql/tables/llx_notify_def_object.sql	
+llx_oauth_state	core	核心/系统	业务实体表	This table is deprecated. Still updated but no more read.	rowid	6	1	0	Y	htdocs/install/mysql/tables/llx_oauth_state.sql	
+llx_oauth_token	core	核心/系统	业务实体表		rowid	18	1	0	Y	htdocs/install/mysql/tables/llx_oauth_token.sql	
+llx_object_lang	core	核心/系统	业务实体表	Table to store some translations of values of objects	rowid	7	2	0	N	htdocs/install/mysql/tables/llx_object_lang.sql	
+llx_onlinesignature	core	核心/系统	明细/行表	Table of with online signatures	rowid	9	1	0	Y	htdocs/install/mysql/tables/llx_onlinesignature.sql	
+llx_opensurvey_comments	opensurvey	在线调查	业务实体表		id_comment	7	3	0	N	htdocs/install/mysql/tables/llx_opensurvey_comments-opensurvey.sql	
+llx_opensurvey_formquestions	opensurvey	在线调查	业务实体表		rowid	4	1	0	N	htdocs/install/mysql/tables/llx_opensurvey_formquestions-opensurvey.sql	
+llx_opensurvey_sondage	opensurvey	在线调查	业务实体表		id_sondage	15	2	0	Y	htdocs/install/mysql/tables/llx_opensurvey_sondage-opensurvey.sql	
+llx_opensurvey_user_formanswers	opensurvey	在线调查	业务实体表			3	0	0	N	htdocs/install/mysql/tables/llx_opensurvey_user_formanswers-opensurvey.sql	
+llx_opensurvey_user_studs	opensurvey	在线调查	业务实体表		id_users	7	4	0	N	htdocs/install/mysql/tables/llx_opensurvey_user_studs-opensurvey.sql	
+llx_overwrite_trans	core	核心/系统	业务实体表		rowid	5	2	0	Y	htdocs/install/mysql/tables/llx_overwrite_trans.sql	
+llx_paiement	core	核心/系统	业务实体表		rowid	20	1	0	Y	htdocs/install/mysql/tables/llx_paiement.sql	
+llx_paiement_extrafields	core	核心/系统	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_paiement_extrafields.sql	
+llx_paiement_facture	core	核心/系统	业务实体表	Table to manage the relation n-n between a payment of invoices and all invoices paid	rowid	7	4	2	N	htdocs/install/mysql/tables/llx_paiement_facture.sql	
+llx_paiementcharge	core	核心/系统	业务实体表		rowid	12	2	0	N	htdocs/install/mysql/tables/llx_paiementcharge.sql	
+llx_paiementfourn	core	核心/系统	业务实体表		rowid	16	1	0	Y	htdocs/install/mysql/tables/llx_paiementfourn.sql	
+llx_paiementfourn_facturefourn	core	核心/系统	业务实体表	Table to manage the relation n-n between a payment of invoices and all invoices paid	rowid	7	4	0	N	htdocs/install/mysql/tables/llx_paiementfourn_facturefourn.sql	
+llx_partnership	partnership	合作伙伴	业务实体表		rowid	24	5	0	Y	htdocs/install/mysql/tables/llx_partnership-partnership.sql	
+llx_partnership_extrafields	partnership	合作伙伴	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_partnership_extrafields-partnership.sql	
+llx_payment_donation	payment	支付	业务实体表		rowid	14	1	0	N	htdocs/install/mysql/tables/llx_payment_donation.sql	
+llx_payment_expensereport	payment	支付	业务实体表		rowid	12	1	0	N	htdocs/install/mysql/tables/llx_payment_expensereport.sql	
+llx_payment_loan	payment	支付	业务实体表		rowid	15	1	0	N	htdocs/install/mysql/tables/llx_payment_loan.sql	
+llx_payment_salary	payment	支付	业务实体表		rowid	21	6	1	Y	htdocs/install/mysql/tables/llx_payment_salary.sql	
+llx_payment_various	payment	支付	业务实体表		rowid	19	1	0	Y	htdocs/install/mysql/tables/llx_payment_various.sql	
+llx_payment_various_extrafields	payment	支付	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_payment_various_extrafields.sql	
+llx_payment_vat	payment	支付	业务实体表		rowid	12	1	0	N	htdocs/install/mysql/tables/llx_payment_vat.sql	
+llx_paymentexpensereport_expensereport	core	核心/系统	业务实体表	Table to manage the relation n-n between a payment of expense reports and all expense reports paid	rowid	7	1	0	N	htdocs/install/mysql/tables/llx_paymentexpensereport_expensereport.sql	
+llx_pos_cash_fence	takepos	POS	业务实体表		rowid	30	1	0	Y	htdocs/install/mysql/tables/llx_pos_cash_fence.sql	
+llx_pos_cash_fence_extrafields	takepos	POS	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_pos_cash_fence_extrafields.sql	
+llx_prelevement	core	核心/系统	业务实体表		rowid	5	2	1	N	htdocs/install/mysql/tables/llx_prelevement.sql	
+llx_prelevement_bons	core	核心/系统	业务实体表		rowid	17	2	0	Y	htdocs/install/mysql/tables/llx_prelevement_bons.sql	
+llx_prelevement_demande	core	核心/系统	业务实体表		rowid	20	4	0	Y	htdocs/install/mysql/tables/llx_prelevement_demande.sql	
+llx_prelevement_lignes	core	核心/系统	业务实体表	This table contains the detail of status and bank information on direct debit or credit transfer.	rowid	10	2	1	N	htdocs/install/mysql/tables/llx_prelevement_lignes.sql	
+llx_prelevement_rejet	core	核心/系统	业务实体表		rowid	9	1	0	N	htdocs/install/mysql/tables/llx_prelevement_rejet.sql	
+llx_printer_receipt	core	核心/系统	业务实体表		rowid	6	2	0	Y	htdocs/install/mysql/tables/llx_printing_receipt-receiptprinter.sql	
+llx_printer_receipt_template	core	核心/系统	业务实体表		rowid	4	1	0	Y	htdocs/install/mysql/tables/llx_printing_receipt_template-receiptprinter.sql	
+llx_printing	core	核心/系统	业务实体表		rowid	10	1	0	N	htdocs/install/mysql/tables/llx_printing.sql	
+llx_product	core	核心/系统	业务实体表		rowid	85	16	4	Y	htdocs/install/mysql/tables/llx_product.sql	
+llx_product_association	product	产品与服务	业务实体表		rowid	7	3	0	N	htdocs/install/mysql/tables/llx_product_association.sql	
+llx_product_attribute	variants	产品变体	业务实体表		rowid	6	3	0	Y	htdocs/install/mysql/tables/llx_product_attribute-variants.sql	
+llx_product_attribute_combination	variants	产品变体	业务实体表	Table to store links between a parent product and its variant products.	rowid	8	3	0	Y	htdocs/install/mysql/tables/llx_product_attribute_combination-variants.sql	
+llx_product_attribute_combination_price_level	variants	产品变体	业务实体表		rowid	5	2	0	N	htdocs/install/mysql/tables/llx_product_attribute_combination_price_level-variants.sql	
+llx_product_attribute_combination2val	variants	产品变体	业务实体表		rowid	4	4	0	N	htdocs/install/mysql/tables/llx_product_attribute_combination2val-variants.sql	
+llx_product_attribute_extrafields	variants	产品变体	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_product_attribute_extrafields-variants.sql	
+llx_product_attribute_value	variants	产品变体	业务实体表		rowid	6	2	0	Y	htdocs/install/mysql/tables/llx_product_attribute_value-variants.sql	
+llx_product_attribute_value_extrafields	variants	产品变体	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_product_attribute_value_extrafields-variants.sql	
+llx_product_batch	product	产品与服务	业务实体表	This table is dedicated to store detail (lots/serial) of a stock	rowid	8	4	1	N	htdocs/install/mysql/tables/llx_product_batch.sql	
+llx_product_customer_price	product	产品与服务	业务实体表		rowid	25	4	3	Y	htdocs/install/mysql/tables/llx_product_customer_price.sql	
+llx_product_customer_price_extrafields	product	产品与服务	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_product_customer_price_extrafields.sql	
+llx_product_customer_price_log	product	产品与服务	日志/历史表		rowid	24	1	0	Y	htdocs/install/mysql/tables/llx_product_customer_price_log.sql	
+llx_product_extrafields	product	产品与服务	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_product_extrafields.sql	
+llx_product_fournisseur_price	product	产品与服务	业务实体表		rowid	36	8	3	Y	htdocs/install/mysql/tables/llx_product_fournisseur_price.sql	
+llx_product_fournisseur_price_extrafields	product	产品与服务	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_product_fournisseur_price_extrafields.sql	
+llx_product_fournisseur_price_log	product	产品与服务	日志/历史表		rowid	11	3	0	N	htdocs/install/mysql/tables/llx_product_fournisseur_price_log.sql	
+llx_product_lang	product	产品与服务	业务实体表		rowid	7	2	1	N	htdocs/install/mysql/tables/llx_product_lang.sql	
+llx_product_lang_extrafields	product	产品与服务	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_product_lang_extrafields.sql	
+llx_product_lot	product	产品与服务	业务实体表	This table is dedicated to store lots with the detail/propeties of each lot. Unique key is fk_product-batch.	rowid	22	2	0	Y	htdocs/install/mysql/tables/llx_product_lot.sql	
+llx_product_lot_extrafields	product	产品与服务	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_product_lot_extrafields.sql	
+llx_product_perentity	product	产品与服务	业务实体表		rowid	10	3	0	Y	htdocs/install/mysql/tables/llx_product_perentity-multicompany.sql	
+llx_product_price	product	产品与服务	业务实体表		rowid	29	3	1	Y	htdocs/install/mysql/tables/llx_product_price.sql	
+llx_product_price_by_qty	product	产品与服务	业务实体表	This table is used to defined price by qty when a line into llx_product_price	rowid	17	3	1	N	htdocs/install/mysql/tables/llx_product_price_by_qty.sql	
+llx_product_price_extrafields	product	产品与服务	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_product_price_extrafields.sql	
+llx_product_pricerules	product	产品与服务	业务实体表	Table used only when PRODUIT_MULTIPRICES is set (prices per level) + PRODUIT_MULTIPRICES_ALLOW_AUTOCALC_PRICELEVEL is set	rowid	5	1	0	N	htdocs/install/mysql/tables/llx_product_pricerules.sql	
+llx_product_stock	product	产品与服务	业务实体表		rowid	6	4	2	N	htdocs/install/mysql/tables/llx_product_stock.sql	
+llx_product_thirdparty	product	产品与服务	业务实体表		rowid	18	1	0	N	htdocs/install/mysql/tables/llx_product_thirdparty.sql	
+llx_product_warehouse_properties	stock	库存	业务实体表	Table used when STOCK_ALLOW_ADD_LIMIT_STOCK_BY_WAREHOUSE is set.	rowid	7	3	2	N	htdocs/install/mysql/tables/llx_product_warehouse_properties-stock.sql	
+llx_projet	projet	项目	业务实体表		rowid	44	6	1	Y	htdocs/install/mysql/tables/llx_projet.sql	
+llx_projet_extrafields	projet	项目	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_projet_extrafields.sql	
+llx_projet_task	projet	项目	业务实体表		rowid	27	5	3	Y	htdocs/install/mysql/tables/llx_projet_task.sql	
+llx_projet_task_dependency	project	项目	业务实体表		rowid	6	4	2	Y	htdocs/install/mysql/tables/llx_projet_task_dependency-project.sql	
+llx_projet_task_extrafields	projet	项目	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_projet_task_extrafields.sql	
+llx_propal	propal	商业提案	业务实体表		rowid	57	11	6	Y	htdocs/install/mysql/tables/llx_propal.sql	
+llx_propal_extrafields	propal	商业提案	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_propal_extrafields.sql	
+llx_propal_merge_pdf_product	propal	商业提案	业务实体表		rowid	9	1	0	N	htdocs/install/mysql/tables/llx_propal_merge_pdf_product.sql	
+llx_propaldet	propal	商业提案	明细/行表		rowid	42	3	2	N	htdocs/install/mysql/tables/llx_propaldet.sql	
+llx_propaldet_extrafields	propal	商业提案	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_propaldet_extrafields.sql	
+llx_quickmemo_memo	core	核心/系统	业务实体表		rowid	25	4	0	Y	htdocs/install/mysql/tables/llx_quickmemo_memo-quickmemo.sql	
+llx_quickmemo_memo_extrafields	core	核心/系统	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_quickmemo_memo_extrafields-quickmemo.sql	
+llx_quickmemo_memo_user	core	核心/系统	业务实体表		rowid	10	3	0	N	htdocs/install/mysql/tables/llx_quickmemo_memo_user-quickmemo.sql	
+llx_reception	core	核心/系统	业务实体表		rowid	32	6	4	Y	htdocs/install/mysql/tables/llx_reception.sql	
+llx_reception_extrafields	core	核心/系统	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_reception_extrafields.sql	
+llx_receptiondet_batch	core	核心/系统	明细/行表	This table is just an history table to track all receiption to do or done for a	rowid	23	5	1	N	htdocs/install/mysql/tables/llx_receptiondet_batch.sql	
+llx_receptiondet_batch_extrafields	core	核心/系统	扩展字段值表	This table should have been named llx_receptiondet_batch_extrafields	rowid	4	2	0	N	htdocs/install/mysql/tables/llx_receptiondet_batch_extrafields.sql	
+llx_recruitment_recruitmentcandidature	recruitment	招聘	业务实体表		rowid	26	5	1	Y	htdocs/install/mysql/tables/llx_recruitment_recruitmentcandidature-recruitment.sql	
+llx_recruitment_recruitmentcandidature_extrafields	recruitment	招聘	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_recruitment_recruitmentcandidature_extrafields-recruitment.sql	
+llx_recruitment_recruitmentjobposition	recruitment	招聘	业务实体表		rowid	24	6	4	Y	htdocs/install/mysql/tables/llx_recruitment_recruitmentjobposition-recruitment.sql	
+llx_recruitment_recruitmentjobposition_extrafields	recruitment	招聘	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_recruitment_recruitmentjobposition_extrafields-recruitment.sql	
+llx_resource	resource	资源	业务实体表		rowid	27	5	1	Y	htdocs/install/mysql/tables/llx_resource.sql	
+llx_resource_extrafields	resource	资源	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_resource_extrafields.sql	
+llx_rights_def	core	核心/系统	权限/关联表			14	0	0	Y	htdocs/install/mysql/tables/llx_rights_def.sql	
+llx_salary	salaries	工资	业务实体表		rowid	25	10	7	Y	htdocs/install/mysql/tables/llx_salary.sql	
+llx_salary_extrafields	salaries	工资	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_salary_extrafields.sql	
+llx_session	core	核心/系统	业务实体表	This table can be used for user defined session management	session_id	7	1	0	N	htdocs/install/mysql/tables/llx_session-disabled.sql	
+llx_societe	societe	第三方/企业	业务实体表		rowid	100	15	0	Y	htdocs/install/mysql/tables/llx_societe.sql	
+llx_societe_account	societe	第三方/企业	业务实体表	Table to store accounts of thirdparties on external websites (like on stripe field site = 'stripe')	rowid	22	8	1	Y	htdocs/install/mysql/tables/llx_societe_account.sql	
+llx_societe_commerciaux	societe	第三方/企业	业务实体表		rowid	5	2	2	N	htdocs/install/mysql/tables/llx_societe_commerciaux.sql	
+llx_societe_contacts	societe	第三方/企业	多对多/关联表	This table contains the contacts by default of a thirdparty	rowid	8	2	3	Y	htdocs/install/mysql/tables/llx_societe_contacts.sql	
+llx_societe_extrafields	societe	第三方/企业	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_societe_extrafields.sql	
+llx_societe_perentity	societe	第三方/企业	业务实体表		rowid	15	3	0	Y	htdocs/install/mysql/tables/llx_societe_perentity-multicompany.sql	
+llx_societe_prices	societe	第三方/企业	业务实体表		rowid	6	1	0	N	htdocs/install/mysql/tables/llx_societe_prices.sql	
+llx_societe_remise	societe	第三方/企业	业务实体表		rowid	8	1	0	Y	htdocs/install/mysql/tables/llx_societe_remise.sql	
+llx_societe_remise_except	societe	第三方/企业	业务实体表		rowid	29	7	8	Y	htdocs/install/mysql/tables/llx_societe_remise_except.sql	
+llx_societe_remise_supplier	societe	第三方/企业	业务实体表		rowid	8	1	0	Y	htdocs/install/mysql/tables/llx_societe_remise_supplier.sql	
+llx_societe_rib	societe	第三方/企业	业务实体表	Table with the payment modes of a thirdparty (BAN, Paypal, Card, ...)	rowid	52	2	1	Y	htdocs/install/mysql/tables/llx_societe_rib.sql	
+llx_socpeople	contact	联系人	业务实体表		rowid	44	4	2	Y	htdocs/install/mysql/tables/llx_socpeople.sql	
+llx_socpeople_extrafields	contact	联系人	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_socpeople_extrafields.sql	
+llx_stock_mouvement	stock	库存	业务实体表		rowid	19	4	0	N	htdocs/install/mysql/tables/llx_stock_mouvement.sql	
+llx_stock_mouvement_extrafields	stock	库存	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_stock_mouvement_extrafields.sql	
+llx_stocktransfer_stocktransfer	stocktransfer	库存调拨	业务实体表		rowid	26	6	1	Y	htdocs/install/mysql/tables/llx_stocktransfer_stocktransfer-stocktransfer.sql	
+llx_stocktransfer_stocktransfer_extrafields	stocktransfer	库存调拨	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_stocktransfer_stocktransfer_extrafields-stocktransfer.sql	
+llx_stocktransfer_stocktransferline	stocktransfer	库存调拨	明细/行表		rowid	11	2	0	N	htdocs/install/mysql/tables/llx_stocktransfer_stocktransferline-stocktransfer.sql	
+llx_stocktransfer_stocktransferline_extrafields	stocktransfer	库存调拨	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_stocktransfer_stocktransferline_extrafields-stocktransfer.sql	
+llx_subscription	core	核心/系统	业务实体表		rowid	15	5	0	N	htdocs/install/mysql/tables/llx_subscription.sql	
+llx_supplier_proposal	supplier_proposal	供应商提案	业务实体表		rowid	43	7	0	Y	htdocs/install/mysql/tables/llx_supplier_proposal.sql	
+llx_supplier_proposal_extrafields	supplier_proposal	供应商提案	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_supplier_proposal_extrafields.sql	
+llx_supplier_proposaldet	supplier_proposal	供应商提案	明细/行表		rowid	42	3	2	N	htdocs/install/mysql/tables/llx_supplier_proposaldet.sql	
+llx_supplier_proposaldet_extrafields	supplier_proposal	供应商提案	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_supplier_proposaldet_extrafields.sql	
+llx_takepos_floor_tables	takepos	POS	业务实体表		rowid	6	2	0	Y	htdocs/install/mysql/tables/llx_takepos_floor_tables-takepos.sql	
+llx_ticket	ticket	工单	业务实体表		rowid	39	7	1	Y	htdocs/install/mysql/tables/llx_ticket-ticket.sql	
+llx_ticket_extrafields	ticket	工单	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_ticket_extrafields-ticket.sql	
+llx_tva	core	核心/系统	业务实体表		rowid	16	1	0	Y	htdocs/install/mysql/tables/llx_tva.sql	
+llx_user	user	用户与权限	业务实体表		rowid	84	7	0	Y	htdocs/install/mysql/tables/llx_user.sql	
+llx_user_alert	user	用户与权限	业务实体表		rowid	4	1	0	N	htdocs/install/mysql/tables/llx_user_alert.sql	
+llx_user_clicktodial	user	用户与权限	业务实体表		fk_user	5	1	0	N	htdocs/install/mysql/tables/llx_user_clicktodial.sql	
+llx_user_employment	user	用户与权限	业务实体表	This table can be used to store employee working contracts	rowid	16	2	1	Y	htdocs/install/mysql/tables/llx_user_employment.sql	
+llx_user_extrafields	user	用户与权限	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_user_extrafields.sql	
+llx_user_param	user	用户与权限	业务实体表			4	1	0	Y	htdocs/install/mysql/tables/llx_user_param.sql	
+llx_user_rib	user	用户与权限	业务实体表		rowid	21	1	0	Y	htdocs/install/mysql/tables/llx_user_rib.sql	
+llx_user_rights	user	用户与权限	权限/关联表		rowid	4	2	1	Y	htdocs/install/mysql/tables/llx_user_rights.sql	
+llx_usergroup	user	用户与权限	权限/关联表		rowid	9	2	0	Y	htdocs/install/mysql/tables/llx_usergroup.sql	
+llx_usergroup_extrafields	user	用户与权限	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_usergroup_extrafields.sql	
+llx_usergroup_rights	user	用户与权限	权限/关联表		rowid	4	2	1	Y	htdocs/install/mysql/tables/llx_usergroup_rights.sql	
+llx_usergroup_user	user	用户与权限	权限/关联表		rowid	4	2	2	Y	htdocs/install/mysql/tables/llx_usergroup_user.sql	
+llx_webhook_history	webhook	Webhook	日志/历史表		rowid	12	3	0	N	htdocs/install/mysql/tables/llx_webhook_history-webhook.sql	
+llx_webhook_target	webhook	Webhook	业务实体表		rowid	18	4	0	Y	htdocs/install/mysql/tables/llx_webhook_target-webhook.sql	
+llx_website	website	网站	业务实体表		rowid	26	2	0	Y	htdocs/install/mysql/tables/llx_website-website.sql	
+llx_website_extrafields	website	网站	扩展字段值表		rowid	4	2	0	N	htdocs/install/mysql/tables/llx_website_extrafields-website.sql	
+llx_website_page	website	网站	业务实体表		rowid	26	2	1	N	htdocs/install/mysql/tables/llx_website_page-website.sql	
+llx_workstation_workstation	workstation	工作站	业务实体表		rowid	16	4	1	Y	htdocs/install/mysql/tables/llx_workstation_workstation-workstation.sql	
+llx_workstation_workstation_extrafields	workstation	工作站	扩展字段值表	Table for extrafields of workstation	rowid	4	2	0	N	htdocs/install/mysql/tables/llx_workstation_workstation_extrafields-workstation.sql	
+llx_workstation_workstation_resource	workstation	工作站	业务实体表		rowid	4	1	0	N	htdocs/install/mysql/tables/llx_workstation_workstation_resource-workstation.sql	
+llx_workstation_workstation_usergroup	workstation	工作站	权限/关联表		rowid	4	1	0	N	htdocs/install/mysql/tables/llx_workstation_workstation_usergroup-workstation.sql	
+llx_zapier_hook	zapier	Zapier	业务实体表		rowid	11	1	0	Y	htdocs/install/mysql/tables/llx_zapier_hook-zapier.sql	
