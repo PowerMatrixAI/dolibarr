@@ -49,3 +49,11 @@ $dolibarr_mailing_limit_sendbycli='0';
 //$dolibarr_font_DOL_DEFAULT_TTF_BOLD='';
 $dolibarr_main_distrib='standard';
 
+// Hermes AI dashboard Q&A bridge. Keep the bearer token consistent with the
+// remote Hermes bridge environment and do not commit production credentials.
+$dolibarr_hermes_endpoint='http://124.156.183.102:8646/v1/chat/completions';
+$dolibarr_hermes_api_key='DOLI-HERMES-HTTP-2026-09-22-7f3c1e8a9b4d2c6f0a5e';
+$dolibarr_hermes_model='hermes';
+$dolibarr_hermes_timeout=180;
+$dolibarr_hermes_system_prompt='';
+$dolibarr_ai_allow_local_endpoints=0;
